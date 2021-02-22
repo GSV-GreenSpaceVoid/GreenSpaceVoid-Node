@@ -2,6 +2,8 @@ package com.greenspacevoid.common.item.industry.resources;
 
 import com.greenspacevoid.common.item.Item;
 
+import java.util.ArrayList;
+
 public class Resource extends Item {
 
 
@@ -32,9 +34,9 @@ public class Resource extends Item {
 
 
 
-            public static class IronOre {
+            public static class IronOres {
                 //From least density of Iron to the greatest. Gets refined into steel
-                public static class Magnetite extends IronOre {
+                public static class Magnetite extends IronOres {
 
 
 
@@ -43,7 +45,7 @@ public class Resource extends Item {
 
                 }
 
-                public static class ConcentratedMagnetite extends IronOre{
+                public static class ConcentratedMagnetite extends IronOres {
 
 
 
@@ -55,123 +57,7 @@ public class Resource extends Item {
 
                 }
 
-                public static class DenseMagnetite extends IronOre{
-
-
-
-
-
-                }
-
-            }
-
-
-
-
-
-
-            public static class TitaniumOre {
-
-                public static class Ilmenite extends TitaniumOre{
-
-
-
-
-
-
-                }
-
-                public static class HardenedIlmenite extends TitaniumOre{
-
-
-
-
-
-
-                }
-
-                public static class SuperdenseIlmenite extends TitaniumOre{
-
-
-
-
-
-
-                }
-
-
-
-            }
-
-            public static class AluminumOre {
-                public static class Bauxite extends AluminumOre{
-
-                }
-
-
-
-
-                public static class ConcentratedBauxite extends AluminumOre{
-
-                }
-
-
-                public static class DenseBauxite extends AluminumOre{
-
-                }
-
-
-            }
-
-            public static class LeadOre{
-
-                public static class Galena extends LeadOre{
-
-
-
-
-
-                }
-
-                public static class SoftGalena extends LeadOre{
-
-
-
-
-
-                }
-
-                public static class VerySoftGalena extends LeadOre{
-
-
-
-
-
-                }
-
-
-
-
-
-
-            }
-
-            public static class UraniumOre{
-
-                public static class Uraninite extends UraniumOre{
-
-
-
-
-                }
-
-                public static class HeavyUraninite extends UraniumOre{
-
-
-
-                }
-
-                public static class SuperHeavyUraninite extends UraniumOre{
+                public static class DenseMagnetite extends IronOres {
 
 
 
@@ -182,26 +68,142 @@ public class Resource extends Item {
             }
 
 
-            public static class RhodiumOre {
 
-                public static class Cuprorhodsite extends RhodiumOre{
+
+
+
+            public static class TitaniumOres {
+
+                public static class Ilmenite extends TitaniumOres {
+
+
+
+
+
 
                 }
 
-                public static class ShinyCuprorhodsite extends RhodiumOre{
+                public static class HardenedIlmenite extends TitaniumOres {
+
+
+
+
+
 
                 }
 
-                public static class PristineCuprorhodsite extends RhodiumOre{
+                public static class SuperdenseIlmenite extends TitaniumOres {
+
+
+
+
+
+
+                }
+
+
+
+            }
+
+            public static class AluminumOres {
+                public static class Bauxite extends AluminumOres {
+
+                }
+
+
+
+
+                public static class ConcentratedBauxite extends AluminumOres {
+
+                }
+
+
+                public static class DenseBauxite extends AluminumOres {
+
+                }
+
+
+            }
+
+            public static class LeadOres {
+
+                public static class Galena extends LeadOres {
+
+
+
+
+
+                }
+
+                public static class SoftGalena extends LeadOres {
+
+
+
+
+
+                }
+
+                public static class VerySoftGalena extends LeadOres {
+
+
+
+
+
+                }
+
+
+
+
+
+
+            }
+
+            public static class UraniumOres {
+
+                public static class Uraninite extends UraniumOres {
+
+
+
+
+                }
+
+                public static class HeavyUraninite extends UraniumOres {
+
+
+
+                }
+
+                public static class SuperHeavyUraninite extends UraniumOres {
+
+
+
+
 
                 }
 
             }
 
 
-            public static class SiliconOre{
+            public static class RhodiumOres {
 
-                public static class Feldspar extends SiliconOre{
+                public static class Cuprorhodsite extends RhodiumOres {
+
+                }
+
+                public static class ShinyCuprorhodsite extends RhodiumOres {
+
+                }
+
+                public static class PristineCuprorhodsite extends RhodiumOres {
+
+                }
+
+            }
+
+
+            public static class SiliconOres {
+
+                public static class Feldspar extends SiliconOres {
 
 
 
@@ -210,7 +212,7 @@ public class Resource extends Item {
 
                 }
 
-                public static class ThickFeldspar extends SiliconOre{
+                public static class ThickFeldspar extends SiliconOres {
 
 
 
@@ -219,7 +221,7 @@ public class Resource extends Item {
 
                 }
 
-                public static class RichFeldspar extends SiliconOre{
+                public static class RichFeldspar extends SiliconOres {
 
 
 
@@ -277,18 +279,18 @@ public class Resource extends Item {
 
             }
 
-            public static class GlacialOre{
+            public static class GlacialOres {
 
-                public static class GlacialSnow extends GlacialOre{
+                public static class GlacialSnow extends GlacialOres {
 
-
-                }
-
-                public static class DenseGlacialSnow extends GlacialOre{
 
                 }
 
-                public static class PureGlacialSnow extends GlacialOre{
+                public static class DenseGlacialSnow extends GlacialOres {
+
+                }
+
+                public static class PureGlacialSnow extends GlacialOres {
 
 
                 }
@@ -297,21 +299,21 @@ public class Resource extends Item {
 
             }
 
-            public static class IceCrystalOre{
+            public static class IceCrystalOres{
 
-                public static class CrystallineIceShard extends IceCrystalOre{
-
-
-
-                }
-
-                public static class RefinedCrystallineIceShard extends IceCrystalOre{
-
+                public static class CrystallineIceShard extends IceCrystalOres{
 
 
 
                 }
-                public static class PristineCrystallinIceeShard extends IceCrystalOre{
+
+                public static class RefinedCrystallineIceShard extends IceCrystalOres{
+
+
+
+
+                }
+                public static class PristineCrystallinIceeShard extends IceCrystalOres{
 
 
                 }
@@ -340,21 +342,107 @@ public class Resource extends Item {
             }
 
 
+            public static class TritiumOres{
+                public static class TritiumOre extends TritiumOres{
 
-            public static class Hydrogen{
+                }
+                public static class CondensedTritiumOre extends TritiumOres{
 
+
+                }
+                public static class DenseTritiumOre extends TritiumOres{
+
+
+
+                }
 
 
 
             }
 
-            public static class Oxygen{
+            public static class DeuteriumOres{
 
+                public static class DeuteriumOre extends DeuteriumOres{
+
+
+
+                }
+
+                public static class CondensedDeuteriumOre extends DeuteriumOres{
+
+
+
+                }
+
+                public static class DenseDeuteriumOre extends DeuteriumOres{
+
+                }
 
 
             }
 
-            public static class Nitrogen{
+
+
+
+
+
+
+
+
+            public static class HydrogenOres{
+                public static class HydrogenOre extends HydrogenOres{
+
+
+                }
+
+                public static class CondensedHydrogenOre extends HydrogenOres{
+
+
+
+                }
+
+                public static class DenseHydrogenOre extends HydrogenOres{
+
+
+
+                }
+
+            }
+
+            public static class HeliumOres{
+                public static class HeliumOre extends HeliumOres{
+
+
+                }
+
+                public static class CondensedHeliumOre extends HeliumOres{
+
+
+
+                }
+                public static class DenseHeliumOre extends HeliumOres{
+
+
+
+                }
+
+
+            }
+
+            public static class WaterVaporOres{
+                public static class WaterVaporOre extends WaterVaporOres{
+
+                }
+
+                public static class CondensedWaterVaporOre extends WaterVaporOres{
+
+
+                }
+
+                public static class SteamingWaterVaporOre extends WaterVaporOres{
+
+
+                }
 
 
 
@@ -403,6 +491,25 @@ public class Resource extends Item {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+    public ArrayList<?> refine(){
+
+
+
+
+        return null;
+
+    }
 
 
 

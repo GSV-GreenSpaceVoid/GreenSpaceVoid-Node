@@ -23,14 +23,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/ores/Ore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/ResourceNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/ResourceSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Argon.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Argon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Hydrogen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Nitrogen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Oxygen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Xenon.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Xenon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$ICE_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$ICE_ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$AluminumOre$Bauxite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$AluminumOre$ConcentratedBauxite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$AluminumOre$DenseBauxite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$AluminumOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$IronOre$ConcentratedMagnetite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$IronOre$DenseMagnetite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$IronOre$Magnetite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$IronOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$LeadOre$Galena.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$LeadOre$SoftGalena.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$LeadOre$VerySoftGalena.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$LeadOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$RhodiumOre$Cuprorhodsite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$RhodiumOre$PristineCuprorhodsite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$RhodiumOre$ShinyCuprorhodsite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$RhodiumOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$SiliconOre$Feldspar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$SiliconOre$RichFeldspar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$SiliconOre$ThickFeldspar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$SiliconOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$TitaniumOre$HardenedIlmenite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$TitaniumOre$Ilmenite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$TitaniumOre$SuperdenseIlmenite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$TitaniumOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$UraniumOre$HeavyUraninite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$UraniumOre$SuperHeavyUraninite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$UraniumOre$Uraninite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE$UraniumOre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/ores/Ore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/ores/Ore.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +193,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1614014467666">
@@ -176,22 +212,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614020833857">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614023429379">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614020833857" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614020833857">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614023429379">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614020833857" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614020833856">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614023429379">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614020833856" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614020833857">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614023429379">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614020833857" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1613952621776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
