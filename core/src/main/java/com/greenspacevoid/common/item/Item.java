@@ -10,6 +10,11 @@ public class Item {
         this.name = name;
         this.baseVolume = baseVolume;
         this.baseMass = baseMass;
+
+        if(quantity <= 0){
+            this.quantity = 1;
+        }
+        this.quantity = quantity;
         //Todo: Calculate total volume/mass based on quantity!
 
 

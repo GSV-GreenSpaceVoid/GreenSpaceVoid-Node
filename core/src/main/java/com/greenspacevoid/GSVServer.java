@@ -1,5 +1,6 @@
 package com.greenspacevoid;
 
+import com.greenspacevoid.common.item.industry.materials.Material;
 import com.greenspacevoid.common.item.industry.resources.Resource;
 import com.greenspacevoid.server.ServerSide;
 import com.greenspacevoid.system.StarSystem;
@@ -38,8 +39,7 @@ public class GSVServer {
             e.printStackTrace();
         }
 
-
-
+        Material.SolidMaterials.Aluminum test = new Material.SolidMaterials.Aluminum(1);
 
 
 
