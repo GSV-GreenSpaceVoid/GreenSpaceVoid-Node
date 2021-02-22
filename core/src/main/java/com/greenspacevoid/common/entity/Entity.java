@@ -1,4 +1,4 @@
-package com.greenspacevoid.entity;
+package com.greenspacevoid.common.entity;
 
 import com.greenspacevoid.system.StarSystem;
 

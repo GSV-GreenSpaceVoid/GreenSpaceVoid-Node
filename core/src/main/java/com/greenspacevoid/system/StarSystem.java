@@ -1,6 +1,6 @@
 package com.greenspacevoid.system;
 
-import com.greenspacevoid.entity.Entity;
+import com.greenspacevoid.common.entity.Entity;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package com.greenspacevoid.entity.world;
+package com.greenspacevoid.common.entity.world;
 
-import com.greenspacevoid.entity.Entity;
+import com.greenspacevoid.common.entity.Entity;
 
 public class WorldEntity extends Entity {
 

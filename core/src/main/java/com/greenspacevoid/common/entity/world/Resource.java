@@ -1,4 +1,4 @@
-package com.greenspacevoid.entity.world;
+package com.greenspacevoid.common.entity.world;
 
 public class Resource extends WorldEntity{
 
@@ -22,7 +22,25 @@ public class Resource extends WorldEntity{
 
 
 
+    public enum Resources{
+        //Asteroid
+        TITANIUM,
+        STEEL,
+        DILITHIUM,
 
+
+        //
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 

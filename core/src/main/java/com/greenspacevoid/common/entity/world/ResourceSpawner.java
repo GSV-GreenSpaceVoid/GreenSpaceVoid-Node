@@ -1,11 +1,21 @@
-package com.greenspacevoid.entity.world;
+package com.greenspacevoid.common.entity.world;
 
 import com.greenspacevoid.system.StarSystem;
 
 public class ResourceSpawner extends WorldEntity {
 
-    private static final int maxResourceNodeCount = 300; //We may make this a function, making the lowest security of star systems the *most* abudant B)
+    public enum SpawnerType{
+        ASTEROID,
+        ICE,
+        GAS,
+        MIXED,
+
+    }
+    private static final int resourceNodeCap = 300;
+    private int maxResourceNodeCount;
     private static final boolean targetable = false;
+
+
     int resourceNodeCount; //Asteroids, gas clouds, iceballs, the works|We will try and limit this to <300
     static String name = "Multi-Resource Field";
     double securityLevel; //Determines resource rarity.
@@ -21,6 +31,24 @@ public class ResourceSpawner extends WorldEntity {
         update();//Sets important data such as name and security level.
 
         //<System name> + <to be implemented(celestial body name) + <FieldType name> + <?(number)
+
+    }
+
+
+    @Override
+    public void update() {//Keeps things up to date when kingdoms change.
+        StarSystem starSystem = this.getStarSystem();
+        try {
+            name = starSystem.getName();
+            this.securityLevel = starSystem.getSecurityLevel();
+
+        }catch(Exception ignored){
+            System.out.println("ERROR: Something went wrong. An asteroid field was created OUTSIDE of a system or a system has an invalid securityLevel." +
+                    "Setting security level to 1.0");
+            this.securityLevel = 1.0;
+        }
+
+        maxResourceNodeCount = (int)(Math.abs(1.1 - securityLevel) * resourceNodeCap);
         switch(type){
             case ASTEROID:
                 name += " Asteroid Field";
@@ -37,18 +65,11 @@ public class ResourceSpawner extends WorldEntity {
     }
 
 
-    @Override
-    public void update() {//Keeps things up to date when kingdoms change.
-        StarSystem starSystem = this.getStarSystem();
-        try {
-            name = starSystem.getName();
-            this.securityLevel = starSystem.getSecurityLevel();
-        }catch(Exception ignored){
-            System.out.println("ERROR: Something went wrong. An asteroid field was created OUTSIDE of a system or a system has an invalid securityLevel." +
-                    "Setting security level to 1.0");
-            this.securityLevel = 1.0;
-        }
-    }
+
+
+
+
+
 
     public void generateResources(){//May overload..Who knows
         //Override stub method
@@ -84,6 +105,11 @@ public class ResourceSpawner extends WorldEntity {
         }
         resourceNodeCount = count;
     }
+
+
+
+
+
 
 
 
@@ -126,13 +152,7 @@ public class ResourceSpawner extends WorldEntity {
 
 
 
-    public enum SpawnerType{
-        ASTEROID,
-        ICE,
-        GAS,
-        MIXED,
 
-    }
 
 
 
