@@ -1,6 +1,7 @@
 package com.greenspacevoid;
 
 import com.greenspacevoid.server.ServerSide;
+import com.greenspacevoid.system.StarSystem;
 
 public class GSVServer {
 

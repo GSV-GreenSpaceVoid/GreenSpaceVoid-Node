@@ -1,6 +1,6 @@
 package com.greenspacevoid.entity.world;
 
-public class Asteroid extends WorldEntity{
+public class Resource extends WorldEntity{
 
     static final String name = "Asteroid";
 
@@ -10,7 +10,7 @@ public class Asteroid extends WorldEntity{
 
 
 
-    public Asteroid(double x, double y, boolean targetable) {
+    public Resource(double x, double y, boolean targetable) {
         //Todo: Create tons of wonky code that allows for efficient asteroid generation B)
 
 

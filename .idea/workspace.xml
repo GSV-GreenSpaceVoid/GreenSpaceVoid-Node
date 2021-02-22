@@ -121,22 +121,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1613955313683">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1613963538188">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613955313683" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1613955313683">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1613963538188" />
+    <state x="474" y="14" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613961335083">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613955313683" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1613955313683">
+    <state x="474" y="14" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1613961335083" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1613961771189">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613955313683" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1613955313683">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613961771189" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1613961771189">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613955313683" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613961771189" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1613961771188">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613961771188" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1613961771189">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613961771189" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1613952621776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -145,5 +153,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="209" y="27" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1613952068555" />
+    <state x="469" y="164" key="refactoring.ChangeSignatureDialog" timestamp="1613963162855">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="469" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1613963162855" />
   </component>
 </project>
