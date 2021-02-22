@@ -3,8 +3,35 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="" />
+    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/ores/Ore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/ResourceNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/ResourceSpawner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +82,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -120,35 +148,50 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1613963538188">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1614014467666">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1613963538188" />
-    <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1613967914593">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1614014467666" />
+    <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614012890906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1613967914593" />
+    <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1614012890906" />
     <state x="474" y="14" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613961335083">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="474" y="14" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1613961335083" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1613961771189">
+    <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog" timestamp="1614017851224">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613961771189" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1613961771189">
+    <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614020833857">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613961771189" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1613961771188">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614020833857" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614020833857">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613961771188" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1613961771189">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614020833857" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614020833856">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613961771189" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614020833856" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614020833857">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614020833857" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1613952621776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -161,5 +204,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="469" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1613963162855" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1614013321164">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1614013321164" />
   </component>
 </project>

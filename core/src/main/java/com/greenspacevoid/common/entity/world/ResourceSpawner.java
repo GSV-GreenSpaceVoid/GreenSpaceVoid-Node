@@ -22,9 +22,6 @@ public class ResourceSpawner extends WorldEntity {
     SpawnerType type = SpawnerType.MIXED;
 
 
-
-
-
     public ResourceSpawner(double x, double y, SpawnerType type) {
         super(name, x, y, targetable);
 
@@ -33,6 +30,11 @@ public class ResourceSpawner extends WorldEntity {
         //<System name> + <to be implemented(celestial body name) + <FieldType name> + <?(number)
 
     }
+
+
+
+
+
 
 
     @Override
