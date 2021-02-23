@@ -5,7 +5,7 @@ import com.greenspacevoid.common.item.Item;
 public class Material extends Item {
 
 
-    public Material(String name, double baseVolume, double baseMass, int quantity) {
+    public Material(String name, double baseVolume, int quantity) {
         super(name, baseVolume, quantity);
     }
 
@@ -17,8 +17,8 @@ public class Material extends Item {
 
     public static class SolidMaterials extends Material {
 
-        public SolidMaterials(String name, double baseVolume, double baseMass, int quantity) {
-            super(name, baseVolume, baseMass, quantity);
+        public SolidMaterials(String name, double baseVolume, int quantity) {
+            super(name, baseVolume, quantity);
         }
 
 
@@ -28,7 +28,7 @@ public class Material extends Item {
             private static final double baseMass = 8050; //8050 kg/m3
 
             public Steel(int quantity){
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -39,7 +39,7 @@ public class Material extends Item {
 
 
             public Aluminum(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -49,7 +49,7 @@ public class Material extends Item {
             private static final double baseMass = 4507 ; //kg/m^3
 
             public Titanium(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -59,7 +59,7 @@ public class Material extends Item {
             private static final double baseMass = 12390; //kg/m^3
 
             public Rhodium(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -69,7 +69,7 @@ public class Material extends Item {
             private static final double baseMass = 19050; //kg/m^3
 
             public Uranium(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
 
         }
@@ -79,8 +79,8 @@ public class Material extends Item {
             private static final double baseVolume = 1; //m^3
             private static final double baseMass = 11342; //kg/m^3
 
-            public Lead(String name, double baseVolume, double baseMass, int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+            public Lead(String name, double baseVolume, int quantity) {
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -89,8 +89,8 @@ public class Material extends Item {
             private static final double baseVolume = 1; //m^3
             private static final double baseMass = 2330; //kg/m^3
 
-            public Silicon(String name, double baseVolume, double baseMass, int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+            public Silicon(String name, double baseVolume, int quantity) {
+                super(name, baseVolume, quantity);
             }
 
 
@@ -105,8 +105,8 @@ public class Material extends Item {
 
     public static class IceMaterials extends Material{
 
-        public IceMaterials(String name, double baseVolume, double baseMass, int quantity) {
-            super(name, baseVolume, baseMass, quantity);
+        public IceMaterials(String name, double baseVolume, int quantity) {
+            super(name, baseVolume, quantity);
         }
 
 
@@ -117,7 +117,7 @@ public class Material extends Item {
 
 
             public Permafrost(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -129,7 +129,7 @@ public class Material extends Item {
 
 
                 public IceCrystal(int quantity) {
-                    super(name, baseVolume, baseMass, quantity);
+                    super(name, baseVolume, quantity);
                 }
 
         }
@@ -147,8 +147,8 @@ public class Material extends Item {
     public static class GasMaterials extends Material{
 
 
-        public GasMaterials(String name, double baseVolume, double baseMass, int quantity) {
-            super(name, baseVolume, baseMass, quantity);
+        public GasMaterials(String name, double baseVolume, int quantity) {
+            super(name, baseVolume, quantity);
         }
 
         public static class LiquidHelium extends GasMaterials{
@@ -157,7 +157,7 @@ public class Material extends Item {
             private static final double baseMass = 300;
 
             public LiquidHelium(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -167,7 +167,7 @@ public class Material extends Item {
             private static final double baseMass = 400;
 
             public LiquidHelium3(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
@@ -178,7 +178,7 @@ public class Material extends Item {
             private static final double baseMass = 100;
 
             public LiquidHydrogen(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
 
 
@@ -194,7 +194,7 @@ public class Material extends Item {
             private static final double baseMass = 200;
 
             public LiquidHydrogen2(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
 
 
@@ -208,7 +208,7 @@ public class Material extends Item {
             private static final double baseMass = 250;
 
             public LiquidHydrogen3(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
 
 
@@ -224,7 +224,7 @@ public class Material extends Item {
             private static final double baseVolume = 1;
             private static final double baseMass = 1000;
             public Water(int quantity) {
-                super(name, baseVolume, baseMass, quantity);
+                super(name, baseVolume, quantity);
             }
         }
 
