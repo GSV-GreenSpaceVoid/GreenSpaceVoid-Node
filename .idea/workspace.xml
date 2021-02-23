@@ -22,26 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/Vessel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/Blueprint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/vessels/VesselBlueprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/GSVServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/GSVServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Argon.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Argon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Xenon.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Xenon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$ICE_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$ICE_ORE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" afterDir="false" />
-    </list>
+    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,22 +190,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614071224369">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614077034804">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614071224369">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614077034804" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614077034804">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614071224369">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614077034804" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614077034804">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614071224369">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614077034804" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614077034804">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614077034804" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1613952621776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
