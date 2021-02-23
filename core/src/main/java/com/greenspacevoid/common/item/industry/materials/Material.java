@@ -135,14 +135,97 @@ public class Material extends Item {
         }
 
 
+
+
+
+
+
     }
 
 
 
-    public static class GasMaterials {
+    public static class GasMaterials extends Material{
+
+
+        public GasMaterials(String name, double baseVolume, double baseMass, int quantity) {
+            super(name, baseVolume, baseMass, quantity);
+        }
+
+        public static class LiquidHelium extends GasMaterials{
+            private static final String name = "Liquid Helium";
+            private static final double baseVolume = 1;
+            private static final double baseMass = 300;
+
+            public LiquidHelium(int quantity) {
+                super(name, baseVolume, baseMass, quantity);
+            }
+        }
+
+        public static class LiquidHelium3 extends GasMaterials{
+            private static final String name = "Liquid Helium-3";
+            private static final double baseVolume = 1;
+            private static final double baseMass = 400;
+
+            public LiquidHelium3(int quantity) {
+                super(name, baseVolume, baseMass, quantity);
+            }
+        }
+
+
+        public static class LiquidHydrogen extends GasMaterials{
+            private static final String name = "Liquid Hydrogen";
+            private static final double baseVolume = 1;
+            private static final double baseMass = 100;
+
+            public LiquidHydrogen(int quantity) {
+                super(name, baseVolume, baseMass, quantity);
+            }
+
+
+
+
+        }
+
+
+
+        public static class LiquidHydrogen2 extends GasMaterials{
+            private static final String name = "Liquid Hydrogen-2";
+            private static final double baseVolume = 1;
+            private static final double baseMass = 200;
+
+            public LiquidHydrogen2(int quantity) {
+                super(name, baseVolume, baseMass, quantity);
+            }
+
+
+
+
+        }
+
+        public static class LiquidHydrogen3 extends GasMaterials{
+            private static final String name = "Liquid Hydrogen-3";
+            private static final double baseVolume = 1;
+            private static final double baseMass = 250;
+
+            public LiquidHydrogen3(int quantity) {
+                super(name, baseVolume, baseMass, quantity);
+            }
+
+
+
+
+        }
+
+
+
 
         public static class Water extends GasMaterials{
-
+            private static final String name = "Water";
+            private static final double baseVolume = 1;
+            private static final double baseMass = 1000;
+            public Water(int quantity) {
+                super(name, baseVolume, baseMass, quantity);
+            }
         }
 
 
