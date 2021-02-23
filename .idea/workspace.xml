@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/components/Components.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" afterDir="false" />
     </list>
@@ -88,6 +84,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -203,6 +202,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1613952621776" />
+    <state x="267" y="165" key="caller.chooser.dialog" timestamp="1614035522619">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="267" y="165" key="caller.chooser.dialog/0.0.1536.834@0.0.1536.834" timestamp="1614035522619" />
     <state x="209" y="27" key="new project wizard" timestamp="1613952068555">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
