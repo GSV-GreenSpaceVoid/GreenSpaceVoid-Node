@@ -5,6 +5,8 @@ import com.greenspacevoid.common.item.industry.resources.Resource;
 import com.greenspacevoid.server.ServerSide;
 import com.greenspacevoid.system.StarSystem;
 
+import java.util.ArrayList;
+
 public class GSVServer {
 
 
@@ -27,6 +29,20 @@ public class GSVServer {
 
          */
 
+        ArrayList<Material> test = new ArrayList<>();
+
+        Resource r = new Resource.ORE.SOLID_ORE.IronOres.Magnetite(10);
+
+        test = r.refine();
+
+        for(int i  = 0; i < test.size(); i++){
+
+            System.out.println(test.get(i).getName());
+            System.out.println(test.get(i).getQuantity());
+
+        }
+
+
 
 
 
@@ -39,7 +55,7 @@ public class GSVServer {
             e.printStackTrace();
         }
 
-        Material.SolidMaterials.Aluminum test = new Material.SolidMaterials.Aluminum(1);
+        //Material.SolidMaterials.Aluminum test = new Material.SolidMaterials.Aluminum(1);
 
 
 

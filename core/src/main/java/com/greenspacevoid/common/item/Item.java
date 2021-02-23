@@ -26,20 +26,23 @@ public class Item {
     }
 
 
+    public String getName() {
+        return name;
+    }
 
+    public double getBaseVolume() {
+        return baseVolume;
+    }
 
+    public double getTotalVolume() {
+        return totalVolume;
+    }
 
+    public double getTotalMass() {
+        return totalMass;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    public int getQuantity() {
+        return quantity;
+    }
 }

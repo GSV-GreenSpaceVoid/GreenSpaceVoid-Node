@@ -23,8 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/components/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/components/Components.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/Vessel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/Blueprint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/vessels/VesselBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/GSVServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/GSVServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Argon.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Argon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Xenon.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE$Xenon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$GAS_ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$ICE_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$ICE_ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE$SOLID_ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource$ORE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/com/greenspacevoid/common/item/industry/resources/Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,13 +116,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/ishmaelistarempire" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\ishmaelistarempire" />
+      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\israel" />
+      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\edom" />
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\server" />
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\server\shared" />
     </key>
@@ -165,18 +185,18 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1614024424113" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1614048400543">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1614074577088">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1614048400543" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1614074577088" />
     <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614012890906">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1614012890906" />
-    <state x="474" y="14" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613961335083">
+    <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614074601943">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="474" y="14" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1613961335083" />
+    <state x="474" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614074601943" />
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614047682514">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -189,22 +209,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614023429379">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614071224369">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614023429379">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614071224369">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614023429379">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614071224369">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614023429379">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614071224369">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614023429379" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614071224369" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1613952621776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

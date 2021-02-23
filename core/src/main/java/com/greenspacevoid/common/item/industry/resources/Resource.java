@@ -3,6 +3,7 @@ package com.greenspacevoid.common.item.industry.resources;
 import com.greenspacevoid.common.item.Item;
 import com.greenspacevoid.common.item.industry.materials.Material;
 
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 //Todo: Balance the refinement values B)
 public class Resource extends Item {
@@ -705,7 +706,8 @@ public class Resource extends Item {
         private int yieldQuantity;
 
         public RefinementData(Class c, int yieldQuantity){
-        this.yieldQuantity = yieldQuantity;
+            this.material = c;
+            this.yieldQuantity = yieldQuantity;
 
 
 
@@ -730,10 +732,20 @@ public class Resource extends Item {
 
     public ArrayList<Material> refine(){
 
+        ArrayList<Material> materials = new ArrayList<>();
 
 
+        for(int i = 0; i < data.length; i++){
+            try {
+                Constructor constructor = data[i].material.getDeclaredConstructor(int.class);
+                materials.add((Material) constructor.newInstance(data[i].getYieldQuantity()));
+            }catch(Exception e){
+                e.printStackTrace();
+            }
 
-        return null;
+
+        }
+        return materials;
 
     }
 
