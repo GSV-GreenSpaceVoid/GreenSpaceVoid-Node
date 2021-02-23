@@ -6,7 +6,7 @@ public class Material extends Item {
 
 
     public Material(String name, double baseVolume, double baseMass, int quantity) {
-        super(name, baseVolume, baseMass, quantity);
+        super(name, baseVolume, quantity);
     }
 
 

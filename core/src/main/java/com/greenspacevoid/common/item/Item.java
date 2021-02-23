@@ -2,14 +2,16 @@ package com.greenspacevoid.common.item;
 
 public class Item {
     String name;
-    double baseVolume, totalVolume, baseMass, totalMass; //basevolume * quantity = totalvolume
+    double baseVolume;
+    double totalVolume;
+    double totalMass; //basevolume * quantity = totalvolume
     int quantity;
 
 
-    public Item(String name, double baseVolume,double baseMass, int quantity){
+    public Item(String name, double baseVolume, int quantity){
         this.name = name;
         this.baseVolume = baseVolume;
-        this.baseMass = baseMass;
+        //this.baseMass = baseMass;
 
         if(quantity <= 0){
             this.quantity = 1;
