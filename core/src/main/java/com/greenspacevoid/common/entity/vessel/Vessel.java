@@ -86,9 +86,15 @@ public class Vessel extends Entity {
 
 
 
-    public Vessel(String name, double x, double y, boolean targetable) {
-        super(name, x, y, targetable);
+    public Vessel(String name, double x, double y, boolean isInvincible, boolean isTargetable) {
+        super(name, x, y, isInvincible, isTargetable);
     }
+
+
+
+
+
+
 
 
 

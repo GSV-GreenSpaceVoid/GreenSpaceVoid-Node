@@ -5,8 +5,11 @@ import com.greenspacevoid.common.item.Item;
 public class Blueprint extends Item {
     private static final double baseVolume = 1;
 
-    public Blueprint(String name, int quantity) {
+    private Recipe[] recipes;
+
+    public Blueprint(String name, int quantity, Recipe[] recipes) {
         super(name,baseVolume, quantity);
+        this.recipes = recipes;
     }
 
 

@@ -1,19 +1,23 @@
 package com.greenspacevoid.common.entity;
 
-import com.greenspacevoid.system.StarSystem;
+import com.greenspacevoid.common.system.StarSystem;
 
 public class Entity {
     //Literally anything!
     String name;
     double x, y, direction;
-    boolean targetable;
+    boolean isInvincible;//Think of as being invincible...
+    boolean isTargetable;
+    boolean canMove;
 
-    public Entity(String name, double x, double y,  boolean targetable){
+    public Entity(String name, double x, double y,  boolean isInvincible, boolean isTargetable, boolean canMove){
         this.name = name;
         this.x = x;
         this.y = y;
         this.direction = 0;
-        this.targetable = targetable;
+        this.isInvincible = isInvincible;
+        this.isTargetable = isTargetable;
+        this.canMove = canMove;
 
     }
 
@@ -65,12 +69,8 @@ public class Entity {
         this.y = y;
     }
 
-    public void setDirection(double direction) {
-        this.direction = direction;
-    }
-
-    public void setTargetable(boolean targetable) {
-        this.targetable = targetable;
+    public void setInvincible(boolean invincible) {
+        this.isInvincible = invincible;
     }
 
     public String getName() {
@@ -89,8 +89,8 @@ public class Entity {
         return direction;
     }
 
-    public boolean isTargetable() {
-        return targetable;
+    public boolean isInvincible() {
+        return isInvincible;
     }
 
     public enum EntityTypes{//Enumerations may be deprecated due to instanceOf
@@ -113,11 +113,30 @@ public class Entity {
 
 
 
+    //Todo: Physics
+    public void move(double x, double y){//Called whenever the physics engine says so..or if an admin needs to yeet something into oblivion.
+        //Mmmm yes physics
+        if(canMove) {
+            this.x = x;
+            this.y = y;
+        }
+
+
+    }
 
 
 
+   public void forceMove(double x, double y){
+        boolean previousState = this.canMove;
+        this.canMove = true;
+        move(x,y);
+        this.canMove = previousState;
 
+   }
 
+   public void setDirection(double direction){
+        this.direction = direction;
+   }
 
 
 

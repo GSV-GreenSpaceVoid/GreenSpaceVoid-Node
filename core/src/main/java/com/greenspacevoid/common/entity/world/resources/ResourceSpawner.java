@@ -1,6 +1,7 @@
-package com.greenspacevoid.common.entity.world;
+package com.greenspacevoid.common.entity.world.resources;
 
-import com.greenspacevoid.system.StarSystem;
+import com.greenspacevoid.common.entity.world.WorldEntity;
+import com.greenspacevoid.common.system.StarSystem;
 
 public class ResourceSpawner extends WorldEntity {
 

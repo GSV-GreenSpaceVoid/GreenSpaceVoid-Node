@@ -3,7 +3,6 @@ package com.greenspacevoid;
 import com.greenspacevoid.common.item.industry.materials.Material;
 import com.greenspacevoid.common.item.industry.resources.Resource;
 import com.greenspacevoid.server.ServerSide;
-import com.greenspacevoid.system.StarSystem;
 
 import java.util.ArrayList;
 

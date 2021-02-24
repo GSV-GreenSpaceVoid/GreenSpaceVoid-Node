@@ -1,6 +1,8 @@
-package com.greenspacevoid.common.entity.world;
+package com.greenspacevoid.common.entity.world.resources;
 
-public class ResourceNode extends WorldEntity{
+import com.greenspacevoid.common.entity.world.WorldEntity;
+
+public class ResourceNode extends WorldEntity {
 
     static final String name = "Asteroid";
 
