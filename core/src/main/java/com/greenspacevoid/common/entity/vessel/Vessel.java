@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class Vessel extends Entity {
 
+    double volume;
+
     boolean canMove;
 
     //Base(Constructor initialized)
@@ -86,11 +88,10 @@ public class Vessel extends Entity {
 
 
 
-    public Vessel(String name, double x, double y, boolean isInvincible, boolean isTargetable, boolean canMove) {
+    public Vessel(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
         super(name, x, y, isInvincible, isTargetable, canMove);
+        this.volume = volume;
     }
-
-
 
 
 

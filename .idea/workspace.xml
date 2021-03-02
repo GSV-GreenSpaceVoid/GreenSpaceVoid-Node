@@ -23,7 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/station/Station.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/engine/ProCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/engine/exceptions/ErrorMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/Vessel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/system/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/system/StarSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,18 +106,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/modules/weapon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/station" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\station" />
+      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\ship" />
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\item\industry\blueprints\modules\weapon" />
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\item\industry\blueprints\modules\structural" />
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\item\industry\blueprints\modules\shield" />
-      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\ishmaelistarempire" />
-      <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\entity\vessel\israel" />
     </key>
   </component>
   <component name="RunManager">
@@ -168,10 +174,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1614024424113" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1614074577088">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="510" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1614661898730">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1614074577088" />
+    <state x="510" y="104" key="#com.intellij.ide.util.MemberChooser/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614661898730" />
     <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614142027274">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

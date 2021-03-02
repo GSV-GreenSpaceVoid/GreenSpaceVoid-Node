@@ -113,6 +113,15 @@ public class Entity {
 
 
 
+
+
+
+
+
+
+
+
+
     //Todo: Physics
     public void move(double x, double y){//Called whenever the physics engine says so..or if an admin needs to yeet something into oblivion.
         //Mmmm yes physics

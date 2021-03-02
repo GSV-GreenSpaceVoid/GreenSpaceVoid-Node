@@ -12,6 +12,9 @@ public class StarSystem {
     String name;
     double securityLevel;
     ArrayList<Entity> entities = new ArrayList<>();
+    //Galactic coordinates
+    double LYX, LYY;
+
     //Todo: Starcharts B)
 
     public StarSystem(String name, double securityLevel){
@@ -29,5 +32,13 @@ public class StarSystem {
 
     public ArrayList<Entity> getEntities() {//Returns an arraylist don't forget...
         return entities;
+    }
+
+    public double getLYX() {
+        return LYX;
+    }
+
+    public double getLYY() {
+        return LYY;
     }
 }
