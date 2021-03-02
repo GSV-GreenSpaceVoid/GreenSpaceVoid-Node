@@ -59,7 +59,7 @@ public class Station extends Vessel {
         public void linkGate(JumpGate gate) throws IOException {
             //Todo: Advanced distance calculations
             //Todo: compute jump distance (in Lightyears)
-            
+
 
 
 
