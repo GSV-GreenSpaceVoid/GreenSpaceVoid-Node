@@ -39,7 +39,7 @@ public class Entity {
     }
 
 
-    public void update(){//Before kingdoms can change, men must change - Isaiah probably
+    public void updateSpawner(){//Before kingdoms can change, men must change - Isaiah probably
 
 
 
@@ -148,6 +148,15 @@ public class Entity {
    }
 
 
+
+   public void updateS(){
+
+
+
+
+
+
+   }
 
 
 }

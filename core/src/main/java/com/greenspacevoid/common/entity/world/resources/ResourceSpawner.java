@@ -5,6 +5,18 @@ import com.greenspacevoid.common.system.StarSystem;
 
 public class ResourceSpawner extends WorldEntity {
 
+    private static boolean isInvincible = true;
+    private static boolean isTargetable = false;
+    private static boolean canMove = false;
+
+
+    public ResourceSpawner(double x, double y, SpawnerType type) {
+        super(name, x, y, isInvincible, isTargetable, canMove);
+        this.type = type;
+        updateSpawner();
+
+    }
+
     public enum SpawnerType{
         ASTEROID,
         ICE,
@@ -23,14 +35,7 @@ public class ResourceSpawner extends WorldEntity {
     SpawnerType type = SpawnerType.MIXED;
 
 
-    public ResourceSpawner(double x, double y, SpawnerType type) {
-        super(name, x, y, targetable);
 
-        update();//Sets important data such as name and security level.
-
-        //<System name> + <to be implemented(celestial body name) + <FieldType name> + <?(number)
-
-    }
 
 
 
@@ -39,7 +44,7 @@ public class ResourceSpawner extends WorldEntity {
 
 
     @Override
-    public void update() {//Keeps things up to date when kingdoms change.
+    public void updateSpawner() {//Keeps things up to date when kingdoms change.
         StarSystem starSystem = this.getStarSystem();
         try {
             name = starSystem.getName();
@@ -137,7 +142,8 @@ public class ResourceSpawner extends WorldEntity {
     public static class GasFieldSpawner extends ResourceSpawner {
         private static final SpawnerType type = SpawnerType.GAS;
 
-        public GasFieldSpawner(double x, double y) {
+
+        public GasFieldSpawner(String name, double x, double y, boolean isInvincible, boolean isTargetable, boolean canMove) {
             super(x, y, type);
         }
     }

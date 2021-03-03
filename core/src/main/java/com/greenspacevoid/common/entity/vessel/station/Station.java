@@ -10,29 +10,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Station extends Vessel {
+    //Todo: Cargo capacities.
 
-
-    public Station(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
-        super(name, x, y, volume, isInvincible, isTargetable, canMove);
+    public Station(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
+        super(name, x, y, volume, isInvincible, isTargetable, canMove, baseCargoCapacity);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public static class JumpGate extends Station{//World or player owned.
         private long jumpWarmupTime;

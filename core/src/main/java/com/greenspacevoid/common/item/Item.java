@@ -29,6 +29,25 @@ public class Item {
     }
 
 
+    public void update(){
+        /*Todo: This method is called in every grandchild class.
+
+
+
+
+         */
+
+
+
+
+
+
+
+    }
+
+
+
+
      //public void stack(){
 
 
@@ -58,8 +77,8 @@ public class Item {
 
 
     public static class CargoHold{
-        private ArrayList<Item> cargoHold = new ArrayList<>();
-        private double cargoHoldSpace;
+        ArrayList<Item> cargoHold = new ArrayList<>();
+        double cargoHoldSpace;
         public CargoHold(double cargoHoldSpace){
             this.cargoHoldSpace = cargoHoldSpace;
 
