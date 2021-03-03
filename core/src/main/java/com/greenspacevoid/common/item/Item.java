@@ -1,5 +1,6 @@
 package com.greenspacevoid.common.item;
 
+import com.greenspacevoid.common.item.industry.resources.Resource;
 import com.greenspacevoid.engine.exceptions.ErrorMessages;
 
 import java.util.ArrayList;
@@ -128,10 +129,6 @@ public class Item {
                     cargoHold.remove(targetItem);
                 }
             }
-
-
-
-
         }
 
 
@@ -144,6 +141,55 @@ public class Item {
 
     }
 
+    public static class OreHold extends CargoHold{
+
+
+        public OreHold(double cargoHoldSpace) {
+            super(cargoHoldSpace);
+        }
+
+
+        @Override
+        public void add(Item item, ArrayList<Item> storedWhere, boolean stack) {
+            if(item instanceof Resource.ORE){
+                super.add(item, storedWhere, stack);
+
+
+            }else{
+
+                //Return exception.. Can't fit non-ores in the ore hold!
+            }
+
+        }
+    }
+
+
+
+
+
+    public static class ShipHold {
+        double volume;
+
+
+        private ShipHold (double volume){
+            this.volume = volume;
+
+        }
+
+        //Add ships, pack ships, move ships, delete ships.
+
+
+
+
+        public static class StationShipHold extends ShipHold{
+
+
+            private StationShipHold(double volume) {
+                super(volume);
+            }
+        }
+
+        //Override methods of course. As stations have infinite storage space B)
 
 
 
@@ -153,12 +199,7 @@ public class Item {
 
 
 
-
-
-
-
-
-
+    }
 
 
 }

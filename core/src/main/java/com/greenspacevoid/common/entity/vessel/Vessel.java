@@ -7,6 +7,11 @@ import java.util.ArrayList;
 
 public class Vessel extends Entity {
 
+
+    Class blueprintClass;
+
+
+
     double volume;
 
     boolean canMove;
@@ -19,7 +24,7 @@ public class Vessel extends Entity {
     double baseHullEnergyResist, baseHullThermalResist, baseHullEMPResist, baseHullExplosiveResist;
     double baseShieldEnergyResist, baseShieldThermalResist, baseShieldEMPResist, baseShieldExplosiveResist;
 
-    double baseCargoCapacity;
+
     double baseSensorStrength, baseSensorRadius, baseSignatureStrength, baseSignatureRadius;
 
     double basePowerGrid, baseCapacitorCapacity, baseCapacitorRegenerationRate;
@@ -27,6 +32,18 @@ public class Vessel extends Entity {
     double baseInertiaModifier, baseSpeed;
 
     int hullModuleSlots, shieldModuleSlots, weaponModuleSlots, miningSlots, weaponSlots, maxTargets;
+
+    double baseRailGunDamageModifier, baseMissileDamageModifier, baseLaserDamageModifier, baseArtilleryDamageModifier, baseMiningYieldModifier;
+    double baseRailGunROFModifier, baseMissileROFModifier, baseLaserROFModifier, baseArtilleryROFModifier, baseMiningROFModifier;
+
+    double baseDroneControlRange, maxNumberOfDrones;
+    double baseDroneDamageModifier, baseDroneDefenseModifier,baseDroneSpeedModifier, baseDroneRateOfFireModifier, baseDroneMiningYieldModifier;
+
+
+
+
+
+
 
 
     //Current
@@ -37,7 +54,7 @@ public class Vessel extends Entity {
     double currentHullEnergyResist, currentHullThermalResist, currentHullEMPResist, currentHullExplosiveResist;
     double currentShieldEnergyResist, currentShieldThermalResist, currentShieldEMPResist, currentShieldExplosiveResist;
 
-    double currentCargoCapacity;
+
     double currentSensorStrength, currentSensorRadius, currentSignatureStrength, currentSignatureRadius;
 
     double currentPowerGrid, currentCapacitorCapacity, currentCapacitorRegenerationRate;
@@ -54,7 +71,7 @@ public class Vessel extends Entity {
     double maxHullEnergyResist, maxHullThermalResist, maxHullEMPResist, maxHullExplosiveResist;
     double maxShieldEnergyResist, maxShieldThermalResist, maxShieldEMPResist, maxShieldExplosiveResist;
 
-    double maxCargoCapacity;
+
     double maxSensorStrength, maxSensorRadius, maxSignatureStrength, maxSignatureRadius;
 
     double maxPowerGrid, maxCapacitorCapacity, maxCapacitorRegenerationRate;
@@ -63,7 +80,7 @@ public class Vessel extends Entity {
 
 
 
-
+    Item.CargoHold cargoHold;
 
 
 
@@ -88,8 +105,12 @@ public class Vessel extends Entity {
 
 
 
-    public Vessel(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
+    public Vessel(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
         super(name, x, y, isInvincible, isTargetable, canMove);
+            cargoHold = new Item.CargoHold(baseCargoCapacity);
+
+
+
         this.volume = volume;
     }
 
