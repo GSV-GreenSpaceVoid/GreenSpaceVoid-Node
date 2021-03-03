@@ -3,7 +3,6 @@ package com.greenspacevoid.common.entity.vessel.station;
 import com.greenspacevoid.common.entity.Entity;
 import com.greenspacevoid.common.entity.vessel.Vessel;
 import com.greenspacevoid.common.item.Item;
-import com.greenspacevoid.common.system.StarSystem;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,16 +17,33 @@ public class Station extends Vessel {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static class JumpGate extends Station{//World or player owned.
-        private final long jumpWarmupTime = 1000;
+        private long jumpWarmupTime;
         private JumpGate linkedJumpGate;
         private boolean isLinked;
         private double jumpDistance;
 
-        public JumpGate(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
+        public JumpGate(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, long baseJumpWarmupTime) {
             super(name, x, y, volume, isInvincible, isTargetable, canMove);
             isLinked = false;
-
+            this.jumpWarmupTime = baseJumpWarmupTime;
 
 
         }
@@ -69,19 +85,24 @@ public class Station extends Vessel {
 
 
 
+
+
+
+
+
         public static class PlayerGate extends JumpGate{
             private static final boolean isInvincible = false;
             private static final boolean isTargetable = true;
             private static final boolean canMove = false; //Tractor a jumpgate into the nearest star anyone?
-            private double jumpPower;
+            private double jumpPower, shipSize;
 
             private ArrayList<Item> cargoHold;
             double cargoHoldSpace;
 
 
 
-            public PlayerGate(String name, double x, double y, double volume, double cargoHoldSpace) {
-                super(name, x, y, volume, isInvincible, isTargetable, canMove);
+            public PlayerGate(String name, double x, double y, double volume, double cargoHoldSpace, long baseJumpWarmupTime) {
+                super(name, x, y, volume, isInvincible, isTargetable, canMove, baseJumpWarmupTime);
                 cargoHold = new ArrayList<>();
                 this.cargoHoldSpace = cargoHoldSpace;
 
@@ -118,8 +139,8 @@ public class Station extends Vessel {
 
 
 
-            public NPCGate(String name, double x, double y, double volume) {
-                super(name, x, y, volume, isInvincible, isTargetable, canMove);
+            public NPCGate(String name, double x, double y, double volume, long baseJumpWarmupTime) {
+                super(name, x, y, volume, isInvincible, isTargetable, canMove, baseJumpWarmupTime);
             }
 
 
