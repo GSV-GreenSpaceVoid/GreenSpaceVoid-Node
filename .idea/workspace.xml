@@ -23,14 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/entities/Deployable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/cargo/CargoContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/cargo/CargoContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/WorldEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/WorldEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/resources/ResourceNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/resources/ResourceNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/resources/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/resources/ResourceSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,10 +223,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="267" y="165" key="caller.chooser.dialog/0.0.1536.834@0.0.1536.834" timestamp="1614035522619" />
-    <state x="209" y="27" key="new project wizard" timestamp="1613952068555">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="131" y="0" key="new project wizard" timestamp="1614816487294">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="209" y="27" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1613952068555" />
+    <state x="131" y="0" key="new project wizard/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614816487293" />
     <state x="469" y="164" key="refactoring.ChangeSignatureDialog" timestamp="1614048666243">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
