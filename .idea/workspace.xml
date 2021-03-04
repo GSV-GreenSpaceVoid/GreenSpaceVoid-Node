@@ -23,12 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/GSVServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +198,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
+    <state x="1916" y="144" key="FileChooserDialogImpl" timestamp="1614832576734">
+      <screen x="1366" y="0" width="1600" height="870" />
+    </state>
+    <state x="1916" y="144" key="FileChooserDialogImpl/1366.0.1600.870/0.0.1366.738@1366.0.1600.870" timestamp="1614832576734" />
     <state width="1323" height="181" key="GridCell.Tab.0.bottom" timestamp="1614822911630">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -235,11 +235,12 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="267" y="165" key="caller.chooser.dialog/0.0.1536.834@0.0.1536.834" timestamp="1614035522619" />
-    <state x="131" y="0" key="new project wizard" timestamp="1614816487294">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="1519" y="0" key="new project wizard" timestamp="1614832628281">
+      <screen x="1366" y="0" width="1600" height="870" />
     </state>
     <state x="209" y="27" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1613952068555" />
     <state x="131" y="0" key="new project wizard/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614816487293" />
+    <state x="1519" y="0" key="new project wizard/1366.0.1600.870/0.0.1366.738@1366.0.1600.870" timestamp="1614832628281" />
     <state x="469" y="164" key="refactoring.ChangeSignatureDialog" timestamp="1614048666243">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

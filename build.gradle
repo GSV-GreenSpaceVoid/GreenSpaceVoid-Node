@@ -39,7 +39,7 @@ project(":GreenSpaceVoid-SharedAPI"){
     apply plugin: "java-library"
     dependencies {
 
-        implementation project(':core')
+        testImplementation project(':core')
         compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
 
     }
