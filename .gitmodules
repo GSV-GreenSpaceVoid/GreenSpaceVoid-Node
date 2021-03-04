@@ -1,0 +1,3 @@
+[submodule "GreenSpaceVoid-SharedAPI"]
+	path = GreenSpaceVoid-SharedAPI
+	url = https://github.com/GSV-GreenSpaceVoid/GreenSpaceVoid-SharedAPI

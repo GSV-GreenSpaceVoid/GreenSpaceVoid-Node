@@ -22,36 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/GSVServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/cargo/CargoContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/cargo/CargoContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/vessel/Vessel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/vessel/station/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/vessel/station/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/WorldEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/world/WorldEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/resources/ResourceNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/world/resources/ResourceNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/entity/world/resources/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/entity/world/resources/ResourceSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/entities/Deployable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/entities/Deployable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/Blueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/industry/blueprints/Blueprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/blueprints/vessels/VesselBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/industry/blueprints/vessels/VesselBlueprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/components/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/industry/components/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/materials/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/industry/materials/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/industry/resources/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/item/modules/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/modules/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/common/system/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/system/StarSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/engine/exceptions/ErrorMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/engine/exceptions/ErrorMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/ServerSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/ServerSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/IMPORTANT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/IMPORTANT.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/Networking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/messages/SharedMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/messages/SharedMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/messages/gameEntity/NetworkedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/messages/gameEntity/NetworkedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/messages/gameEntity/targetingandrendering.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/messages/gameEntity/targetingandrendering.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/messages/generalInfo/NetworkedPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/messages/generalInfo/NetworkedPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/network/messages/login/NetworkedLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/network/messages/login/NetworkedLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/renderer/AllRenderableEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/renderer/AllRenderableEntities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoid/server/shared/renderer/AnimationStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/server/shared/renderer/AnimationStates.java" afterDir="false" />
-    </list>
+    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +82,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/core/src/main/java/com/greenspacevoidsharedAPI/common/item/industry/materials/Material.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/materials/Material.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
