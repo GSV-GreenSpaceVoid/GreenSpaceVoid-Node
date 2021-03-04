@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,35 +51,24 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Server" type="f1a62948:ProjectNode" />
+                <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Server" type="f1a62948:ProjectNode" />
+                <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Server" type="f1a62948:ProjectNode" />
+                <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="application" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Server" type="f1a62948:ProjectNode" />
+                <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Server" type="f1a62948:ProjectNode" />
-                <item name="core" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Server" type="f1a62948:ProjectNode" />
-                <item name="core" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -209,22 +200,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614124156252">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1323" height="181" key="GridCell.Tab.0.bottom" timestamp="1614822343995">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614124156252">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1323" height="181" key="GridCell.Tab.0.bottom/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822343995" />
+    <state width="1323" height="181" key="GridCell.Tab.0.center" timestamp="1614822343995">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614124156252">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1323" height="181" key="GridCell.Tab.0.center/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822343995" />
+    <state width="1323" height="181" key="GridCell.Tab.0.left" timestamp="1614822343995">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614124156252">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1323" height="181" key="GridCell.Tab.0.left/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822343995" />
+    <state width="1323" height="181" key="GridCell.Tab.0.right" timestamp="1614822343995">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
+    <state width="1323" height="181" key="GridCell.Tab.0.right/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822343995" />
     <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1613952621776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

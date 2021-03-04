@@ -1,4 +1,4 @@
-rootProject.name = 'GreenSpaceVoid-Server'
+rootProject.name = 'GreenSpaceVoid-Node'
 include 'core'
 include 'GreenSpaceVoid-SharedAPI'
 include 'GreenSpaceVoid-API'
