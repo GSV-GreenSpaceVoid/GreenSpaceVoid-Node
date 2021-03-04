@@ -1,4 +1,4 @@
 rootProject.name = 'GreenSpaceVoid-Server'
 include 'core'
 include 'GreenSpaceVoid-SharedAPI'
-
+include 'GreenSpaceVoid-API'
