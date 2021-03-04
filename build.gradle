@@ -16,4 +16,36 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation project(':GreenSpaceVoid-SharedAPI')
+    implementation project(':core')
+    implementation 'com.esotericsoftware:kryonet:2.22.0-RC1'
+
+}
+
+
+project(":core") {
+    apply plugin: "java-library"
+    dependencies {
+
+        implementation project(':GreenSpaceVoid-SharedAPI')
+        compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
+
+    }
+}
+
+
+
+project(":GreenSpaceVoid-SharedAPI"){
+    apply plugin: "java-library"
+    dependencies {
+
+        implementation project(':core')
+        compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
+
+    }
+
+
+
+
+
 }
