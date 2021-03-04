@@ -3,6 +3,7 @@ package com.greenspacevoidnode;
 import com.greenspacevoidnode.common.item.industry.materials.Material;
 import com.greenspacevoidnode.common.item.industry.resources.Resource;
 import com.greenspacevoidnode.server.ServerSide;
+import com.greenspacevoidsharedAPI.Test;
 
 import java.util.ArrayList;
 
@@ -45,7 +46,7 @@ public class GSVServer {
 
 
 
-        System.out.println("Test");
+        System.out.println("com.greenspacevoidsharedAPI.Test");
 
 
         try {

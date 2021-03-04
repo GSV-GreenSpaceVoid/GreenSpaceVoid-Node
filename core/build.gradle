@@ -20,4 +20,7 @@ dependencies {
 
     compile 'org.mariadb.jdbc:mariadb-java-client:2.7.2'
     compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
+
+    implementation project(':GreenSpaceVoid-SharedAPI')
+
 }

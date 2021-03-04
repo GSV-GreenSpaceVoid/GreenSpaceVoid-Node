@@ -86,7 +86,7 @@ public class NetworkedEntity{//Object Class. Data networking classes are nested 
         }
 
 
-        //IF WE CAN OVERRIDE DATA TO SAVE BANDWIDTH, MORE POWER TO US. Todo: Test kryonet and see which serializes better.
+        //IF WE CAN OVERRIDE DATA TO SAVE BANDWIDTH, MORE POWER TO US. Todo: com.greenspacevoidsharedAPI.Test kryonet and see which serializes better.
         public static class UpdateHitPointPoolsMessage extends SharedMessage{
             int index;
             double currentShield, maxShield, currentHealth, maxHealth, currentHull, maxHull;
