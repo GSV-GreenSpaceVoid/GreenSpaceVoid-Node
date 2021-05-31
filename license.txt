@@ -1,0 +1,9 @@
+GSV LICENSE 1.0:
+
+The goal of this license is to have a secure closed source repository where any close contributor may add, delete, or make changes freely without exposing the source to the open internet. We desire for this project to suffer not any legal penalty and/or conflict from its users or contributors and thus ALL WORK submitted into this repository(s) shall have its rights surrendered to Salvador Joseph Aubert.
+
+The code, source, binaries, assets, commits, branches, and all elements of this repository are the property of Salvador Joseph Aubert, CEO of GreenSpaceVoid.
+
+CONTRIBUTORS: Anyone or anything that contributes code and/or assets hereby surrenders all rights to the work they have submitted to Salvador Joseph Aubert. 
+
+This code is "restricted access" and cannot be redistributed, used privately, and/or be used commercially without the express permission and consent of Salvador Joseph Aubert.
