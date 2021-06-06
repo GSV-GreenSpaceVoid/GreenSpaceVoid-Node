@@ -159,4 +159,29 @@ public class Entity {
    }
 
 
+   public void save(){
+        //Todo: Implement Save!
+
+
+
+
+
+
+
+
+
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
 }

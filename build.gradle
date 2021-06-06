@@ -20,6 +20,13 @@ dependencies {
     implementation project(':core')
     implementation 'com.esotericsoftware:kryonet:2.22.0-RC1'
 
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
+
+
+    implementation 'org.hibernate:hibernate-core:5.5.0.Final'
+
+
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
 }
 
 
@@ -29,6 +36,10 @@ project(":core") {
 
         implementation project(':GreenSpaceVoid-SharedAPI')
         compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
+        implementation 'org.hibernate:hibernate-core:5.5.0.Final'
+        implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.3'
+
+
 
     }
 }

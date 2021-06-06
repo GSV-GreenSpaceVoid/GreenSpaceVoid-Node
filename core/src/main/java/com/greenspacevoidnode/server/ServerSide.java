@@ -17,7 +17,7 @@ public class ServerSide {
     public static void startServer() throws IOException {
 
         Server server = new Server();
-        Networking.syncRegisters(server.getKryo());
+        //Networking.syncRegisters(server.getKryo());
         server.bind(30000);
         server.start();
         //Add listeners here

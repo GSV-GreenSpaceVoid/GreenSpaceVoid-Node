@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "com.greenspacevoidnode.sql.TestClass" table = "testclass">
+
+        <meta attribute = "class-description">
+            Contains our test class!
+        </meta>
+
+        <id name = "id" type = "int" column = "id">
+            <generator class="native"/>
+        </id>
+
+        <property name = "hullHP" column = "hullHP" type = "int"/>
+        <property name = "armorHP" column = "armorHP" type = "int"/>
+        <property name = "shieldHP" column = "shieldHP" type = "int"/>
+        <property name = "name" column = "name" type = "string"/>
+
+    </class>
+</hibernate-mapping>

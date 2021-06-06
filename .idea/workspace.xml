@@ -23,8 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-API/src/main/java/com/greenspacevoidAPI/sql/SQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-API/src/main/java/com/greenspacevoidAPI/sql/SQLInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/SQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/TestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/resources/TestClass.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-API" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-API" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/vessel/station/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/vessel/station/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/blueprints/vessels/VesselBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/blueprints/vessels/VesselBlueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/ServerSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/ServerSide.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +76,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
-                <item name="core" type="2d1252cf:ModuleNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -79,6 +87,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -86,15 +95,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/materials/Material.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1ooTUJaOPLBrPo2Yst44oIvQs9b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -104,10 +114,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GreenSpaceVoid-API" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -117,8 +128,29 @@
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\item\industry\blueprints\modules\weapon" />
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\item\industry\blueprints\modules\structural" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sal\Documents\GSV\GreenSpaceVoid-Node\core\src\main\resources" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="update" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.SQL$HibernateManager">
+    <configuration name="SQL$HibernateManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.greenspacevoidnode.sql.SQL$HibernateManager" />
+      <module name="GreenSpaceVoid-Node.core.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.greenspacevoidnode.sql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GreenSpaceVoid-Server [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -135,11 +167,14 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SQL$HibernateManager" />
         <item itemvalue="Gradle.GreenSpaceVoid-Server [run]" />
       </list>
     </recent_temporary>
@@ -166,89 +201,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1614024424113">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1614024424113" />
-    <state x="510" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1614741313671">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1614074577088" />
-    <state x="510" y="104" key="#com.intellij.ide.util.MemberChooser/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614741313671" />
-    <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614142027274">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="366" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1614142027274" />
-    <state x="161" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614743758739">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="332" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614142863647" />
-    <state x="161" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614743758739" />
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614047682514">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1614047682514" />
-    <state x="499" y="164" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1614052672865">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="164" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.834@0.0.1536.834" timestamp="1614052672865" />
-    <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog" timestamp="1614017851224">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="350" y="0" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/0.0.1536.834@0.0.1536.834" timestamp="1614017851224" />
-    <state x="1916" y="144" key="FileChooserDialogImpl" timestamp="1614832576734">
-      <screen x="1366" y="0" width="1600" height="870" />
-    </state>
-    <state x="1916" y="144" key="FileChooserDialogImpl/1366.0.1600.870/0.0.1366.738@1366.0.1600.870" timestamp="1614832576734" />
-    <state width="1323" height="181" key="GridCell.Tab.0.bottom" timestamp="1614822911630">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1323" height="181" key="GridCell.Tab.0.bottom/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822911630" />
-    <state width="1323" height="181" key="GridCell.Tab.0.center" timestamp="1614822911629">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1323" height="181" key="GridCell.Tab.0.center/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822911629" />
-    <state width="1323" height="181" key="GridCell.Tab.0.left" timestamp="1614822911629">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1323" height="181" key="GridCell.Tab.0.left/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822911629" />
-    <state width="1323" height="181" key="GridCell.Tab.0.right" timestamp="1614822911629">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614124156252" />
-    <state width="1323" height="181" key="GridCell.Tab.0.right/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614822911629" />
-    <state x="1677" y="75" key="Maven.ArtifactSearchDialog" timestamp="1614824862465">
-      <screen x="1366" y="0" width="1600" height="870" />
-    </state>
-    <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1613952621776" />
-    <state x="1677" y="75" key="Maven.ArtifactSearchDialog/1366.0.1600.870/0.0.1366.738@1366.0.1600.870" timestamp="1614824862465" />
-    <state x="384" y="48" width="768" height="775" key="RefactorJ.IntroduceParameterObject" timestamp="1614048566377">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="384" y="48" width="768" height="775" key="RefactorJ.IntroduceParameterObject/0.0.1536.834@0.0.1536.834" timestamp="1614048566377" />
-    <state x="267" y="165" key="caller.chooser.dialog" timestamp="1614035522619">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="267" y="165" key="caller.chooser.dialog/0.0.1536.834@0.0.1536.834" timestamp="1614035522619" />
-    <state x="1519" y="0" key="new project wizard" timestamp="1614832628281">
-      <screen x="1366" y="0" width="1600" height="870" />
-    </state>
-    <state x="209" y="27" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1613952068555" />
-    <state x="131" y="0" key="new project wizard/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614816487293" />
-    <state x="1519" y="0" key="new project wizard/1366.0.1600.870/0.0.1366.738@1366.0.1600.870" timestamp="1614832628281" />
-    <state x="469" y="164" key="refactoring.ChangeSignatureDialog" timestamp="1614048666243">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="469" y="164" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1614048666243" />
-    <state x="383" y="137" width="672" height="600" key="search.everywhere.popup" timestamp="1614741690101">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1614045276829" />
-    <state x="383" y="137" width="672" height="600" key="search.everywhere.popup/1366.0.1600.870/0.0.1366.738@0.0.1366.738" timestamp="1614741690101" />
   </component>
 </project>
