@@ -2,14 +2,20 @@ package com.greenspacevoidnode.common.item.modules;
 
 import com.greenspacevoidnode.common.item.Item;
 
+import javax.persistence.*;
+
+
+@MappedSuperclass
 public class Module extends Item {
 
-    protected Sizes size;
-    protected ModuleType type;
 
 
 
-    private boolean canActivate, canOverheat, isActive;
+    @Column(name = "isActive")
+    private boolean isActive;
+
+
+    private boolean canActivate, canOverheat;
     private long cycleTime;//In millis
 
     private double structureHitPointModifier, hullHitPointModifier, shieldHitPointModifier;
@@ -95,9 +101,6 @@ public class Module extends Item {
     public static class ExtraSmallModule extends Module{
         public ExtraSmallModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.EXTRA_SMALL;
-            this.type = ModuleType.VESSEL;
-
 
 
         }
@@ -110,8 +113,6 @@ public class Module extends Item {
 
         public SmallModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.SMALL;
-            this.type = ModuleType.VESSEL;
         }
     }
 
@@ -120,8 +121,6 @@ public class Module extends Item {
 
         public MediumModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.MEDIUM;
-            this.type = ModuleType.VESSEL;
         }
     }
 
@@ -131,8 +130,6 @@ public class Module extends Item {
 
         public LargeModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.LARGE;
-            this.type = ModuleType.VESSEL;
         }
     }
 
@@ -144,8 +141,6 @@ public class Module extends Item {
 
         public CapitalModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.CAPITAL;
-            this.type = ModuleType.VESSEL;
         }
     }
 
@@ -155,8 +150,6 @@ public class Module extends Item {
 
         public SuperCapitalModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.SUPER_CAPITAL;
-            this.type = ModuleType.VESSEL;
         }
     }
 
@@ -165,37 +158,9 @@ public class Module extends Item {
 
         public StationModule(String name, double baseVolume, int quantity) {
             super(name, baseVolume, quantity);
-            this.size = Sizes.STATION;
-            this.type = ModuleType.STATION;
         }
     }
 
-
-
-
-    public enum Sizes{
-        EXTRA_SMALL,
-        SMALL,
-        MEDIUM,
-        LARGE,
-        CAPITAL,
-        SUPER_CAPITAL,
-        STATION,
-
-    }
-
-    public enum ModuleType{
-        VESSEL,
-        STATION,
-        DOOMSDAY,
-
-
-
-
-
-
-
-    }
 
 
 
