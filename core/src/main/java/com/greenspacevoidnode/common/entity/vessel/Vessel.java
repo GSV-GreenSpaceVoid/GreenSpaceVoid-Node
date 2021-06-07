@@ -3,7 +3,16 @@ package com.greenspacevoidnode.common.entity.vessel;
 import com.greenspacevoidnode.common.entity.Entity;
 import com.greenspacevoidnode.common.item.Item;
 
+import javax.persistence.*;
+
+
+@MappedSuperclass
 public class Vessel extends Entity {
+
+    @Column(name = "cargoHoldID")
+    private long cargoHoldID; //Table reference to this vessel's cargo hold (Screw joins!)
+
+
 
 
 
@@ -15,7 +24,7 @@ public class Vessel extends Entity {
 
     double volume;
 
-    boolean canMove;
+
 
     //Base(Constructor initialized)
     double baseStructureHP, baseHullHP, baseShieldHP;
@@ -30,7 +39,9 @@ public class Vessel extends Entity {
 
     double basePowerGrid, baseCapacitorCapacity, baseCapacitorRegenerationRate;
 
-    double baseInertiaModifier, baseSpeed;
+    double baseInertiaModifier, baseSpeed, baseTurnRate;
+
+    double baseCargoHoldCapacity;
 
     int hullModuleSlots, shieldModuleSlots, weaponModuleSlots, miningSlots, weaponSlots, maxTargets;
 
@@ -60,11 +71,16 @@ public class Vessel extends Entity {
 
     double currentPowerGrid, currentCapacitorCapacity, currentCapacitorRegenerationRate;
 
-    double currentInertiaModifier, currentSpeed;
+    double currentInertiaModifier, currentSpeed, currentTurnRate;
 
     int currentHullModuleCount, currentShieldModuleCount, currentWeaponModuleCount, currentMiningModuleCount;
 
+    boolean isPacked;
+
     //Calculated maxes
+
+    //Maxes can be recomputed upon load, saving database table utilization.
+
     double maxStructureHP, maxHullHP, maxShieldHP;
     double maxShieldRegenerationRate;
 
@@ -77,11 +93,11 @@ public class Vessel extends Entity {
 
     double maxPowerGrid, maxCapacitorCapacity, maxCapacitorRegenerationRate;
 
-    double maxInertiaModifier, maxSpeed;
+    double maxInertiaModifier, maxSpeed, maxTurnRate;
 
 
 
-    Item.CargoHold cargoHold;
+    Item.GenericHold genericHold;
 
 
 
@@ -108,7 +124,7 @@ public class Vessel extends Entity {
 
     public Vessel(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
         super(name, x, y, isInvincible, isTargetable, canMove);
-            cargoHold = new Item.CargoHold(baseCargoCapacity);
+            genericHold = new Item.GenericHold(baseCargoCapacity);
 
 
 

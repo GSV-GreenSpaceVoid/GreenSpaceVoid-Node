@@ -37,8 +37,8 @@ public class SQL {
             System.out.println(testClassID1);
             */
 
-            manager.updateClasses();
-
+            //manager.updateClasses();
+            //System.out.println(manager.getClass().getSimpleName());
             //manager.listClasses();
 
 

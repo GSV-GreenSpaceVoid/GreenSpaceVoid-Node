@@ -10,6 +10,7 @@ import javax.persistence.*;
 
 @MappedSuperclass
 public class Entity {
+    @Id @GeneratedValue
     @Column(name = "id")
     private long id; //Database Key BigInteger
 

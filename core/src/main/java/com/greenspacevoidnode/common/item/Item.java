@@ -35,12 +35,11 @@ public class Item {
         this.baseVolume = basevolume;
         //this.baseMass = baseMass;
 
-        if(quantity <= 0){
+        if(quantity <= 0){//No zero quantities around here!
             this.quantity = 1;
+        }else {
+            this.quantity = quantity;
         }
-        this.quantity = quantity;
-
-
 
 
 
@@ -100,51 +99,77 @@ public class Item {
         return quantity;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @MappedSuperclass
+    public static class GenericHold { //Stores items
+        @Id @GeneratedValue
+        @Column(name = "id")
+        private long id;
+
+        @Column(name = "contents")
+        private String contents;
 
 
+        private ArrayList<Item> genericHold = new ArrayList<>();
+        private double baseCargoHoldSpace;
+        private double currentCargoHoldSpace; //Modified basevalue, not accumulated space taken by items.
 
 
-
-
-
-
-    public static class CargoHold{
-        ArrayList<Item> cargoHold = new ArrayList<>();
-        double cargoHoldSpace;
-        public CargoHold(double cargoHoldSpace){
-            this.cargoHoldSpace = cargoHoldSpace;
+        public GenericHold(double baseCargoHoldSpace){
+            this.baseCargoHoldSpace = baseCargoHoldSpace;
 
 
 
 
         }
 
-        public ArrayList<Item> getCargoHold() {
-            return cargoHold;
+        public ArrayList<Item> getHoldAsArrayList() {
+            return genericHold;
         }
 
-        public double getCargoHoldSpace() {
-            return cargoHoldSpace;
+        public double getHoldSpace() {
+            return baseCargoHoldSpace;
         }
 
-        public void setCargoHoldSpace(double cargoHoldSpace) throws ErrorMessages.CargoHoldNotEmptyException {
-            if (currentAvailableSpace() != cargoHoldSpace || cargoHold.size() != 0){//May want to use ampersand for security
+        public void setBaseCargoHoldSpace(double baseCargoHoldSpace) throws ErrorMessages.CargoHoldNotEmptyException {
+            if (currentAvailableSpace() != baseCargoHoldSpace || genericHold.size() != 0){//May want to use ampersand for security
                 throw new ErrorMessages.CargoHoldNotEmptyException();
 
             }else {
-                this.cargoHoldSpace = cargoHoldSpace;
+                this.baseCargoHoldSpace = baseCargoHoldSpace;
             }
         }
 
         public double currentAvailableSpace(){
             double usedCargoSpace = 0;
-            for(Item item : cargoHold){
+            for(Item item : genericHold){
                 usedCargoSpace += item.getVolume();
             }
             return usedCargoSpace;
         }
 
+        public void SQLSave(){
+            //Todo: Implement save method
 
+
+        }
+
+
+        public void generateContentsString(){
+            //Converts assets within arraylist to string format. (No need for a billion tables when you can use table name:id eh?)
+            for(Item item : genericHold){
+                contents += item.getClass().getSimpleName() + ":" + item.getId() + ",";
+            }
+
+
+        }
 
 
 
@@ -153,7 +178,7 @@ public class Item {
             if (storedWhere != null) {//Must specify valid previously stored location.
                 if (item.getQuantity() * item.getVolume() < currentAvailableSpace()) {
                     if (stack) {
-                        for (Item i : cargoHold) {
+                        for (Item i : genericHold) {
                             if (i.getClass().equals(item.getClass())) {
                                 i.setQuantity(i.getQuantity() + item.getQuantity());
                                 storedWhere.remove(item);
@@ -161,7 +186,7 @@ public class Item {
                             }
                         }
                     } else {//Don't stack, add new item
-                        cargoHold.add(item);
+                        genericHold.add(item);
                         storedWhere.remove(item);
                     }
                 }
@@ -171,28 +196,39 @@ public class Item {
 
         public void stack(Item targetItem, Item destinationItem){//Todo: Add exception
 
-            if(cargoHold.contains(targetItem) && cargoHold.contains(destinationItem)) {
+            if(genericHold.contains(targetItem) && genericHold.contains(destinationItem)) {
 
 
                 //Might want to add the currentAvailableSpace method if clause for security. But otherwise, meh...
                 if (targetItem.getClass().equals(destinationItem.getClass())) {
                     destinationItem.setQuantity(destinationItem.getQuantity() + targetItem.getQuantity());
-                    cargoHold.remove(targetItem);
+                    genericHold.remove(targetItem);
                 }
             }
         }
 
 
+        public long getId() {
+            return id;
+        }
 
-
-
-
-
-
-
+        public void setId(long id) {
+            this.id = id;
+        }
     }
 
-    public static class OreHold extends CargoHold{
+    public static class CargoHold extends GenericHold{
+
+
+        public CargoHold(double cargoHoldSpace) {
+            super(cargoHoldSpace);
+        }
+    }
+
+
+
+
+    public static class OreHold extends GenericHold {
 
 
         public OreHold(double cargoHoldSpace) {
@@ -218,7 +254,7 @@ public class Item {
 
 
 
-    public static class ShipHold {
+    public static class ShipHold {//This will be useful for moving assembled ships
         double volume;
 
 
