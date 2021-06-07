@@ -6,6 +6,9 @@ import com.greenspacevoidnode.common.item.Item;
 public class Vessel extends Entity {
 
 
+
+    //TODO: REPEAT AFTER ME! I WILL NOT AND SHALL NOT INCLUDE BASEVALUES EVER(!!!!) IN THE DATABASE!
+
     Class blueprintClass;
 
 

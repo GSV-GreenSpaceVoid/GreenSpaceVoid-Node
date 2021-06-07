@@ -3,24 +3,43 @@ package com.greenspacevoidnode.common.item;
 import com.greenspacevoidnode.common.item.industry.resources.Resource;
 import com.greenspacevoidnode.engine.exceptions.ErrorMessages;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
+
+
+
+
+
+@MappedSuperclass
 public class Item {
-    String name;
-    double volume;
-    int quantity;
+
+    @Column(name = "id")
+    private long id;
+
+    @Column(name = "name")
+    private String name;//This may be redundant as this is an item. But so be it...
 
 
-    public Item(String name, double volume, int quantity){
+    private double baseVolume, volume; //Computed/onJar values values. No need for database access.
+
+
+
+
+    @Column(name = "quantity")
+    private int quantity;
+
+
+    public Item(String name, double basevolume, int quantity){
         this.name = name;
-        this.volume = volume;
+        this.baseVolume = basevolume;
         //this.baseMass = baseMass;
 
         if(quantity <= 0){
             this.quantity = 1;
         }
         this.quantity = quantity;
-        //Todo: Calculate total volume/mass based on quantity!
+
 
 
 
@@ -59,7 +78,20 @@ public class Item {
         return name;
     }
 
+    public double getBaseVolume() {
+        return baseVolume;
+    }
+
+    public void setBaseVolume(double baseVolume) {
+        this.baseVolume = baseVolume;
+    }
+
     public double getVolume() {
+
+        if (volume <= 0){
+            return baseVolume;
+        }
+
         return volume;
     }
 

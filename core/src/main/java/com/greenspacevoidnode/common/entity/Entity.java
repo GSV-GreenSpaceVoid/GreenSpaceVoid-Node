@@ -1,14 +1,61 @@
 package com.greenspacevoidnode.common.entity;
 
 import com.greenspacevoidnode.common.system.StarSystem;
+import com.greenspacevoidnode.sql.SQL;
+import org.hibernate.*;
+import org.hibernate.SessionFactory;
 
+import javax.persistence.*;
+
+
+@MappedSuperclass
 public class Entity {
+    @Column(name = "id")
+    private long id; //Database Key BigInteger
+
+    //Non-Database needed as this value is stored within the Jar
+    private int rendererID; //Renderer Specific ID (ex. What texture to tell the client renderer to rend)
+
+    @Column(name = "name")
+    private String name; //Some entities may have a custom name so it may be worth jamming in the database.
+
+    @Column(name = "positionX")
+    private double x;
+
+    @Column(name = "positionY")
+    private double y;
+
+    @Column(name = "direction")
+    private double direction;
+
+    @Column(name = "isInvincible")
+    private boolean isInvincible;//Think of as being invincible...
+
+    @Column(name = "isTargetable")
+    private boolean isTargetable;//Whether it cannot be targeted (ex. navpoints, cloaked vessels)
+
+    @Column(name = "isVisible")
+    private boolean isVisible; //Renderer specific. Cloaked ships/navpoints again.
+
+    @Column(name = "canMove")
+    private boolean canMove;//General integration to prevent spoof
+
+
+
+
+
+
+
+
+
+
+
     //Literally anything!
-    String name;
-    double x, y, direction;
-    boolean isInvincible;//Think of as being invincible...
-    boolean isTargetable;
-    boolean canMove;
+
+
+
+
+
 
     public Entity(String name, double x, double y,  boolean isInvincible, boolean isTargetable, boolean canMove){
         this.name = name;
@@ -38,18 +85,6 @@ public class Entity {
 
     }
 
-
-    public void updateSpawner(){//Before kingdoms can change, men must change - Isaiah probably
-
-
-
-
-
-
-
-
-
-    }
 
 
 
@@ -93,34 +128,46 @@ public class Entity {
         return isInvincible;
     }
 
-    public enum EntityTypes{//Enumerations may be deprecated due to instanceOf
-        VESSEL,
-        ASTEROID,
-        PLANET,
-        STAR,
-        RESOURCE_SPAWNER, //World spawners represent asteroid(or other resource<s>) field destinations
 
-
-
-
-
-
-
-
-
-
+    public long getId() {
+        return id;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public int getRendererID() {
+        return rendererID;
+    }
 
+    public void setRendererID(int rendererID) {
+        this.rendererID = rendererID;
+    }
 
+    public boolean isTargetable() {
+        return isTargetable;
+    }
 
+    public void setTargetable(boolean targetable) {
+        isTargetable = targetable;
+    }
 
+    public boolean isVisible() {
+        return isVisible;
+    }
 
+    public void setVisible(boolean visible) {
+        isVisible = visible;
+    }
 
+    public boolean isCanMove() {
+        return canMove;
+    }
 
-
-
+    public void setCanMove(boolean canMove) {
+        this.canMove = canMove;
+    }
 
     //Todo: Physics
     public void move(double x, double y){//Called whenever the physics engine says so..or if an admin needs to yeet something into oblivion.
@@ -159,10 +206,9 @@ public class Entity {
    }
 
 
-   public void save(){
-        //Todo: Implement Save!
-
-
+   public void saveToDatabase(){
+        //Todo: Implement Hibernate Save!!!!!
+        Session factory = SQL.HibernateManager.factory.openSession();
 
 
 

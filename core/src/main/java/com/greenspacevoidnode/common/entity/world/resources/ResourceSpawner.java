@@ -43,7 +43,7 @@ public class ResourceSpawner extends WorldEntity {
 
 
 
-    @Override
+
     public void updateSpawner() {//Keeps things up to date when kingdoms change.
         StarSystem starSystem = this.getStarSystem();
         try {
