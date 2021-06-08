@@ -1,8 +1,13 @@
 package com.greenspacevoidnode.common.entity.world.resources;
 
+import com.greenspacevoidnode.common.entity.Entity;
 import com.greenspacevoidnode.common.entity.world.WorldEntity;
 import com.greenspacevoidnode.common.system.StarSystem;
 
+import javax.persistence.MappedSuperclass;
+
+
+@MappedSuperclass
 public class ResourceSpawner extends WorldEntity {
 
     private static boolean isInvincible = true;
@@ -10,21 +15,16 @@ public class ResourceSpawner extends WorldEntity {
     private static boolean canMove = false;
 
 
-    public ResourceSpawner(double x, double y, SpawnerType type) {
+    public ResourceSpawner(double x, double y) {
         super(name, x, y, isInvincible, isTargetable, canMove);
-        this.type = type;
-        updateSpawner();
+
+        //updateSpawner();
 
     }
 
-    public enum SpawnerType{
-        ASTEROID,
-        ICE,
-        GAS,
-        MIXED,
-
-    }
     private static final int resourceNodeCap = 300;
+    private static final int resourceFieldRadius = 30000;
+
     private int maxResourceNodeCount;
     private static final boolean targetable = false;
 
@@ -32,7 +32,29 @@ public class ResourceSpawner extends WorldEntity {
     int resourceNodeCount; //Asteroids, gas clouds, iceballs, the works|We will try and limit this to <300
     static String name = "Multi-Resource Field";
     double securityLevel; //Determines resource rarity.
-    SpawnerType type = SpawnerType.MIXED;
+
+
+
+    public void countResources(){
+
+        double thisPosX = this.getX();
+        double thisPosY = this.getY();
+
+
+
+
+        for(Entity entity : StarSystem.starSystem.getEntities()){
+            if(entity instanceof ResourceNode){
+                if(Math.sqrt(Math.pow(entity.getX() - thisPosX, 2) + Math.pow(entity.getY() - thisPosY, 2)) < resourceFieldRadius) {//Distance formula B)
+                    resourceNodeCount++;
+                }
+            }
+        }
+
+
+
+
+    }
 
 
 
@@ -40,10 +62,7 @@ public class ResourceSpawner extends WorldEntity {
 
 
 
-
-
-
-
+    /*
     public void updateSpawner() {//Keeps things up to date when kingdoms change.
         StarSystem starSystem = this.getStarSystem();
         try {
@@ -71,14 +90,14 @@ public class ResourceSpawner extends WorldEntity {
         }
         this.setName(name);
     }
+    */
 
 
 
 
 
 
-
-
+    /*
     public void generateResources(){//May overload..Who knows
         //Override stub method
         //Todo: lots of randoms n stuff
@@ -114,7 +133,7 @@ public class ResourceSpawner extends WorldEntity {
         resourceNodeCount = count;
     }
 
-
+    */
 
 
 
@@ -124,35 +143,35 @@ public class ResourceSpawner extends WorldEntity {
     //Resource field variants below:
 
     public static class AsteroidFieldSpawner extends ResourceSpawner {
-        private static final SpawnerType type = SpawnerType.ASTEROID;
+
 
         public AsteroidFieldSpawner(double x, double y) {
-            super(x, y, type);
+            super(x, y);
         }
     }
 
     public static class IceFieldSpawner extends ResourceSpawner {
-        private static final SpawnerType type = SpawnerType.ICE;
+
 
         public IceFieldSpawner(double x, double y) {
-            super(x, y, type);
+            super(x, y);
         }
     }
 
     public static class GasFieldSpawner extends ResourceSpawner {
-        private static final SpawnerType type = SpawnerType.GAS;
 
 
-        public GasFieldSpawner(String name, double x, double y, boolean isInvincible, boolean isTargetable, boolean canMove) {
-            super(x, y, type);
+
+        public GasFieldSpawner(double x, double y) {
+            super(x, y);
         }
     }
 
     public static class MixedResourceFieldSpawner extends ResourceSpawner {
-        private static final SpawnerType type = SpawnerType.MIXED;
+
 
         public MixedResourceFieldSpawner(double x, double y) {
-            super(x, y, type);
+            super(x, y);
         }
     }
 

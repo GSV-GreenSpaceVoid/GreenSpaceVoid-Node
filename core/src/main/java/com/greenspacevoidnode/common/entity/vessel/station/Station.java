@@ -129,7 +129,7 @@ public class Station extends Vessel {
             @Override
             public void linkGate(JumpGate gate) throws IOException {
 
-                this.setName(gate.getStarSystem().getName());
+                //this.setName(gate.getStarSystem().getName());
 
 
 

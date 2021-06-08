@@ -57,7 +57,7 @@ public class Entity {
 
 
 
-
+    //Todo: Update constructor in include rendererID and database values
     public Entity(String name, double x, double y,  boolean isInvincible, boolean isTargetable, boolean canMove){
         this.name = name;
         this.x = x;
@@ -69,7 +69,7 @@ public class Entity {
 
     }
 
-
+    /*
     public StarSystem getStarSystem(){
         //Todo: Find which Arraylist(System) this entity exists in.
         for(StarSystem system:StarSystem.StarSystems){
@@ -85,7 +85,7 @@ public class Entity {
         return null; //Yikes if this gets here.
 
     }
-
+    */
 
 
 
@@ -224,7 +224,14 @@ public class Entity {
 
 
 
+    public void destroy(){
+        //Destroys this object from the database
+        //this = null;
 
+
+
+
+    }
 
 
 
