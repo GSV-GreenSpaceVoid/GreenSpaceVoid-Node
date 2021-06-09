@@ -15,7 +15,7 @@ public class ResourceSpawner extends WorldEntity {
     private static boolean canMove = false;
 
 
-    public ResourceSpawner(double x, double y) {
+    public ResourceSpawner(long x, long y) {
         super(name, x, y, isInvincible, isTargetable, canMove);
 
         //updateSpawner();
@@ -31,6 +31,9 @@ public class ResourceSpawner extends WorldEntity {
 
     int resourceNodeCount; //Asteroids, gas clouds, iceballs, the works|We will try and limit this to <300
     static String name = "Multi-Resource Field";
+
+
+
     double securityLevel; //Determines resource rarity.
 
 
@@ -145,7 +148,7 @@ public class ResourceSpawner extends WorldEntity {
     public static class AsteroidFieldSpawner extends ResourceSpawner {
 
 
-        public AsteroidFieldSpawner(double x, double y) {
+        public AsteroidFieldSpawner(long x, long y) {
             super(x, y);
         }
     }
@@ -153,7 +156,7 @@ public class ResourceSpawner extends WorldEntity {
     public static class IceFieldSpawner extends ResourceSpawner {
 
 
-        public IceFieldSpawner(double x, double y) {
+        public IceFieldSpawner(long x, long y) {
             super(x, y);
         }
     }
@@ -162,7 +165,7 @@ public class ResourceSpawner extends WorldEntity {
 
 
 
-        public GasFieldSpawner(double x, double y) {
+        public GasFieldSpawner(long x, long y) {
             super(x, y);
         }
     }
@@ -170,7 +173,7 @@ public class ResourceSpawner extends WorldEntity {
     public static class MixedResourceFieldSpawner extends ResourceSpawner {
 
 
-        public MixedResourceFieldSpawner(double x, double y) {
+        public MixedResourceFieldSpawner(long x, long y) {
             super(x, y);
         }
     }

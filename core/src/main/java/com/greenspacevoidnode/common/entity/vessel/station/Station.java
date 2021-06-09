@@ -12,7 +12,7 @@ import java.util.TimerTask;
 public class Station extends Vessel {
     //Todo: Cargo capacities.
     private static int baseCargoCapacity = 10000;
-    public Station(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
+    public Station(String name, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
         super(name, x, y, volume, isInvincible, isTargetable, canMove, baseCargoCapacity);
     }
 
@@ -22,7 +22,7 @@ public class Station extends Vessel {
         private boolean isLinked;
         private double jumpDistance;
 
-        public JumpGate(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, long baseJumpWarmupTime) {
+        public JumpGate(String name, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, long baseJumpWarmupTime) {
             super(name, x, y, volume, isInvincible, isTargetable, canMove);
             isLinked = false;
             this.jumpWarmupTime = baseJumpWarmupTime;
@@ -83,7 +83,7 @@ public class Station extends Vessel {
 
 
 
-            public PlayerGate(String name, double x, double y, double volume, double cargoHoldSpace, long baseJumpWarmupTime) {
+            public PlayerGate(String name, long x, long y, double volume, double cargoHoldSpace, long baseJumpWarmupTime) {
                 super(name, x, y, volume, isInvincible, isTargetable, canMove, baseJumpWarmupTime);
                 cargoHold = new ArrayList<>();
                 this.cargoHoldSpace = cargoHoldSpace;
@@ -121,7 +121,7 @@ public class Station extends Vessel {
 
 
 
-            public NPCGate(String name, double x, double y, double volume, long baseJumpWarmupTime) {
+            public NPCGate(String name, long x, long y, double volume, long baseJumpWarmupTime) {
                 super(name, x, y, volume, isInvincible, isTargetable, canMove, baseJumpWarmupTime);
             }
 

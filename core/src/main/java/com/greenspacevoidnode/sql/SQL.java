@@ -36,15 +36,54 @@ public class SQL {
             manager.addTestClass(1234,1234,1234,"Test #1", 1234);
             System.out.println(testClassID1);
             */
-
+            manager.demo();
             //manager.updateClasses();
             //System.out.println(manager.getClass().getSimpleName());
             //manager.listClasses();
 
 
-
         }
 
+
+        public void demo(){
+            Session session = factory.openSession();
+            Transaction tx = null;
+            Integer testClassID = null;
+
+
+            try{
+                tx = session.beginTransaction();
+                //TestClass testClass = new TestClass(name, hullHP, armorHP, shieldHP, powerlevel);
+
+                OtherGrandChildClass c = new OtherGrandChildClass("asparagus", 5678, 5678, 5678,5678);
+                c.setId(9);
+
+
+
+                session.update(c);
+                tx.commit();
+
+                c.getId();
+
+
+
+            }catch(Exception e){
+                e.printStackTrace();
+                if(tx!= null){
+                    tx.rollback();
+                }
+
+            }finally{
+                session.close();
+            }
+
+
+
+
+
+
+
+        }
 
 
         public Integer addTestClass (int hullHP, int armorHP, int shieldHP, String name, int powerlevel){
@@ -99,6 +138,8 @@ public class SQL {
                     System.out.println("  ShieldHP: " + testClass.getShieldHP());
                 }
                 tx.commit();
+
+
             } catch (HibernateException e) {
                 if (tx!=null) tx.rollback();
                 e.printStackTrace();

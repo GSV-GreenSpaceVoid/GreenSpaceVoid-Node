@@ -1,7 +1,8 @@
 package com.greenspacevoidnode.common.entity.vessel;
 
 import com.greenspacevoidnode.common.entity.Entity;
-import com.greenspacevoidnode.common.item.Item;
+import com.greenspacevoidnode.common.item.Hold;
+import com.greenspacevoidnode.common.item.modules.Module;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -98,7 +99,7 @@ public class Vessel extends Entity {
 
 
 
-    Item.GenericHold genericHold;
+    Hold.CargoHold cargoHold;
 
 
 
@@ -109,7 +110,7 @@ public class Vessel extends Entity {
 //            88  `8b   d8'  88  a8"     "8a  a8"    `Y88  88       88  88  a8P_____88  I8[    ""
 //            88   `8b d8'   88  8b       d8  8b       88  88       88  88  8PP"""""""   `"Y8ba,
 //            88    `888'    88  "8a,   ,a8"  "8a,   ,d88  "8a,   ,a88  88  "8b,   ,aa  aa    ]8I
-//           88     `8'     88   `"YbbdP"'    `"8bbdP"Y8   `"YbbdP'Y8  88   `"Ybbd8"'  `"YbbdP"'
+//            88     `8'     88   `"YbbdP"'    `"8bbdP"Y8   `"YbbdP'Y8  88   `"Ybbd8"'  `"YbbdP"'
 
 
     //Database table reference stuff
@@ -132,6 +133,14 @@ public class Vessel extends Entity {
     private String weaponsData;
 
 
+
+
+
+
+
+
+
+
     ArrayList<Module> shieldModules = new ArrayList<>();
     ArrayList<Module> armorModules = new ArrayList<>();
     ArrayList<Module> hullModules = new ArrayList<>();
@@ -141,32 +150,107 @@ public class Vessel extends Entity {
 
     ArrayList<Module> weapons = new ArrayList<>();
 
+    @Override
+    public Long save() {
+        shieldModulesData = "";
+        armorModulesData = "";
+        hullModulesData = "";
+        weaponModulesData = "";
+        miningModulesData = "";
+        weaponsData = "";
+
+        for(Module module : shieldModules){
+
+            shieldModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ",";
+        }
+
+        for(Module module : armorModules){
+            armorModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ",";
+        }
+
+        for(Module module : hullModules){
+            hullModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ",";
+        }
+
+        for(Module module : weaponModules){
+            weaponModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ",";
+        }
+
+        for(Module module : weaponModules){
+            weaponModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ","; //Mapping. This will be necessary for generation
+        }
+
+        for(Module module : miningModules){
+            miningModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ","; //Mapping. This will be necessary for generation
+        }
+
+        for(Module module : weapons){
+            weaponsData = module.getClass().getSimpleName() + ":" + module.getId() + ","; //Mapping. This will be necessary for generation
+        }
 
 
+        cargoHoldID = cargoHold.save();
 
 
+        return super.save();
+    }
 
+    public String getShieldModulesData() {
+        return shieldModulesData;
+    }
 
+    public void setShieldModulesData(String shieldModulesData) {
+        this.shieldModulesData = shieldModulesData;
+    }
 
+    public String getArmorModulesData() {
+        return armorModulesData;
+    }
 
+    public void setArmorModulesData(String armorModulesData) {
+        this.armorModulesData = armorModulesData;
+    }
 
+    public String getHullModulesData() {
+        return hullModulesData;
+    }
 
+    public void setHullModulesData(String hullModulesData) {
+        this.hullModulesData = hullModulesData;
+    }
 
+    public String getWeaponModulesData() {
+        return weaponModulesData;
+    }
 
+    public void setWeaponModulesData(String weaponModulesData) {
+        this.weaponModulesData = weaponModulesData;
+    }
 
+    public String getMiningModulesData() {
+        return miningModulesData;
+    }
 
+    public void setMiningModulesData(String miningModulesData) {
+        this.miningModulesData = miningModulesData;
+    }
 
+    public String getWeaponsData() {
+        return weaponsData;
+    }
 
+    public void setWeaponsData(String weaponsData) {
+        this.weaponsData = weaponsData;
+    }
 
-    public Vessel(String name, double x, double y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
+    public Vessel(String name, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
         super(name, x, y, isInvincible, isTargetable, canMove);
-            genericHold = new Item.GenericHold(baseCargoCapacity);
+            Hold.CargoHold cargoHold = new Hold.CargoHold(baseCargoCapacity);
 
 
 
         this.volume = volume;
     }
-
 
 
 

@@ -1,13 +1,22 @@
 package com.greenspacevoidnode.common.entity.world.resources;
 
 import com.greenspacevoidnode.common.entity.world.WorldEntity;
+import com.greenspacevoidnode.common.item.industry.resources.ore.Ore;
 
 public class ResourceNode extends WorldEntity {
 
-    static final String name = "Asteroid";
+    private static final String name = "Asteroid";
+    private static final boolean isInvincible = true;
+    private static final boolean isTargetable = true;
+    private static final boolean canMove = true;
 
-    public ResourceNode(String name, double x, double y, boolean isInvincible, boolean isTargetable, boolean canMove) {
-        super(name, x, y, isInvincible, isTargetable, canMove);
+    Ore ore; //Refine the ores system
+
+
+
+
+    public ResourceNode(String name, long x, long y) {
+        super(name + "" + ResourceNode.name, x, y, isInvincible, isTargetable, canMove);
 
 
 
@@ -22,22 +31,9 @@ public class ResourceNode extends WorldEntity {
         TITANIUM,
         STEEL,
         DILITHIUM,
-
-
-        //
-
-
-
-
-
-
-
-
-
-
     }
 
-
-
-
+    public Ore getOre() {
+        return ore;
+    }
 }

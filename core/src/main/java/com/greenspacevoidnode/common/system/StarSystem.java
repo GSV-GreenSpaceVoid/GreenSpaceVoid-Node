@@ -1,6 +1,7 @@
 package com.greenspacevoidnode.common.system;
 
 import com.greenspacevoidnode.common.entity.Entity;
+import com.greenspacevoidnode.sql.Saveable;
 
 import javax.persistence.*;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 
 @javax.persistence.Entity
 @Table(name = "systemInfo")
-public class StarSystem {//It's actually a database B)
+public class StarSystem implements Saveable {//It's actually a database B)
     //public static ArrayList<StarSystem> StarSystems = new ArrayList<>();
 
     public static StarSystem starSystem;
@@ -27,10 +28,10 @@ public class StarSystem {//It's actually a database B)
     private double securityLevel;
 
     @Column(name = "galacticX")
-    private double galacticX;
+    private long galacticX;
 
     @Column(name = "galacticY")
-    double galacticY;
+    private long galacticY;
 
     ArrayList<Entity> entities; //List by which we store all pointers to our entities.
     //Galactic coordinates
@@ -50,11 +51,11 @@ public class StarSystem {//It's actually a database B)
 
     }
 
-
+    @Override
     public long getId() {
         return id;
     }
-
+    @Override
     public void setId(long id) {
         this.id = id;
     }
@@ -75,19 +76,19 @@ public class StarSystem {//It's actually a database B)
         this.securityLevel = securityLevel;
     }
 
-    public double getGalacticX() {
+    public long getGalacticX() {
         return galacticX;
     }
 
-    public void setGalacticX(double galacticX) {
+    public void setGalacticX(long galacticX) {
         this.galacticX = galacticX;
     }
 
-    public double getGalacticY() {
+    public long getGalacticY() {
         return galacticY;
     }
 
-    public void setGalacticY(double galacticY) {
+    public void setGalacticY(long galacticY) {
         this.galacticY = galacticY;
     }
 

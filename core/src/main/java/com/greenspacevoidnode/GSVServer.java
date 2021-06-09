@@ -1,9 +1,9 @@
 package com.greenspacevoidnode;
 
 import com.greenspacevoidnode.common.item.industry.materials.Material;
+import com.greenspacevoidnode.common.item.industry.resources.ore.Ore;
 import com.greenspacevoidnode.common.item.industry.resources.Resource;
 import com.greenspacevoidnode.server.ServerSide;
-import com.greenspacevoidsharedAPI.Test;
 
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ public class GSVServer {
 
         ArrayList<Material> test = new ArrayList<>();
 
-        Resource r = new Resource.ORE.SOLID_ORE.IronOres.Magnetite(10);
+        Resource r = new Ore.SOLID_ORE.IronOre.Magnetite(10);
 
         test = r.refine();
 

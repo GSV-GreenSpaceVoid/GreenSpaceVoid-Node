@@ -1,7 +1,7 @@
 package com.greenspacevoidnode.common.entity.cargo;
 
 import com.greenspacevoidnode.common.entity.Entity;
-import com.greenspacevoidnode.common.item.Item;
+import com.greenspacevoidnode.common.item.Hold;
 
 import javax.persistence.*;
 
@@ -12,7 +12,7 @@ public class CargoContainer extends Entity {
     private static final boolean isTargetable = true;
     private static final boolean canMove = true;
 
-    Item.GenericHold genericHold;
+    Hold hold;
 
     @Column(name = "owner")
     private long playerID;
@@ -25,9 +25,9 @@ public class CargoContainer extends Entity {
 
 
 
-    private CargoContainer(String name, double x, double y, Item.GenericHold genericHold) {
+    private CargoContainer(String name, long x, long y, Hold hold) {
         super(name, x, y, isInvincible, isTargetable, canMove);
-        this.genericHold = genericHold;
+        this.hold = hold;
 
 
     }
@@ -40,8 +40,8 @@ public class CargoContainer extends Entity {
 
 
 
-        public SmallCargoContainer(double x, double y) {
-            super(name, x, y, new Item.GenericHold(cargoHoldSpace));
+        public SmallCargoContainer(long x, long y) {
+            super(name, x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -50,8 +50,8 @@ public class CargoContainer extends Entity {
         private static final String name = "Medium Cargo Container";
         private static final double cargoHoldSpace = 1000;
 
-        public MediumCargoContainer(double x, double y) {
-            super(name, x, y, new Item.GenericHold(cargoHoldSpace));
+        public MediumCargoContainer(long x, long y) {
+            super(name, x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -60,8 +60,8 @@ public class CargoContainer extends Entity {
         private static final String name = "Large Cargo Container";
         private static final double cargoHoldSpace = 2500;
 
-        public LargeCargoContainer(double x, double y) {
-            super(name, x, y, new Item.GenericHold(cargoHoldSpace));
+        public LargeCargoContainer(long x, long y) {
+            super(name, x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -70,8 +70,8 @@ public class CargoContainer extends Entity {
         private static final String name = "Capital Cargo Container";
         private static final double cargoHoldSpace = 5000;
 
-        public CapitalCargoContainer(double x, double y) {
-            super(name, x, y, new Item.GenericHold(cargoHoldSpace));
+        public CapitalCargoContainer(long x, long y) {
+            super(name, x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -80,8 +80,8 @@ public class CargoContainer extends Entity {
         private static final String name = "Capital Cargo Container";
         private static final double oreHoldSpace = 30000;
 
-        public OreContainer(double x, double y) {
-            super(name, x, y, new Item.OreHold(oreHoldSpace));
+        public OreContainer(long x, long y) {
+            super(name, x, y, new Hold.OreHold(oreHoldSpace));
         }
     }
 

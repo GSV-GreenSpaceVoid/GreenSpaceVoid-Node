@@ -1,15 +1,12 @@
 package com.greenspacevoidnode.common.entity;
 
-import com.greenspacevoidnode.common.system.StarSystem;
-import com.greenspacevoidnode.sql.SQL;
-import org.hibernate.*;
-import org.hibernate.SessionFactory;
+import com.greenspacevoidnode.sql.Saveable;
 
 import javax.persistence.*;
 
 
 @MappedSuperclass
-public class Entity {
+public class Entity implements Saveable {
     @Id @GeneratedValue
     @Column(name = "id")
     private long id; //Database Key BigInteger
@@ -21,10 +18,10 @@ public class Entity {
     private String name; //Some entities may have a custom name so it may be worth jamming in the database.
 
     @Column(name = "positionX")
-    private double x;
+    private long x;
 
     @Column(name = "positionY")
-    private double y;
+    private long y;
 
     @Column(name = "direction")
     private double direction;
@@ -58,7 +55,7 @@ public class Entity {
 
 
     //Todo: Update constructor in include rendererID and database values
-    public Entity(String name, double x, double y,  boolean isInvincible, boolean isTargetable, boolean canMove){
+    public Entity(String name, long x, long y, boolean isInvincible, boolean isTargetable, boolean canMove){
         this.name = name;
         this.x = x;
         this.y = y;
@@ -97,11 +94,11 @@ public class Entity {
         this.name = name;
     }
 
-    public void setX(double x) {
+    public void setX(long x) {
         this.x = x;
     }
 
-    public void setY(double y) {
+    public void setY(long y) {
         this.y = y;
     }
 
@@ -113,11 +110,11 @@ public class Entity {
         return name;
     }
 
-    public double getX() {
+    public long getX() {
         return x;
     }
 
-    public double getY() {
+    public long getY() {
         return y;
     }
 
@@ -129,11 +126,12 @@ public class Entity {
         return isInvincible;
     }
 
-
+    @Override
     public long getId() {
         return id;
     }
 
+    @Override
     public void setId(long id) {
         this.id = id;
     }
@@ -171,7 +169,7 @@ public class Entity {
     }
 
     //Todo: Physics
-    public void move(double x, double y){//Called whenever the physics engine says so..or if an admin needs to yeet something into oblivion.
+    public void move(long x, long y){//Called whenever the physics engine says so..or if an admin needs to yeet something into oblivion.
         //Mmmm yes physics
         if(canMove) {
             this.x = x;
@@ -183,7 +181,7 @@ public class Entity {
 
 
 
-   public void forceMove(double x, double y){
+   public void forceMove(long x, long y){
         boolean previousState = this.canMove;
         this.canMove = true;
         move(x,y);
@@ -206,23 +204,10 @@ public class Entity {
 
    }
 
-
-   public void saveToDatabase(){
-        //Todo: Implement Hibernate Save!!!!!
-        Session factory = SQL.HibernateManager.factory.openSession();
-
-
-
-
-
-
-
-
-
-   }
-
-
-
+    @Override
+    public Long save() {
+        return Saveable.super.save();
+    }
 
     public void destroy(){
         //Destroys this object from the database
