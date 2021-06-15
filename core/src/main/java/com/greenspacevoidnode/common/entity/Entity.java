@@ -24,7 +24,7 @@ public class Entity implements Saveable {
     private long y;
 
     @Column(name = "direction")
-    private double direction;
+    private int direction;
 
     @Column(name = "isInvincible")
     private boolean isInvincible;//Think of as being invincible...
@@ -118,7 +118,7 @@ public class Entity implements Saveable {
         return y;
     }
 
-    public double getDirection() {
+    public int getDirection() {
         return direction;
     }
 
@@ -189,7 +189,7 @@ public class Entity implements Saveable {
 
    }
 
-   public void setDirection(double direction){
+   public void setDirection(int direction){
         this.direction = direction;
    }
 
@@ -209,16 +209,22 @@ public class Entity implements Saveable {
         return Saveable.super.save();
     }
 
+
     public void destroy(){
+        //Animation of destruction!!!
+
+
+
+        Saveable.super.delete();
+    }
+
+    public void delete(){
         //Destroys this object from the database
         //this = null;
 
 
 
-
     }
-
-
 
 
 

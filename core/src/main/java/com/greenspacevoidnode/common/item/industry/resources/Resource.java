@@ -16,6 +16,12 @@ public class Resource extends Item {
     }
 
 
+
+
+
+
+
+
     public static class RefinementData{
         private Class<Material> material;
         private int yieldQuantity;

@@ -3,13 +3,19 @@ package com.greenspacevoidnode.common.entity.vessel;
 import com.greenspacevoidnode.common.entity.Entity;
 import com.greenspacevoidnode.common.item.Hold;
 import com.greenspacevoidnode.common.item.modules.Module;
+import com.greenspacevoidnode.common.item.modules.weapons.Weapon;
+import com.greenspacevoidnode.common.player.Player;
+import com.greenspacevoidnode.common.player.PlayerTells;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 
 
 @MappedSuperclass
-public class Vessel extends Entity {
+public class Vessel extends Entity implements PlayerTells {
+
+    private Player pilot;
+
 
     @Column(name = "cargoHoldID")
     private long cargoHoldID; //Table reference to this vessel's cargo hold (Screw joins!)
@@ -20,7 +26,7 @@ public class Vessel extends Entity {
 
     //TODO: REPEAT AFTER ME! I WILL NOT AND SHALL NOT INCLUDE BASEVALUES EVER(!!!!) IN THE DATABASE!
 
-    Class blueprintClass;
+    private Class blueprintClass;
 
 
 
@@ -45,7 +51,7 @@ public class Vessel extends Entity {
 
     double baseCargoHoldCapacity;
 
-    int hullModuleSlots, shieldModuleSlots, weaponModuleSlots, miningSlots, weaponSlots, maxTargets;
+    int hullModuleSlots, armorModuleSlots, shieldModuleSlots, weaponModuleSlots, miningModuleSlots, weaponSlots, maxTargets;
 
     double baseRailGunDamageModifier, baseMissileDamageModifier, baseLaserDamageModifier, baseArtilleryDamageModifier, baseMiningYieldModifier;
     double baseRailGunROFModifier, baseMissileROFModifier, baseLaserROFModifier, baseArtilleryROFModifier, baseMiningROFModifier;
@@ -117,38 +123,30 @@ public class Vessel extends Entity {
 
     //Stored as tableName:id,
 
-    @Column(name = "shieldModules")
+    @Column(name = "shieldModulesData")
     private String shieldModulesData;
-    @Column(name = "armorModules")
+    @Column(name = "armorModulesData")
     private String armorModulesData;
-    @Column(name = "hullModules")
+    @Column(name = "hullModulesData")
     private String hullModulesData;
 
-    @Column(name = "weaponModules")
+    @Column(name = "weaponModulesData")
     private String weaponModulesData;
-    @Column(name = "miningModules")
+    @Column(name = "miningModulesData")
     private String miningModulesData;
 
-    @Column(name = "weapons")
+    @Column(name = "weaponsData")
     private String weaponsData;
 
 
+    ArrayList<Module.ShieldModule> shieldModules = new ArrayList<>();
+    ArrayList<Module.ArmorModule> armorModules = new ArrayList<>();
+    ArrayList<Module.HullModule> hullModules = new ArrayList<>();
 
+    ArrayList<Module.WeaponModule> weaponModules = new ArrayList<>();
+    ArrayList<Module.MiningModule> miningModules = new ArrayList<>();
 
-
-
-
-
-
-
-    ArrayList<Module> shieldModules = new ArrayList<>();
-    ArrayList<Module> armorModules = new ArrayList<>();
-    ArrayList<Module> hullModules = new ArrayList<>();
-
-    ArrayList<Module> weaponModules = new ArrayList<>();
-    ArrayList<Module> miningModules = new ArrayList<>();
-
-    ArrayList<Module> weapons = new ArrayList<>();
+    ArrayList<Weapon> weapons = new ArrayList<>();
 
     @Override
     public Long save() {
@@ -183,7 +181,6 @@ public class Vessel extends Entity {
         for(Module module : miningModules){
             miningModulesData = module.getClass().getSimpleName() + ":" + module.getId() + ","; //Mapping. This will be necessary for generation
         }
-
         for(Module module : weapons){
             weaponsData = module.getClass().getSimpleName() + ":" + module.getId() + ","; //Mapping. This will be necessary for generation
         }
@@ -194,6 +191,62 @@ public class Vessel extends Entity {
 
         return super.save();
     }
+
+    public void addModule(Module module){
+        if(module instanceof Module.HullModule){
+            if(hullModules.size() < hullModuleSlots){
+                hullModules.add((Module.HullModule) module);
+                module.setVessel(this);
+            }else{
+                pilot.warn("Not Enough Hull Module Slots");
+            }
+        }else if(module instanceof Module.ArmorModule){
+            if(armorModules.size() < armorModuleSlots) {
+                armorModules.add((Module.ArmorModule) module);
+                module.setVessel(this);
+            }else{
+                pilot.warn("Not Enough Armor Module Slots");
+            }
+        }else if(module instanceof Module.ShieldModule){
+            if(shieldModules.size() < shieldModuleSlots) {
+                shieldModules.add((Module.ShieldModule) module);
+                module.setVessel(this);
+            }else{
+                pilot.warn("Not Enough Shield Module Slots");
+            }
+        }else if(module instanceof Module.WeaponModule){
+            if(weaponModules.size() < weaponModuleSlots){
+                weaponModules.add((Module.WeaponModule) module);
+                module.setVessel(this);
+            }else{
+                pilot.warn("Not Enough Weapon Module Slots");
+            }
+        }else if(module instanceof Module.MiningModule){
+            if(miningModules.size() < miningModuleSlots){
+                miningModules.add((Module.MiningModule) module);
+                module.setVessel(this);
+            }else{
+                pilot.warn("Not Enough Mining Module Slots");
+            }
+        }else if(module instanceof Weapon) {
+            if(weapons.size() < weaponSlots) {
+                weapons.add((Weapon) module);
+            }else{
+                pilot.warn("Not Enough Mining Module Slots");
+            }
+        }else{
+            System.out.println("A bad module tried to be inserted into objectID:" + this.getId());
+        }
+    }
+
+
+
+
+
+
+
+
+
 
     public String getShieldModulesData() {
         return shieldModulesData;
@@ -253,6 +306,13 @@ public class Vessel extends Entity {
     }
 
 
+    @Override
+    public void destroy() {
+
+        //Todo: Create loot/salvage on death!
+
+        super.destroy();
+    }
 
 
 

@@ -1,5 +1,6 @@
 package com.greenspacevoidnode.common.item;
 
+import com.greenspacevoidnode.common.item.industry.resources.Resource;
 import com.greenspacevoidnode.common.item.industry.resources.ore.Ore;
 import com.greenspacevoidnode.engine.exceptions.ErrorMessages;
 import com.greenspacevoidnode.sql.Saveable;
@@ -21,7 +22,7 @@ public class Hold implements Saveable { //Stores items
     private String contents;
 
 
-    private ArrayList<Item> genericHold = new ArrayList<>();
+    private ArrayList<Item> items = new ArrayList<>();
     private double baseCargoHoldSpace;
     private double currentCargoHoldSpace; //Modified basevalue, not accumulated space taken by items.
 
@@ -35,12 +36,17 @@ public class Hold implements Saveable { //Stores items
 
     @Override
     public Long save() {
+
+        for(Item item : items ){
+            item.update();
+        }
+
         this.generateContentsString();//Convert our stored mapped objects into a string (Format: TABLENAME/CLASSNAME:ID,)
         return Saveable.super.save();
     }
 
-    public ArrayList<Item> getHoldAsArrayList() {
-        return genericHold;
+    public ArrayList<Item> getItems() {
+        return items;
     }
 
     public double getHoldSpace() {
@@ -48,7 +54,7 @@ public class Hold implements Saveable { //Stores items
     }
 
     public void setBaseCargoHoldSpace(double baseCargoHoldSpace) throws ErrorMessages.CargoHoldNotEmptyException {
-        if (currentAvailableSpace() != baseCargoHoldSpace || genericHold.size() != 0) {//May want to use ampersand for security
+        if (currentAvailableSpace() != baseCargoHoldSpace || items.size() != 0) {//May want to use ampersand for security
             throw new ErrorMessages.CargoHoldNotEmptyException();
 
         } else {
@@ -56,9 +62,39 @@ public class Hold implements Saveable { //Stores items
         }
     }
 
+
+
+
+
+
+    public void refineMaterial(Resource resource){
+
+
+
+        items.addAll(resource.refine());
+        items.remove(resource);
+        this.save();
+    }
+
+    public void refineMaterial(ArrayList<Resource> resources){
+        //Creates new materials from resources, deletes references from resources, and saves this cargohold to the database.
+
+        //Todo: Implement stack to keep things tidy!
+
+        for(Resource resource : resources) {
+            items.addAll(resource.refine());
+            items.remove(resource);
+            this.save();
+        }
+    }
+
+
+
+
+
     public double currentAvailableSpace() {
         double usedCargoSpace = 0;
-        for (Item item : genericHold) {
+        for (Item item : items) {
             usedCargoSpace += item.getVolume();
         }
         return usedCargoSpace;
@@ -68,7 +104,7 @@ public class Hold implements Saveable { //Stores items
     public void generateContentsString() {
         //Converts assets within arraylist to string format. (No need for a billion tables when you can use table name:id eh?)
         contents = "";
-        for (Item item : genericHold) {
+        for (Item item : items) {
             contents += item.getClass().getSimpleName() + ":" + item.getId() + ",";
         }
 
@@ -80,7 +116,7 @@ public class Hold implements Saveable { //Stores items
         if (storedWhere != null) {//Must specify valid previously stored location.
             if (item.getQuantity() * item.getVolume() < currentAvailableSpace()) {
                 if (stack) {
-                    for (Item i : genericHold) {
+                    for (Item i : items) {
                         if (i.getClass().equals(item.getClass())) {
                             i.setQuantity(i.getQuantity() + item.getQuantity());
                             storedWhere.remove(item);
@@ -88,7 +124,7 @@ public class Hold implements Saveable { //Stores items
                         }
                     }
                 } else {//Don't stack, add new item
-                    genericHold.add(item);
+                    items.add(item);
                     storedWhere.remove(item);
                 }
             }
@@ -98,13 +134,13 @@ public class Hold implements Saveable { //Stores items
 
     public void stack(Item targetItem, Item destinationItem) {//Todo: Add exception
 
-        if (genericHold.contains(targetItem) && genericHold.contains(destinationItem)) {
+        if (items.contains(targetItem) && items.contains(destinationItem)) {
 
 
             //Might want to add the currentAvailableSpace method if clause for security. But otherwise, meh...
             if (targetItem.getClass().equals(destinationItem.getClass())) {
                 destinationItem.setQuantity(destinationItem.getQuantity() + targetItem.getQuantity());
-                genericHold.remove(targetItem);
+                items.remove(targetItem);
             }
         }
     }
@@ -125,6 +161,32 @@ public class Hold implements Saveable { //Stores items
             super(cargoHoldSpace);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static class OreHold extends Hold {
 

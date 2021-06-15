@@ -1,5 +1,8 @@
 package com.greenspacevoidnode.common.item.modules;
 
+import com.greenspacevoidnode.common.Sizes;
+import com.greenspacevoidnode.common.entity.vessel.Vessel;
+import com.greenspacevoidnode.common.entity.vessel.ship.Ship;
 import com.greenspacevoidnode.common.item.Item;
 
 import javax.persistence.*;
@@ -10,6 +13,10 @@ public class Module extends Item {
 
 
 
+    private Sizes size;
+    private Vessel vessel; //Vessel reference!
+
+
 
     @Column(name = "isActive")
     private boolean isActive;
@@ -18,7 +25,7 @@ public class Module extends Item {
     private boolean canActivate, canOverheat;
     private long cycleTime;//In millis
 
-    private double structureHitPointModifier, hullHitPointModifier, shieldHitPointModifier;
+    private double armorHitPointModifier, hullHitPointModifier, shieldHitPointModifier;
 
 
 
@@ -80,7 +87,7 @@ public class Module extends Item {
 
 
 
-    public Module(String name, double baseVolume, int quantity) {
+    public Module(String name, double baseVolume, int quantity, Sizes size) {
         super(name, baseVolume, quantity);
     }
 
@@ -93,79 +100,52 @@ public class Module extends Item {
 
     }
 
+    public Vessel getVessel() {
+        return vessel;
+    }
+
+    public void setVessel(Vessel vessel) {
+        this.vessel = vessel;
+    }
+
+    public static class WeaponModule extends Module{
 
 
-
-
-
-    public static class ExtraSmallModule extends Module{
-        public ExtraSmallModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
-
-
+        public WeaponModule(String name, double baseVolume, int quantity, Sizes size) {
+            super(name, baseVolume, quantity, size);
         }
     }
 
+    public static class MiningModule extends Module{
 
 
-    public static class SmallModule extends Module{
-
-
-        public SmallModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
+        public MiningModule(String name, double baseVolume, int quantity, Sizes size) {
+            super(name, baseVolume, quantity, size);
         }
     }
 
-    public static class MediumModule extends Module{
+    public static class HullModule extends Module{
 
 
-        public MediumModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
+        public HullModule(String name, double baseVolume, int quantity, Sizes size) {
+            super(name, baseVolume, quantity, size);
         }
     }
 
+    public static class ShieldModule extends Module{
 
-    public static class LargeModule extends Module{
 
-
-        public LargeModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
+        public ShieldModule(String name, double baseVolume, int quantity, Sizes size) {
+            super(name, baseVolume, quantity, size);
         }
     }
 
+    public static class ArmorModule extends Module{
 
-
-
-    public static class CapitalModule extends Module{
-
-
-        public CapitalModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
+        public ArmorModule(String name, double baseVolume, int quantity, Sizes size) {
+            super(name, baseVolume, quantity, size);
         }
     }
-
-
-    public static class SuperCapitalModule extends Module{
-
-
-        public SuperCapitalModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
-        }
-    }
-
-    public static class StationModule extends Module{
-
-
-        public StationModule(String name, double baseVolume, int quantity) {
-            super(name, baseVolume, quantity);
-        }
-    }
-
-
-
-
-
-
 
 
 

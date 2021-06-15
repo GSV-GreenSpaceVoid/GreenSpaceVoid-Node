@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "Player")
-public class Player {
+public class Player implements PlayerTells{
     @Id @GeneratedValue
     @Column(name = "id")
     private long id;
@@ -17,7 +17,7 @@ public class Player {
     private String username;
 
     @Column(name = "password")
-    private String password;
+    private String password; //Todo: SHA encryption
 
     @Column(name = "emailAddress")
     private String emailAddress;
@@ -25,10 +25,11 @@ public class Player {
     @Column(name = "currency")
     private BigDecimal currency;
 
+    @Column(name = "ship")
+    private String currentShip;
 
-
-
-
+    @Column
+    private String currentSystem;
 
 
 
@@ -87,5 +88,13 @@ public class Player {
 
     public void setConnection(Connection connection) {
         this.connection = connection;
+    }
+
+    public String getCurrentShip() {
+        return currentShip;
+    }
+
+    public void setCurrentShip(String currentShip) {
+        this.currentShip = currentShip;
     }
 }
