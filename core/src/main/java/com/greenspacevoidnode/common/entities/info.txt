@@ -1,0 +1,1 @@
+This directory contains supergrandchildren classes. I.e unique ships and classes otherwise not defined in "core"

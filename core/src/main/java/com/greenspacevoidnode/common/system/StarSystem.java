@@ -1,6 +1,6 @@
 package com.greenspacevoidnode.common.system;
 
-import com.greenspacevoidnode.common.entity.Entity;
+import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.sql.Saveable;
 
 import javax.persistence.*;

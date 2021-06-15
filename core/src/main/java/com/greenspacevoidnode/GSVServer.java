@@ -1,8 +1,8 @@
 package com.greenspacevoidnode;
 
-import com.greenspacevoidnode.common.item.industry.materials.Material;
-import com.greenspacevoidnode.common.item.industry.resources.ore.Ore;
-import com.greenspacevoidnode.common.item.industry.resources.Resource;
+import com.greenspacevoidnode.common.core.item.industry.materials.Material;
+import com.greenspacevoidnode.common.core.item.industry.resources.ore.Ore;
+import com.greenspacevoidnode.common.core.item.industry.resources.Resource;
 import com.greenspacevoidnode.server.ServerSide;
 
 import java.util.ArrayList;

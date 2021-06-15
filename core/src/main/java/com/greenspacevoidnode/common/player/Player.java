@@ -97,4 +97,11 @@ public class Player implements PlayerTells{
     public void setCurrentShip(String currentShip) {
         this.currentShip = currentShip;
     }
+
+    public void warn(String str){
+
+    }
+
+
+
 }

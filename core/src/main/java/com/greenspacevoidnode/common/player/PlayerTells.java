@@ -6,9 +6,7 @@ public interface PlayerTells {
 
    }
 
-    default void warn(String str){
 
-    }
 
 
 
