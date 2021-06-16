@@ -1,12 +1,13 @@
 package com.greenspacevoidnode.common.core.item;
 
+import com.greenspacevoidnode.common.core.Identifiable;
 import com.greenspacevoidnode.sql.Saveable;
 
 import javax.persistence.*;
 
 
 @MappedSuperclass
-public class Item implements Saveable {
+public class Item implements Saveable, Identifiable {
 
     @Column(name = "id")
     private long id;
@@ -14,6 +15,7 @@ public class Item implements Saveable {
     @Column(name = "name")
     private String name;//This may be redundant as this is an item. But so be it...
 
+    private int UUID;
 
     private double baseVolume, volume; //Computed/onJar values values. No need for database access.
 

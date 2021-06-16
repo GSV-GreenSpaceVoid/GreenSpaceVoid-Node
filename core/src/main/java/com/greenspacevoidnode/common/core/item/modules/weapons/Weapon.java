@@ -1,6 +1,5 @@
 package com.greenspacevoidnode.common.core.item.modules.weapons;
 
-import com.greenspacevoidnode.common.Sizes;
 import com.greenspacevoidnode.common.core.item.modules.Module;
 public class Weapon extends Module{
 
@@ -21,16 +20,9 @@ public class Weapon extends Module{
     boolean isReloading;
     boolean canFire;
 
-
-
-
-
-
-
-    public Weapon(String name, double baseVolume, int quantity, Sizes size) {
+    public Weapon(String name, double baseVolume, int quantity, int size) {
         super(name, baseVolume, quantity, size);
     }
-
 
 
     public void fire(){

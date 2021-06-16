@@ -86,7 +86,7 @@ public class Module extends Item {
 
 
 
-    public Module(String name, double baseVolume, int quantity, Sizes size) {
+    public Module(String name, double baseVolume, int quantity, int size) {
         super(name, baseVolume, quantity);
     }
 
@@ -110,7 +110,7 @@ public class Module extends Item {
     public static class WeaponModule extends Module{
 
 
-        public WeaponModule(String name, double baseVolume, int quantity, Sizes size) {
+        public WeaponModule(String name, double baseVolume, int quantity, int size) {
             super(name, baseVolume, quantity, size);
         }
     }
@@ -118,7 +118,7 @@ public class Module extends Item {
     public static class MiningModule extends Module{
 
 
-        public MiningModule(String name, double baseVolume, int quantity, Sizes size) {
+        public MiningModule(String name, double baseVolume, int quantity, int size) {
             super(name, baseVolume, quantity, size);
         }
     }
@@ -126,7 +126,7 @@ public class Module extends Item {
     public static class HullModule extends Module{
 
 
-        public HullModule(String name, double baseVolume, int quantity, Sizes size) {
+        public HullModule(String name, double baseVolume, int quantity, int size) {
             super(name, baseVolume, quantity, size);
         }
     }
@@ -134,14 +134,14 @@ public class Module extends Item {
     public static class ShieldModule extends Module{
 
 
-        public ShieldModule(String name, double baseVolume, int quantity, Sizes size) {
+        public ShieldModule(String name, double baseVolume, int quantity, int size) {
             super(name, baseVolume, quantity, size);
         }
     }
 
     public static class ArmorModule extends Module{
 
-        public ArmorModule(String name, double baseVolume, int quantity, Sizes size) {
+        public ArmorModule(String name, double baseVolume, int quantity, int size) {
             super(name, baseVolume, quantity, size);
         }
     }

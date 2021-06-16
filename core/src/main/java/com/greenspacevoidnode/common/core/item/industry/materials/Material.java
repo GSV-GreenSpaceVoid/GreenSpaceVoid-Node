@@ -3,13 +3,9 @@ package com.greenspacevoidnode.common.core.item.industry.materials;
 import com.greenspacevoidnode.common.core.item.Item;
 
 public class Material extends Item {
-
-
-    public Material(String name, double baseVolume, int quantity) {
-        super(name, baseVolume, quantity);
+    public Material(String name, double basevolume, int quantity) {
+        super(name,basevolume, quantity);
     }
-
-
 
 
     //Refined Materials below:

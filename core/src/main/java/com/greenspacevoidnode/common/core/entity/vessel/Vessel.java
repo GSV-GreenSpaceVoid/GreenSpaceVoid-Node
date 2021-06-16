@@ -15,7 +15,8 @@ import java.util.ArrayList;
 public class Vessel extends Entity implements PlayerTells {
 
     private Player pilot;
-
+    @Column(name = "pilotID")
+    private long pilotID;
 
     @Column(name = "cargoHoldID")
     private long cargoHoldID; //Table reference to this vessel's cargo hold (Screw joins!)
@@ -26,7 +27,7 @@ public class Vessel extends Entity implements PlayerTells {
 
     //TODO: REPEAT AFTER ME! I WILL NOT AND SHALL NOT INCLUDE BASEVALUES EVER(!!!!) IN THE DATABASE!
 
-    private Class blueprintClass;
+
 
 
 
@@ -47,7 +48,7 @@ public class Vessel extends Entity implements PlayerTells {
 
     double basePowerGrid, baseCapacitorCapacity, baseCapacitorRegenerationRate;
 
-    double baseInertiaModifier, baseSpeed, baseTurnRate;
+    double baseInertiaModifier, baseSpeed, baseAccelerationRate, baseTurnRate;
 
     double baseCargoHoldCapacity;
 
@@ -79,7 +80,7 @@ public class Vessel extends Entity implements PlayerTells {
 
     double currentPowerGrid, currentCapacitorCapacity, currentCapacitorRegenerationRate;
 
-    double currentInertiaModifier, currentSpeed, currentTurnRate;
+    double currentInertiaModifier, currentSpeed, currentAccelerationRate, currentTurnRate;
 
     int currentHullModuleCount, currentShieldModuleCount, currentWeaponModuleCount, currentMiningModuleCount;
 
@@ -101,7 +102,7 @@ public class Vessel extends Entity implements PlayerTells {
 
     double maxPowerGrid, maxCapacitorCapacity, maxCapacitorRegenerationRate;
 
-    double maxInertiaModifier, maxSpeed, maxTurnRate;
+    double maxInertiaModifier, maxSpeed, maxAccelerationRate, maxTurnRate;
 
 
 
@@ -139,14 +140,14 @@ public class Vessel extends Entity implements PlayerTells {
     private String weaponsData;
 
 
-    ArrayList<Module.ShieldModule> shieldModules = new ArrayList<>();
-    ArrayList<Module.ArmorModule> armorModules = new ArrayList<>();
-    ArrayList<Module.HullModule> hullModules = new ArrayList<>();
+    private ArrayList<Module.ShieldModule> shieldModules = new ArrayList<>();
+    private ArrayList<Module.ArmorModule> armorModules = new ArrayList<>();
+    private ArrayList<Module.HullModule> hullModules = new ArrayList<>();
 
-    ArrayList<Module.WeaponModule> weaponModules = new ArrayList<>();
-    ArrayList<Module.MiningModule> miningModules = new ArrayList<>();
+    private ArrayList<Module.WeaponModule> weaponModules = new ArrayList<>();
+    private ArrayList<Module.MiningModule> miningModules = new ArrayList<>();
 
-    ArrayList<Weapon> weapons = new ArrayList<>();
+    private ArrayList<Weapon> weapons = new ArrayList<>();
 
     @Override
     public Long save() {
@@ -247,6 +248,117 @@ public class Vessel extends Entity implements PlayerTells {
 
 
     }
+
+/*           _    _                                _____           _
+            | |  | |                              /  ___|         | |
+            | |  | | ___  __ _ _ __   ___  _ __   \ `--. _   _ ___| |_ ___ _ __ ___  ___
+            | |/\| |/ _ \/ _` | '_ \ / _ \| '_ \   `--. \ | | / __| __/ _ \ '_ ` _ \/ __|
+            \  /\  /  __/ (_| | |_) | (_) | | | | /\__/ / |_| \__ \ ||  __/ | | | | \__ \
+             \/  \/ \___|\__,_| .__/ \___/|_| |_| \____/ \__, |___/\__\___|_| |_| |_|___/
+                             | |                         __/ |
+                             |_|                        |___/
+*/
+
+    private ArrayList<Entity> targets = new ArrayList<>();
+
+    public void addTarget(Entity entity){
+        if(targets.size() < maxTargets){
+            if(entity.isTargetable()){
+                targets.add(entity);
+            }else{
+                pilot.warn("Cannot Target " + entity.getName() + "!");
+                return;
+            }
+        }else{
+            pilot.warn("You have reached your maximum of " + maxTargets + " targets already!");
+        }
+    }
+
+    @Deprecated
+    public void addTarget(int UUID){//Client Specific
+
+
+    }
+
+
+    public void removeTarget(Entity entity){
+
+
+
+    }
+
+    /*  ___  ___                                    _
+        |  \/  |                                   | |
+        | .  . | _____   _____ _ __ ___   ___ _ __ | |_
+        | |\/| |/ _ \ \ / / _ \ '_ ` _ \ / _ \ '_ \| __|
+        | |  | | (_) \ V /  __/ | | | | |  __/ | | | |_
+        \_|  |_/\___/ \_/ \___|_| |_| |_|\___|_| |_|\__|
+     */
+
+
+    private boolean isMoving, isAccelerating, isDecelerating;
+    private long destinationX, destinationY;
+    private double targetSpeed;
+
+
+    public void setDestination(long x, long y){
+        destinationX = x;
+        destinationY = y;
+        isMoving = true;
+    }
+
+    public void setDestination(Entity entity){
+        destinationX = entity.getX();
+        destinationY = entity.getY();
+        isMoving = true;
+    }
+
+    public void setTargetSpeed(double targetSpeed){
+        this.targetSpeed = targetSpeed;
+    }
+
+    public double getTargetSpeed(){
+        return targetSpeed;
+    }
+
+    public double getCurrentSpeed(){
+        return currentSpeed;
+    }
+
+    public void stopMoving(){
+        isMoving = false;
+    }
+
+    public void freeze(){
+        setCanMove(false);
+        currentSpeed = 0;
+        isMoving = false;
+    }
+
+    @Deprecated
+    public void move(){
+        //Todo: Physics logic!..This may belong better in the physics engine class as it can read destination and THEN do the according physics. Better there than here?
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

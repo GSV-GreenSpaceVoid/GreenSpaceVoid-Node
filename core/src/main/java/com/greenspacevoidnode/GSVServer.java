@@ -1,8 +1,6 @@
 package com.greenspacevoidnode;
 
 import com.greenspacevoidnode.common.core.item.industry.materials.Material;
-import com.greenspacevoidnode.common.core.item.industry.resources.ore.Ore;
-import com.greenspacevoidnode.common.core.item.industry.resources.Resource;
 import com.greenspacevoidnode.server.ServerSide;
 
 import java.util.ArrayList;
@@ -31,18 +29,9 @@ public class GSVServer {
 
         ArrayList<Material> test = new ArrayList<>();
 
-        Resource r = new Ore.SOLID_ORE.IronOre.Magnetite(10);
-
-        test = r.refine();
-
-        for(int i  = 0; i < test.size(); i++){
-
-            System.out.println(test.get(i).getName());
-            System.out.println(test.get(i).getQuantity());
-
-        }
 
 
+        //test = r.refine();
 
 
         System.out.println("com.greenspacevoidsharedAPI.Test");

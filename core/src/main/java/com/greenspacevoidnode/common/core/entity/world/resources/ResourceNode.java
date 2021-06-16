@@ -1,7 +1,7 @@
 package com.greenspacevoidnode.common.core.entity.world.resources;
 
 import com.greenspacevoidnode.common.core.entity.world.WorldEntity;
-import com.greenspacevoidnode.common.core.item.industry.resources.ore.Ore;
+import com.greenspacevoidnode.common.core.item.industry.materials.Ore;
 
 public class ResourceNode extends WorldEntity {
 

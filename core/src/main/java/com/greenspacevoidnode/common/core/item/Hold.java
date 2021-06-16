@@ -1,7 +1,7 @@
 package com.greenspacevoidnode.common.core.item;
 
 import com.greenspacevoidnode.common.core.item.industry.resources.Resource;
-import com.greenspacevoidnode.common.core.item.industry.resources.ore.Ore;
+import com.greenspacevoidnode.common.core.item.industry.materials.Ore;
 import com.greenspacevoidnode.engine.exceptions.ErrorMessages;
 import com.greenspacevoidnode.sql.Saveable;
 

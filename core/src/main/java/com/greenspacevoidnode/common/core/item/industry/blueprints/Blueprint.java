@@ -8,7 +8,7 @@ public class Blueprint extends Item {
     private Recipe[] recipes;
 
     public Blueprint(String name, int quantity, Recipe[] recipes) {
-        super(name,baseVolume, quantity);
+        super(name, baseVolume, quantity);
         this.recipes = recipes;
     }
 

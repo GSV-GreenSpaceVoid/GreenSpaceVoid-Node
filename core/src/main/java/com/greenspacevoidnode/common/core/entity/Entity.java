@@ -1,18 +1,22 @@
 package com.greenspacevoidnode.common.core.entity;
 
+import com.greenspacevoidnode.common.core.Identifiable;
 import com.greenspacevoidnode.sql.Saveable;
 
 import javax.persistence.*;
 
 
 @MappedSuperclass
-public class Entity implements Saveable {
+public class Entity implements Saveable, Identifiable {
     @Id @GeneratedValue
     @Column(name = "id")
     private long id; //Database Key BigInteger
-
     //Non-Database needed as this value is stored within the Jar
     private int rendererID; //Renderer Specific ID (ex. What texture to tell the client renderer to rend)
+
+    @Column(name = "systemID")
+    private long systemID;
+
 
     @Column(name = "name")
     private String name; //Some entities may have a custom name so it may be worth jamming in the database.

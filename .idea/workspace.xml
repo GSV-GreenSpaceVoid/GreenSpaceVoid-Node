@@ -23,95 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/barge/barge.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/blockaderunner/blockaderunner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/freighter/freighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/harvester/harvester.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/hauler/hauler.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/industrialcommandship/industrialcommandship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/jumpfreighter/jumpfreighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/scavenger/scavenger.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/superfreighter/superfreighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/industrial/tanker/tanker.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/battlecruiser/battlecruiser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/battleship/battleship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/carrier/carrier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/corvette/corvette.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/cruiser/cruiser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/dreadnought/dreadnought.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/fighter/fighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/frigate/frigate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/supercarrier/supercarrier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/ship/military/superdreadnought/superdreadnought.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/edom/station/station.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/barge/barge.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/blockaderunner/blockaderunner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/freighter/freighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/harvester/harvester.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/hauler/hauler.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/industrialcommandship/industrialcommandship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/jumpfreighter/jumpfreighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/scavenger/scavenger.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/superfreighter/superfreighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/industrial/tanker/tanker.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/battlecruiser/battlecruiser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/battleship/battleship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/carrier/carrier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/corvette/corvette.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/cruiser/cruiser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/dreadnought/dreadnought.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/fighter/fighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/frigate/frigate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/supercarrier/supercarrier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/ship/military/superdreadnought/superdreadnought.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/ishmael/station/station.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/barge/barge.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/blockaderunner/blockaderunner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/freighter/freighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/harvester/harvester.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/hauler/hauler.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/industrialcommandship/industrialcommandship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/jumpfreighter/jumpfreighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/scavenger/scavenger.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/superfreighter/superfreighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/industrial/tanker/tanker.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/battlecruiser/battlecruiser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/battleship/battleship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/carrier/carrier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/corvette/corvette.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/cruiser/cruiser.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/dreadnought/dreadnought.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/fighter/fighter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/frigate/frigate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/supercarrier/supercarrier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/ship/military/superdreadnought/superdreadnought.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/faction/israel/station/station.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entities/info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/generalInfo/InformationMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/Identifiable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/blueprints/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/GSVServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/cargo/CargoContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/cargo/CargoContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/vessel/ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/vessel/station/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/station/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/vessel/station/npc/NPCStations.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/station/npc/NPCStations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/world/WorldEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/WorldEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/world/resources/ResourceNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/entity/world/resources/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/Hold.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Hold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/entities/Deployable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/entities/Deployable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/blueprints/Blueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/blueprints/Blueprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/blueprints/vessels/VesselBlueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/blueprints/vessels/VesselBlueprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/components/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/components/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/materials/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/materials/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/resources/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/industry/resources/ore/Ore.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/resources/ore/Ore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/modules/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/item/modules/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/weapons/Weapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/PlayerTells.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/PlayerTells.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/system/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/system/StarSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Hold.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Hold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/blueprints/Blueprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/blueprints/Blueprint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/blueprints/vessels/VesselBlueprint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/components/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/components/Components.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/materials/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/materials/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/resources/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/resources/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/resources/ore/Ore.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/materials/Ore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/weapons/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,9 +94,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

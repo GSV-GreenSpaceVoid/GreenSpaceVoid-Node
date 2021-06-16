@@ -9,11 +9,14 @@ import java.util.ArrayList;
 public class Resource extends Item {
 
     private RefinementData[] data;
-    //All resources must be refinable...Unless they refine into nothing :)
-    public Resource(String name, double baseVolume, int quantity, RefinementData[] data) {
-        super(name, baseVolume, quantity);
+
+    public Resource(String name, double basevolume, int quantity, RefinementData[] data) {
+        super(name, basevolume, quantity);
         this.data = data;
     }
+
+
+    //All resources must be refinable...Unless they refine into nothing :)
 
 
 

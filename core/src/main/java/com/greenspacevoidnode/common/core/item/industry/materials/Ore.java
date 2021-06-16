@@ -1,6 +1,5 @@
-package com.greenspacevoidnode.common.core.item.industry.resources.ore;
+package com.greenspacevoidnode.common.core.item.industry.materials;
 
-import com.greenspacevoidnode.common.core.item.industry.materials.Material;
 import com.greenspacevoidnode.common.core.item.industry.resources.Resource;
 
 public class Ore extends Resource {
@@ -28,7 +27,6 @@ public class Ore extends Resource {
             //From least density of Iron to the greatest. Gets refined into steel
             public static class Magnetite extends IronOre {
                 private static final String name = "Magnetite";
-                private static final double baseMass = 6021;
                 private static final RefinementData[] data = new RefinementData[]{new RefinementData(Material.SolidMaterials.Titanium.class, 3)};
 
 
@@ -41,7 +39,6 @@ public class Ore extends Resource {
 
             public static class ConcentratedMagnetite extends IronOre {
                 private static final String name = "Concentrated Magnetite";
-                private static final double baseMass = 9055;
                 private static final RefinementData[] data = new RefinementData[]{new RefinementData(Material.SolidMaterials.Titanium.class, 3)};
 
                 public ConcentratedMagnetite(int quantity) {
@@ -591,7 +588,7 @@ public class Ore extends Resource {
                 private static final String name = "Condensed Steam";
                 private static final RefinementData[] data = new RefinementData[]{new RefinementData(Material.SolidMaterials.Titanium.class, 3)};
 
-                public CondensedWaterVaporOre(String name, double baseMass, int quantity) {
+                public CondensedWaterVaporOre(String name, int quantity) {
                     super(name, quantity, data);
                 }
             }
@@ -600,7 +597,7 @@ public class Ore extends Resource {
                 private static final String name = "Thick Steam";
                 private static final RefinementData[] data = new RefinementData[]{new RefinementData(Material.SolidMaterials.Titanium.class, 3)};
 
-                public SteamingWaterVaporOre(String name, double baseMass, int quantity) {
+                public SteamingWaterVaporOre(String name, int quantity) {
                     super(name, quantity, data);
                 }
             }
