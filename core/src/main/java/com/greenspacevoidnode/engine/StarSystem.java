@@ -1,12 +1,17 @@
-package com.greenspacevoidnode.common.system;
+package com.greenspacevoidnode.engine;
 
 import com.greenspacevoidnode.common.core.entity.Entity;
+import com.greenspacevoidnode.sql.SQL;
 import com.greenspacevoidnode.sql.Saveable;
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import javax.persistence.*;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 @javax.persistence.Entity
 @Table(name = "systemInfo")
@@ -21,6 +26,9 @@ public class StarSystem implements Saveable {//It's actually a database B)
     @Id@GeneratedValue
     @Column(name = "id")
     private long id;
+
+    @Column(name = "isLoaded")
+    private boolean isLoaded;
 
     @Column(name = "name")
     String name;
@@ -50,6 +58,78 @@ public class StarSystem implements Saveable {//It's actually a database B)
 
 
     }
+
+
+
+
+
+
+    public void start(){
+
+
+
+
+    }
+
+
+
+
+    public void load(){
+
+        Session session = SQL.HibernateManager.factory.openSession();
+        Transaction tx = null;
+        try{
+            tx = session.beginTransaction();
+            List entities = session.createQuery("").list();
+
+
+
+
+
+
+
+
+        }catch(Exception e){
+            if(tx != null){
+                tx.rollback();
+            }
+
+
+        }finally{
+            session.close();
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public long getId() {

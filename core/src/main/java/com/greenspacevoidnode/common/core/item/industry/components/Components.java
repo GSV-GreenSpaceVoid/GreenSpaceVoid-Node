@@ -8,4 +8,13 @@ public class Components extends Item {
     public Components(String name, double basevolume, int quantity) {
         super(name, basevolume, quantity);
     }
+
+
+
+
+
+    //Todo: Add construction components!
+
+
+
 }

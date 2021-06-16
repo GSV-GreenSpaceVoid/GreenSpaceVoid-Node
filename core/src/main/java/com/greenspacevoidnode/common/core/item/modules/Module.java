@@ -99,6 +99,11 @@ public class Module extends Item {
 
     }
 
+
+
+    //TODO: Implement Module modifiers!
+
+
     public Vessel getVessel() {
         return vessel;
     }

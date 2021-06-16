@@ -2,7 +2,7 @@ package com.greenspacevoidnode.common.core.entity.world.resources;
 
 import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.common.core.entity.world.WorldEntity;
-import com.greenspacevoidnode.common.system.StarSystem;
+import com.greenspacevoidnode.engine.StarSystem;
 
 import javax.persistence.MappedSuperclass;
 

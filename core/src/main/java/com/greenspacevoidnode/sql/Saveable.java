@@ -92,7 +92,6 @@ public interface Saveable {
 
 
 
-
     long getId();
     void setId(long id);
 

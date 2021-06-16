@@ -1,8 +1,29 @@
 package com.greenspacevoidnode.engine;
-
+@Deprecated
 public class GameEngine {
 
-    public GameEngine(long systemID){
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public GameEngine(StarSystem starsystem){
+
+
+
+
+
+
+
+
 
 
 
