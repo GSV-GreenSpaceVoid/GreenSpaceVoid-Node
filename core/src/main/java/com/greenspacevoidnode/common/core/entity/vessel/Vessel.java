@@ -2,6 +2,7 @@ package com.greenspacevoidnode.common.core.entity.vessel;
 
 import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.common.core.item.Hold;
+import com.greenspacevoidnode.common.core.item.Item;
 import com.greenspacevoidnode.common.core.item.modules.Module;
 import com.greenspacevoidnode.common.core.item.modules.weapons.Weapon;
 import com.greenspacevoidnode.common.player.Player;
@@ -9,6 +10,7 @@ import com.greenspacevoidnode.common.player.PlayerTells;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 @MappedSuperclass
@@ -20,6 +22,50 @@ public class Vessel extends Entity implements PlayerTells {
 
     @Column(name = "cargoHoldID")
     private long cargoHoldID; //Table reference to this vessel's cargo hold (Screw joins!)
+
+    @Override
+    public void load() {
+        //Clears the modules first. This is to prevent item duplication.
+        hullModules.removeAll(hullModules);
+        armorModules.removeAll(armorModules);
+        shieldModules.removeAll(shieldModules);
+        weaponModules.removeAll(weaponModules);
+        miningModules.removeAll(miningModules);
+        weapons.removeAll(weapons);
+
+        ArrayList<Item> hullItems = loadItemsFromString(hullModulesData);
+        hullItems.removeIf(i -> !(i instanceof Module.HullModule));
+        this.hullModules.addAll((Collection<? extends Module.HullModule>) hullItems);
+
+        ArrayList<Item> armorItems = loadItemsFromString(armorModulesData);
+        armorItems.removeIf(i -> !(i instanceof Module.ArmorModule));
+        this.armorModules.addAll((Collection<? extends Module.ArmorModule>) armorItems);
+
+        ArrayList<Item> shieldItems = loadItemsFromString(shieldModulesData);
+        shieldItems.removeIf(i -> !(i instanceof Module.ShieldModule));
+        this.shieldModules.addAll((Collection<? extends Module.ShieldModule>) shieldItems);
+
+        ArrayList<Item> weaponModuleItems = loadItemsFromString(weaponModulesData);
+        weaponModuleItems.removeIf(i -> !(i instanceof Module.WeaponModule));
+        this.weaponModules.addAll((Collection<? extends Module.WeaponModule>) weaponModuleItems);
+
+        ArrayList<Item> miningModuleItems = loadItemsFromString(miningModulesData);
+        miningModuleItems.removeIf(i -> !(i instanceof Module.MiningModule));
+        this.miningModules.addAll((Collection<? extends Module.MiningModule>) miningModuleItems);
+
+        ArrayList<Item> weaponItems = loadItemsFromString(weaponsData);
+        weaponItems.removeIf(i -> !(i instanceof Weapon));
+        this.weapons.addAll((Collection<? extends Weapon>) weaponItems);
+
+        cargoHold.load();
+    }
+
+
+
+
+
+
+
 
 
 

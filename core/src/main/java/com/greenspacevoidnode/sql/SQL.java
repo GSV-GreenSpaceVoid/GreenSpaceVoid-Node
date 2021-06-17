@@ -1,5 +1,6 @@
 package com.greenspacevoidnode.sql;
 
+import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidsharedAPI.Test;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -7,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -36,7 +38,10 @@ public class SQL {
             manager.addTestClass(1234,1234,1234,"Test #1", 1234);
             System.out.println(testClassID1);
             */
-            manager.demo();
+            //manager.demo();
+
+            //manager.loadTable("OtherGrandChildClass");
+            //manager.load();
             //manager.updateClasses();
             //System.out.println(manager.getClass().getSimpleName());
             //manager.listClasses();
@@ -122,6 +127,20 @@ public class SQL {
 
         }
 
+        public void test(){
+
+
+
+
+
+
+
+        }
+
+
+
+
+
         public void listClasses( ){
             Session session = factory.openSession();
             Transaction tx = null;
@@ -180,8 +199,12 @@ public class SQL {
 
 
 
-    }
 
+
+
+
+
+    }
 
 
 

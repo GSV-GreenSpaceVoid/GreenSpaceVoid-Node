@@ -24,11 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/components/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/industry/components/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/modules/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/system/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/StarSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Hold.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/item/Hold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/StarSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/SQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/Saveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/Saveable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

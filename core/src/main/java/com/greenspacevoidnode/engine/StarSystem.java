@@ -3,7 +3,6 @@ package com.greenspacevoidnode.engine;
 import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.sql.SQL;
 import com.greenspacevoidnode.sql.Saveable;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -15,7 +14,7 @@ import java.util.List;
 
 @javax.persistence.Entity
 @Table(name = "systemInfo")
-public class StarSystem implements Saveable {//It's actually a database B)
+public class StarSystem implements Saveable {//It's not actually a database B)
     //public static ArrayList<StarSystem> StarSystems = new ArrayList<>();
 
     public static StarSystem starSystem;
@@ -41,7 +40,7 @@ public class StarSystem implements Saveable {//It's actually a database B)
     @Column(name = "galacticY")
     private long galacticY;
 
-    ArrayList<Entity> entities; //List by which we store all pointers to our entities.
+    private ArrayList<Entity> entities; //List by which we store all pointers to our entities.
     //Galactic coordinates
 
 
@@ -74,21 +73,27 @@ public class StarSystem implements Saveable {//It's actually a database B)
 
 
 
-    public void load(){
+
+    public void loadAll(){
 
         Session session = SQL.HibernateManager.factory.openSession();
         Transaction tx = null;
+        ArrayList<String> tables = new ArrayList<>();
+
         try{
             tx = session.beginTransaction();
-            List entities = session.createQuery("").list();
+            List tableStrings = session.createSQLQuery("select TABLE_NAME from INFORMATION_SCHEMA.COLUMNS where COLUMN_NAME like 'armorHP' ").list(); //Todo: Replace with systemID
 
 
+            System.out.println(tableStrings);
+            tables.addAll(tableStrings);
 
-
-
-
-
-
+            tx.commit();
+            /*
+            for (Iterator iterator = tableStrings.iterator(); iterator.hasNext();){
+                System.out.println((String) iterator.next());
+            }
+            */
         }catch(Exception e){
             if(tx != null){
                 tx.rollback();
@@ -99,10 +104,43 @@ public class StarSystem implements Saveable {//It's actually a database B)
             session.close();
         }
 
+        for(String tableName : tables){
+            loadEntityTable(tableName);
+        }
+
+        for(Entity entity : entities){
+            entity.updateS();
 
 
 
 
+        }
+
+
+
+    }
+
+
+
+
+    private ArrayList<Entity> loadEntityTable(String name){//Loads all entities from specified table that are in THIS star system!
+        Session session = SQL.HibernateManager.factory.openSession();
+        Transaction tx = null;
+        ArrayList<Entity> entities = new ArrayList<>();
+        try{
+            tx = session.beginTransaction();
+            List results = session.createQuery("from " + name + " where systemID = "+ this.getId()).list(); //Todo: Replace with systemID
+            System.out.println(results);
+            entities.addAll(results);
+            tx.commit();
+        }catch(Exception e){
+            if(tx != null){
+                tx.rollback();
+            }
+        }finally{
+            session.close();
+        }
+        return entities;
     }
 
 

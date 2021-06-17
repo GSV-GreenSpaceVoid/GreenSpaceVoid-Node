@@ -45,6 +45,22 @@ public class Hold implements Saveable { //Stores items
         return Saveable.super.save();
     }
 
+
+    @Override
+    public void load(){
+        //Todo: HQL lookup for items
+        items = loadItemsFromString(contents);
+
+
+    }
+
+
+
+
+
+
+
+
     public ArrayList<Item> getItems() {
         return items;
     }
