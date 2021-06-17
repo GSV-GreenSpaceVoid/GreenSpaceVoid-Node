@@ -370,6 +370,15 @@ public class Vessel extends Entity implements PlayerTells {
 
     }
 
+    public void setTurretTarget(int i, Entity target){
+        try {
+            weapons.get(i).setTarget(target);
+        }catch(Exception e){
+            pilot.warn("Selected Turret No Longer Exists!");
+        }
+    }
+
+
 
     public void removeTarget(Entity entity){
 
@@ -385,8 +394,8 @@ public class Vessel extends Entity implements PlayerTells {
         \_|  |_/\___/ \_/ \___|_| |_| |_|\___|_| |_|\__|
      */
 
-
-    private boolean isMoving, isAccelerating, isDecelerating;
+    //isMoving determines whether the engine will change ship position based on movement.
+    private boolean isMoving;
     private long destinationX, destinationY;
     private double targetSpeed;
 
