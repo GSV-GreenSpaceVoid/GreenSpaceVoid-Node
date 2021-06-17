@@ -15,8 +15,8 @@ public abstract class Ship extends Vessel {
     private Class blueprintClass;
 
 
-    public Ship(String name, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
-        super(name, x, y, volume, isInvincible, isTargetable, canMove, baseCargoCapacity);
+    public Ship(String name, long systemID, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
+        super(name, systemID, x, y, volume, isInvincible, isTargetable, canMove, baseCargoCapacity);
     }
 
 

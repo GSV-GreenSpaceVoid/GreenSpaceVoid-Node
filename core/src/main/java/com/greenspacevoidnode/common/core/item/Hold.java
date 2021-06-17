@@ -1,5 +1,6 @@
 package com.greenspacevoidnode.common.core.item;
 
+import com.greenspacevoidnode.common.core.entity.vessel.Vessel;
 import com.greenspacevoidnode.common.core.item.industry.resources.Resource;
 import com.greenspacevoidnode.common.core.item.industry.materials.Ore;
 import com.greenspacevoidnode.engine.exceptions.ErrorMessages;
@@ -21,6 +22,7 @@ public class Hold implements Saveable { //Stores items
     @Column(name = "contents")
     private String contents;
 
+    private Vessel vesselReference;
 
     private ArrayList<Item> items = new ArrayList<>();
     private double baseCargoHoldSpace;
@@ -38,20 +40,17 @@ public class Hold implements Saveable { //Stores items
     public Long save() {
 
         for(Item item : items ){
-            item.update();
+            item.save();
         }
 
-        this.generateContentsString();//Convert our stored mapped objects into a string (Format: TABLENAME/CLASSNAME:ID,)
+        contents = Saveable.generateIDStringFromItemList(items);
         return Saveable.super.save();
     }
 
 
     @Override
     public void load(){
-        //Todo: HQL lookup for items
         items = loadItemsFromString(contents);
-
-
     }
 
 
@@ -65,7 +64,7 @@ public class Hold implements Saveable { //Stores items
         return items;
     }
 
-    public double getHoldSpace() {
+    public double getbaseHoldSpace() {
         return baseCargoHoldSpace;
     }
 
@@ -178,24 +177,13 @@ public class Hold implements Saveable { //Stores items
         }
     }
 
+    public Vessel getVesselReference() {
+        return vesselReference;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void setVesselReference(Vessel vesselReference) {
+        this.vesselReference = vesselReference;
+    }
 
 
 
@@ -216,8 +204,6 @@ public class Hold implements Saveable { //Stores items
         public void add(Item item, ArrayList<Item> storedWhere, boolean stack) {
             if(item instanceof Ore){
                 super.add(item, storedWhere, stack);
-
-
             }else{
 
                 //Return exception.. Can't fit non-ores in the ore hold!
@@ -225,6 +211,19 @@ public class Hold implements Saveable { //Stores items
 
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static class ShipHold {//This will be useful for moving assembled ships
         double volume;
@@ -250,13 +249,24 @@ public class Hold implements Saveable { //Stores items
 
         //Override methods of course. As stations have infinite storage space B)
 
-
-
-
-
-
-
-
-
     }
+
+
+
+
+
+
+
+    public static class DroneBay extends Hold{
+
+
+        public DroneBay(double baseCargoHoldSpace) {
+            super(baseCargoHoldSpace);
+        }
+    }
+
+
+
+
+
 }

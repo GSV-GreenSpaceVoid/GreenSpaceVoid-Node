@@ -15,8 +15,8 @@ public class ResourceSpawner extends WorldEntity {
     private static boolean canMove = false;
 
 
-    public ResourceSpawner(long x, long y) {
-        super(name, x, y, isInvincible, isTargetable, canMove);
+    public ResourceSpawner(long systemID, long x, long y) {
+        super(name, systemID, x, y, isInvincible, isTargetable, canMove);
 
         //updateSpawner();
 
@@ -148,16 +148,16 @@ public class ResourceSpawner extends WorldEntity {
     public static class AsteroidFieldSpawner extends ResourceSpawner {
 
 
-        public AsteroidFieldSpawner(long x, long y) {
-            super(x, y);
+        public AsteroidFieldSpawner(long systemID, long x, long y) {
+            super(systemID, x, y);
         }
     }
 
     public static class IceFieldSpawner extends ResourceSpawner {
 
 
-        public IceFieldSpawner(long x, long y) {
-            super(x, y);
+        public IceFieldSpawner(long systemID, long x, long y) {
+            super(systemID, x, y);
         }
     }
 
@@ -165,16 +165,16 @@ public class ResourceSpawner extends WorldEntity {
 
 
 
-        public GasFieldSpawner(long x, long y) {
-            super(x, y);
+        public GasFieldSpawner(long systemID, long x, long y) {
+            super(systemID, x, y);
         }
     }
 
     public static class MixedResourceFieldSpawner extends ResourceSpawner {
 
 
-        public MixedResourceFieldSpawner(long x, long y) {
-            super(x, y);
+        public MixedResourceFieldSpawner(long systemID, long x, long y) {
+            super(systemID, x, y);
         }
     }
 

@@ -36,28 +36,10 @@ public class Item implements Saveable, Identifiable {
         }else {
             this.quantity = quantity;
         }
-
-
-
-        this.save();
     }
 
 
-    public void update(){
-        /*Todo: This method is called in every grandchild class.
 
-
-
-
-         */
-
-
-
-
-
-
-
-    }
 
 
 
@@ -105,8 +87,5 @@ public class Item implements Saveable, Identifiable {
     }
 
 
-    @Override
-    public Long save() {
-        return Saveable.super.save();
-    }
+
 }

@@ -9,8 +9,8 @@ public class NPCStations extends Station {
     private static final boolean canMove = false;
 
 
-    public NPCStations(String name, long x, long y) {
-        super(name, x, y, volume, isInvincible, isTargetable, canMove);
+    public NPCStations(String name, long systemID, long x, long y) {
+        super(name, systemID, x, y, volume, isInvincible, isTargetable, canMove);
     }
 
 

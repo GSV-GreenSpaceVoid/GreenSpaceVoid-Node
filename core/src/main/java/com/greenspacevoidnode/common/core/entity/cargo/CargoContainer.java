@@ -25,8 +25,8 @@ public class CargoContainer extends Entity {
 
 
 
-    private CargoContainer(String name, long x, long y, Hold hold) {
-        super(name, x, y, isInvincible, isTargetable, canMove);
+    private CargoContainer(String name, long systemID, long x, long y, Hold hold) {
+        super(name, systemID, x, y, isInvincible, isTargetable, canMove);
         this.hold = hold;
 
 
@@ -40,8 +40,8 @@ public class CargoContainer extends Entity {
 
 
 
-        public SmallCargoContainer(long x, long y) {
-            super(name, x, y, new Hold(cargoHoldSpace));
+        public SmallCargoContainer(long systemID, long x, long y) {
+            super(name, systemID,x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -50,18 +50,18 @@ public class CargoContainer extends Entity {
         private static final String name = "Medium Cargo Container";
         private static final double cargoHoldSpace = 1000;
 
-        public MediumCargoContainer(long x, long y) {
-            super(name, x, y, new Hold(cargoHoldSpace));
+        public MediumCargoContainer(long systemID, long x, long y) {
+            super(name, systemID, x, y, new Hold(cargoHoldSpace));
         }
     }
 
     @javax.persistence.Entity
-    public static class LargeCargoContainer extends CargoContainer{
+    public static class LargeCargoContainer extends CargoContainer {
         private static final String name = "Large Cargo Container";
         private static final double cargoHoldSpace = 2500;
 
-        public LargeCargoContainer(long x, long y) {
-            super(name, x, y, new Hold(cargoHoldSpace));
+        public LargeCargoContainer(long systemID, long x, long y) {
+            super(name, systemID, x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -70,8 +70,8 @@ public class CargoContainer extends Entity {
         private static final String name = "Capital Cargo Container";
         private static final double cargoHoldSpace = 5000;
 
-        public CapitalCargoContainer(long x, long y) {
-            super(name, x, y, new Hold(cargoHoldSpace));
+        public CapitalCargoContainer(long systemID, long x, long y) {
+            super(name, systemID, x, y, new Hold(cargoHoldSpace));
         }
     }
 
@@ -80,8 +80,8 @@ public class CargoContainer extends Entity {
         private static final String name = "Capital Cargo Container";
         private static final double oreHoldSpace = 30000;
 
-        public OreContainer(long x, long y) {
-            super(name, x, y, new Hold.OreHold(oreHoldSpace));
+        public OreContainer(long systemID, long x, long y) {
+            super(name, systemID, x, y, new Hold(oreHoldSpace));
         }
     }
 

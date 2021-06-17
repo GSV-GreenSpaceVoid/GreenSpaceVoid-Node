@@ -15,8 +15,8 @@ public class ResourceNode extends WorldEntity {
 
 
 
-    public ResourceNode(String name, long x, long y) {
-        super(name + "" + ResourceNode.name, x, y, isInvincible, isTargetable, canMove);
+    public ResourceNode(String name, long systemID,long x, long y) {
+        super(name + "" + ResourceNode.name, systemID, x, y, isInvincible, isTargetable, canMove);
 
 
 

@@ -59,7 +59,7 @@ public class Entity implements Saveable, Identifiable {
 
 
     //Todo: Update constructor in include rendererID and database values
-    public Entity(String name, long x, long y, boolean isInvincible, boolean isTargetable, boolean canMove){
+    public Entity(String name, long systemID, long x, long y, boolean isInvincible, boolean isTargetable, boolean canMove){
         this.name = name;
         this.x = x;
         this.y = y;

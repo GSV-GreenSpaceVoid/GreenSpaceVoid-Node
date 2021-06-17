@@ -10,7 +10,6 @@ import com.greenspacevoidnode.common.player.PlayerTells;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Collection;
 
 
 @MappedSuperclass
@@ -23,9 +22,18 @@ public class Vessel extends Entity implements PlayerTells {
     @Column(name = "cargoHoldID")
     private long cargoHoldID; //Table reference to this vessel's cargo hold (Screw joins!)
 
+    @Column(name = "oreHoldID")
+    private long oreHoldID;
+
+    @Column(name = "shipHoldID")
+    private long shipHoldID;
+
+    @Column(name = "droneBayID")
+    private long droneBayID;
+
     @Override
     public void load() {
-        //Clears the modules first. This is to prevent item duplication.
+        //Clears the modules first. This is to prevent item duplication. #Redundant
         hullModules.removeAll(hullModules);
         armorModules.removeAll(armorModules);
         shieldModules.removeAll(shieldModules);
@@ -35,28 +43,35 @@ public class Vessel extends Entity implements PlayerTells {
 
         ArrayList<Item> hullItems = loadItemsFromString(hullModulesData);
         hullItems.removeIf(i -> !(i instanceof Module.HullModule));
-        this.hullModules.addAll((Collection<? extends Module.HullModule>) hullItems);
-
+        for(Item module : hullItems){
+            hullModules.add((Module.HullModule)module);
+        }
         ArrayList<Item> armorItems = loadItemsFromString(armorModulesData);
         armorItems.removeIf(i -> !(i instanceof Module.ArmorModule));
-        this.armorModules.addAll((Collection<? extends Module.ArmorModule>) armorItems);
-
+        for(Item module : armorItems){
+            armorModules.add((Module.ArmorModule)module);
+        }
         ArrayList<Item> shieldItems = loadItemsFromString(shieldModulesData);
         shieldItems.removeIf(i -> !(i instanceof Module.ShieldModule));
-        this.shieldModules.addAll((Collection<? extends Module.ShieldModule>) shieldItems);
-
+        for(Item module : shieldItems){
+            shieldModules.add((Module.ShieldModule)module);
+        }
         ArrayList<Item> weaponModuleItems = loadItemsFromString(weaponModulesData);
         weaponModuleItems.removeIf(i -> !(i instanceof Module.WeaponModule));
-        this.weaponModules.addAll((Collection<? extends Module.WeaponModule>) weaponModuleItems);
-
+        for(Item module : weaponModuleItems){
+            weaponModules.add((Module.WeaponModule)module);
+        }
         ArrayList<Item> miningModuleItems = loadItemsFromString(miningModulesData);
         miningModuleItems.removeIf(i -> !(i instanceof Module.MiningModule));
-        this.miningModules.addAll((Collection<? extends Module.MiningModule>) miningModuleItems);
-
+        for(Item module : miningModuleItems){
+            miningModules.add((Module.MiningModule)module);
+        }
         ArrayList<Item> weaponItems = loadItemsFromString(weaponsData);
         weaponItems.removeIf(i -> !(i instanceof Weapon));
-        this.weapons.addAll((Collection<? extends Weapon>) weaponItems);
-
+        for(Item module : weaponItems){
+            weapons.add((Weapon)module);
+        }
+        setModulesVesselReference();
         cargoHold.load();
     }
 
@@ -152,9 +167,10 @@ public class Vessel extends Entity implements PlayerTells {
 
 
 
-    Hold.CargoHold cargoHold;
-
-
+    private Hold.CargoHold cargoHold;
+    private Hold.OreHold oreHold;
+    private Hold.ShipHold shipHold;
+    private Hold.DroneBay droneBay;
 
 //            88b           d88                        88               88
 //            888b         d888                        88               88
@@ -287,6 +303,34 @@ public class Vessel extends Entity implements PlayerTells {
         System.out.println("Sent a warning to player: " + pilot.getUsername() + " ID: " + pilot.getId());
 
     }
+
+
+    public void setModulesVesselReference(){//Tells every module which ship that they're installed on. This is vital for weaponry/stats.
+        for(Module.HullModule h : hullModules){
+            h.setVessel(this);
+        }
+        for(Module.ArmorModule a : armorModules){
+            a.setVessel(this);
+        }
+        for(Module.ShieldModule s : shieldModules){
+            s.setVessel(this);
+        }
+        for(Module.WeaponModule w : weaponModules){
+            w.setVessel(this);
+        }
+        for(Module.MiningModule m : miningModules){
+            m.setVessel(this);
+        }
+        for(Weapon weapon : weapons){
+            weapon.setVessel(this);
+        }
+    }
+
+
+
+
+
+
 
 
     public void updateStats(){
@@ -461,8 +505,8 @@ public class Vessel extends Entity implements PlayerTells {
         this.weaponsData = weaponsData;
     }
 
-    public Vessel(String name, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
-        super(name, x, y, isInvincible, isTargetable, canMove);
+    public Vessel(String name, long systemID, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
+        super(name, systemID, x, y, isInvincible, isTargetable, canMove);
             Hold.CargoHold cargoHold = new Hold.CargoHold(baseCargoCapacity);
 
 

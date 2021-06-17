@@ -66,9 +66,23 @@ public interface Saveable {
         return this.getId();
     }
 
-    default String generateStringFromItemList(List<Item> items){
 
-        return "";
+    static String generateIDString(Item i){
+        return i.getClass().getSimpleName() + ":" + i.getId() + ",";
+    }
+
+    default String getIDString(){
+        return this.getClass().getSimpleName() + ":" + this.getId() + ",";
+    }
+
+
+
+    static String generateIDStringFromItemList(List<Item> items){
+        StringBuilder s = new StringBuilder();
+        for(Item i : items){
+            s.append(generateIDString(i));
+        }
+        return s.toString();
     }
 
 
