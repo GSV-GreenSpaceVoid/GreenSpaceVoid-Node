@@ -4,27 +4,29 @@ import com.greenspacevoidnode.common.core.entity.vessel.ship.Ship;
 
 public class Gideon extends Ship {
 
-    private static double baseStructureHP, baseHullHP, baseShieldHP;
-    private static double baseShieldRegenerationRate;
+    private static double baseStructureHP = 100;
+    private static double baseHullHP = 100;
+    private static double baseShieldHP = 0;
+    private static double baseShieldRegenerationRate = 0;
 
-    private static double baseStructureEnergyResist;
-    private static double baseStructureThermalResist;
-    private static double baseStructureEMPResist;
-    private static double baseStructureExplosiveResist;
-    private static double baseHullEnergyResist;
-    private static double baseHullThermalResist;
-    private static double baseHullEMPResist;
-    private static double baseHullExplosiveResist;
-    private static double baseShieldEnergyResist;
-    private static double baseShieldThermalResist;
-    private static double baseShieldEMPResist;
-    private static double baseShieldExplosiveResist;
+    private static double baseStructureEnergyResist = 0.05;
+    private static double baseStructureThermalResist = 0.05;
+    private static double baseStructureEMPResist = 0.05;
+    private static double baseStructureExplosiveResist = 0.05;
+    private static double baseHullEnergyResist = 0.05;
+    private static double baseHullThermalResist = 0.05;
+    private static double baseHullEMPResist = 0.05;
+    private static double baseHullExplosiveResist = 0.05;
+    private static double baseShieldEnergyResist = 0.05;
+    private static double baseShieldThermalResist = 0.05;
+    private static double baseShieldEMPResist = 0.05;
+    private static double baseShieldExplosiveResist = 0.05;
 
 
-    private static double baseSensorStrength;
-    private static double BaseSensorRadius;
-    private static double baseSignatureStrength;
-    private static double baseSignatureRadius;
+    private static double baseSensorStrength = 0.5;
+    private static double BaseSensorRadius = 5000;
+    private static double baseSignatureStrength = 0.5;
+    private static double baseSignatureRadius = 2500;
 
 
 
@@ -34,45 +36,43 @@ public class Gideon extends Ship {
 
 
 
-    private static double basePowerGrid;
-    private static double baseCapacitorCapacity;
-    private static double baseCapacitorRegenerationRate;
+    private static double basePowerGrid = 1000;
+    private static double baseCapacitorCapacity = 4000;
+    private static double baseCapacitorRegenerationRate = 150;
 
-    private static double baseInertiaModifier;
-    private static double baseSpeed;
-    private static double baseAccelerationRate;
-    private static double baseTurnRate;
+    private static double baseInertiaModifier = 1;
+    private static double baseSpeed = 1000;
+    private static double baseAccelerationRate = 0.1;
+    private static double baseTurnRate = 20;
 
-    private static double baseCargoHoldCapacity;
+    private static double baseCargoHoldCapacity = 100;
 
-    private static int hullModuleSlots;
-    private static int armorModuleSlots;
-    private static int shieldModuleSlots;
-    private static int weaponModuleSlots;
-    private static int miningModuleSlots;
-    private static int weaponSlots;
-    private static int maxTargets;
+    private static int hullModuleSlots = 2;
+    private static int armorModuleSlots = 2;
+    private static int shieldModuleSlots = 0;
+    private static int weaponModuleSlots = 2;
+    private static int miningModuleSlots = 0;
+    private static int weaponSlots = 4;
+    private static int maxTargets = 2;
 
-    private static double baseRailGunDamageModifier;
-    private static double baseMissileDamageModifier;
-    private static double baseLaserDamageModifier;
-    private static double baseArtilleryDamageModifier;
-    private static double baseMiningYieldModifier;
-    private static double baseRailGunROFModifier;
-    private static double baseMissileROFModifier;
-    private static double baseLaserROFModifier;
-    private static double baseArtilleryROFModifier;
-    private static double baseMiningROFModifier;
+    private static double baseRailGunDamageModifier = 0;
+    private static double baseMissileDamageModifier = 0.2;
+    private static double baseLaserDamageModifier = 0;
+    private static double baseArtilleryDamageModifier = 0.2;
+    private static double baseMiningYieldModifier = 0;
+    private static double baseRailGunROFModifier = 0;
+    private static double baseMissileROFModifier = 0;
+    private static double baseLaserROFModifier = 0;
+    private static double baseArtilleryROFModifier = 0;
+    private static double baseMiningROFModifier = 0;
 
-    private static double baseDroneControlRange;
-    private static double maxNumberOfDrones;
-    private static double baseDroneDamageModifier;
-    private static double baseDroneDefenseModifier;
-    private static double baseDroneSpeedModifier;
-    private static double baseDroneRateOfFireModifier;
-    private static double baseDroneMiningYieldModifier;
-
-
+    private static double baseDroneControlRange = 0;
+    private static double maxNumberOfDrones = 0;
+    private static double baseDroneDamageModifier = 0;
+    private static double baseDroneDefenseModifier = 0;
+    private static double baseDroneSpeedModifier = 0;
+    private static double baseDroneRateOfFireModifier = 0;
+    private static double baseDroneMiningYieldModifier = 0;
 
 
 
