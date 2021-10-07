@@ -2,6 +2,7 @@ package com.greenspacevoidnode;
 
 import com.greenspacevoidnode.common.core.item.industry.materials.Material;
 import com.greenspacevoidnode.server.ServerSide;
+import com.greenspacevoidnode.sql.SQL;
 
 import java.util.ArrayList;
 
@@ -9,7 +10,14 @@ public class GSVServer {
 
 
     public static void main(String[] args) {
+
+        //SQL.HibernateManager.main(null);
         /*
+
+
+
+
+
         Todo: SQL. SQL should be top priority for whenever the server starts. SQL will contain all player information, data,
         Todo: ship data, world data, and the works.
 
