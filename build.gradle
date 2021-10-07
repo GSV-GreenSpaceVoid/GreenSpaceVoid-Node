@@ -54,9 +54,11 @@ project(":GreenSpaceVoid-SharedAPI"){
         compile 'com.esotericsoftware:kryonet:2.22.0-RC1'
 
     }
+}
 
+project(":GreenSpaceVoid-Shared"){
+    apply plugin: "java-library"
+    dependencies {
 
-
-
-
+    }
 }

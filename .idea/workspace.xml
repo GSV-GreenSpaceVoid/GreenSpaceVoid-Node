@@ -22,7 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="" />
+    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-Shared" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-Shared/Test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +170,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/GreenSpaceVoid-API" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -198,6 +209,8 @@
       <recent name="C:\Users\Sal\Documents\GreenSpaceVoid-Server\core\src\main\java\com\greenspacevoid\common\item\industry\blueprints\modules\structural" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sal\Documents\GSV\GreenSpaceVoid-Node\GreenSpaceVoid-Shared\src" />
+      <recent name="C:\Users\Sal\Documents\GSV\GreenSpaceVoid-Node\GreenSpaceVoid-Shared" />
       <recent name="C:\Users\Sal\Documents\GSV\GreenSpaceVoid-Node\core\src\main\resources" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">

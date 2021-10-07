@@ -1,4 +1,6 @@
 rootProject.name = 'GreenSpaceVoid-Node'
 include 'core'
-include 'GreenSpaceVoid-SharedAPI'
+include 'GreenSpaceVoid-Shared'
 include 'GreenSpaceVoid-API'
+include 'GreenSpaceVoid-SharedAPI'
+
