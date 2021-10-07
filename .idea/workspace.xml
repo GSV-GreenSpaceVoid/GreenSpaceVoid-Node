@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/industry/blueprints/component/component.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/industry/blueprints/module/module.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/industry/blueprints/munition/munition.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/industry/blueprints/ship/ship.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/industry/blueprints/station/station.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/industry/components/munitions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/items/munitions/munitions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/GreenSpaceVoid-Shared" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
