@@ -36,5 +36,7 @@
         <mapping class="com.greenspacevoidnode.sql.ChildTestClass"/>
         <mapping class="com.greenspacevoidnode.sql.GrandChildTestClass"/>
         <mapping class="com.greenspacevoidnode.sql.OtherGrandChildClass"/>
+        <mapping class="com.greenspacevoidnode.sql.PersistenceObject"/>
+        <mapping class="com.greenspacevoidnode.sql.StoredObject"/>
     </session-factory>
 </hibernate-configuration>

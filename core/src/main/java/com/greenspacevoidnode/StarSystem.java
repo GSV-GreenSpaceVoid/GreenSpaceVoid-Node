@@ -1,4 +1,4 @@
-package com.greenspacevoidnode.engine;
+package com.greenspacevoidnode;
 
 import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.sql.SQL;
@@ -85,7 +85,7 @@ public class StarSystem implements Saveable {//It's not actually a database B)
             List tableStrings = session.createSQLQuery("select TABLE_NAME from INFORMATION_SCHEMA.COLUMNS where COLUMN_NAME like 'armorHP' ").list(); //Todo: Replace with systemID
 
 
-            System.out.println(tableStrings);
+            java.lang.System.out.println(tableStrings);
             tables.addAll(tableStrings);
 
             tx.commit();
@@ -130,7 +130,7 @@ public class StarSystem implements Saveable {//It's not actually a database B)
         try{
             tx = session.beginTransaction();
             List results = session.createQuery("from " + name + " where systemID = "+ this.getId()).list(); //Todo: Replace with systemID
-            System.out.println(results);
+            java.lang.System.out.println(results);
             entities.addAll(results);
             tx.commit();
         }catch(Exception e){

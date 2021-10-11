@@ -28,7 +28,7 @@ public class Player implements PlayerTells{
     @Column(name = "ship")
     private String currentShip;
 
-    @Column
+    @Column(name = "currentSystem")
     private String currentSystem;
 
 

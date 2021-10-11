@@ -3,11 +3,14 @@ package com.greenspacevoidnode.server;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.kryonet.Server;
-import com.greenspacevoidnode.server.shared.network.Networking;
-import com.greenspacevoidnode.server.shared.network.messages.login.NetworkedLogin;
+import com.greenspacevoidnode.sql.SQL;
+import com.greenspacevoidsharedAPI.networking.network.messages.login.NetworkedLogin;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 public class ServerSide {
 
@@ -28,10 +31,16 @@ public class ServerSide {
             public void received(Connection c, Object object){
 
                 //Todo: Implement SQL compare
-                if(object instanceof NetworkedLogin.CLIENT_SEND.LoginMessage){
+                if(object instanceof NetworkedLogin.CLIENT.CLIENT_SEND_LoginMessage){
+                    /*
                     System.out.println(((NetworkedLogin.CLIENT_SEND.LoginMessage) object).username);
                     System.out.println(Arrays.toString(((NetworkedLogin.CLIENT_SEND.LoginMessage) object).password));
                     System.out.println("Yuh!");
+                    */
+                    login_user((NetworkedLogin.CLIENT.CLIENT_SEND_LoginMessage) object, c);
+
+
+
                 }
 
 
@@ -53,7 +62,35 @@ public class ServerSide {
 
 
 
+    public static void login_user(NetworkedLogin.CLIENT.CLIENT_SEND_LoginMessage message, Connection connection){
 
+
+        try {
+            Session session = SQL.HibernateManager.factory.openSession();
+            List p = session.createSQLQuery("SELECT * FROM player WHERE PASSWORD = " + Arrays.toString(message.password) + " AND username = " + message.username).list();
+            if(p.size() == 1){
+                NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage sendableMessage = new NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage();
+                sendableMessage.loginAccepted = true;
+                //p.get(0)
+
+
+
+
+
+
+                connection.sendTCP(sendableMessage);
+            }else{
+                NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage sendableMessage = new NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage();
+                sendableMessage.loginAccepted = false;
+                connection.sendTCP(sendableMessage);
+                connection.close();
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Something bad has happened in the LoginManager class");
+        }
+    }
 
 
 
