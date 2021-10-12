@@ -1,7 +1,6 @@
 package com.greenspacevoidnode.server.shared.network;
 
 import com.esotericsoftware.kryo.Kryo;
-import com.greenspacevoidnode.server.shared.network.messages.login.NetworkedLogin;
 
 import java.util.ArrayList;
 
@@ -29,7 +28,7 @@ public class Networking {
 
         kryo.register(ArrayList.class);
         kryo.register(byte[].class);
-        kryo.register(NetworkedLogin.CLIENT_SEND.LoginMessage.class);
+        //kryo.register(NetworkedLogin.CLIENT_SEND.LoginMessage.class);
 
         /*
         kryo.register(ArrayList.class);

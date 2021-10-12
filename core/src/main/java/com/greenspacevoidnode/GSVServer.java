@@ -2,8 +2,8 @@ package com.greenspacevoidnode;
 
 import com.greenspacevoidnode.common.core.item.industry.materials.Material;
 import com.greenspacevoidnode.common.player.Player;
+import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.server.ServerSide;
-import com.greenspacevoidnode.sql.SQL;
 import org.hibernate.SessionFactory;
 
 import java.util.ArrayList;
@@ -12,12 +12,12 @@ public class GSVServer {
 
     public static SessionFactory HibernateFactory;
     public static ArrayList<Player> connectedPlayers = new ArrayList<>();
-
+    public static ArrayList<StarSystem> starSystems = new ArrayList<StarSystem>();
 
     public static void main(String[] args) {
 
 
-        ArrayList<StarSystem> starSystems = new ArrayList<StarSystem>();
+
 
 
 

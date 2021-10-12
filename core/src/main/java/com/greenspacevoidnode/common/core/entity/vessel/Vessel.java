@@ -32,7 +32,7 @@ public class Vessel extends Entity implements PlayerTells {
     private long droneBayID;
 
     @Override
-    public void load() {
+    public void update() {
         //Clears the modules first. This is to prevent item duplication. #Redundant
         hullModules.removeAll(hullModules);
         armorModules.removeAll(armorModules);
@@ -72,7 +72,7 @@ public class Vessel extends Entity implements PlayerTells {
             weapons.add((Weapon)module);
         }
         setModulesVesselReference();
-        cargoHold.load();
+        cargoHold.update();
     }
 
 

@@ -49,7 +49,7 @@ public class Hold implements Saveable { //Stores items
 
 
     @Override
-    public void load(){
+    public void update(){
         items = loadItemsFromString(contents);
     }
 

@@ -1,9 +1,12 @@
 package com.greenspacevoidnode.common.core.entity;
 
+import com.greenspacevoidnode.GSVServer;
+import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.common.core.Identifiable;
 import com.greenspacevoidnode.sql.Saveable;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 
 @MappedSuperclass
@@ -42,7 +45,7 @@ public class Entity implements Saveable, Identifiable {
     @Column(name = "canMove")
     private boolean canMove;//General integration to prevent spoof
 
-
+    private boolean markedForDeletion = false;
 
 
 
@@ -198,8 +201,15 @@ public class Entity implements Saveable, Identifiable {
    }
 
 
+    public long getSystemID() {
+        return systemID;
+    }
 
-   public void updateS(){
+    public void setSystemID(long systemID) {
+        this.systemID = systemID;
+    }
+
+    public void updateS(){
 
 
 
@@ -208,9 +218,15 @@ public class Entity implements Saveable, Identifiable {
 
    }
 
+
     @Override
     public Long save() {
-        return Saveable.super.save();
+
+
+        if(!markedForDeletion) {
+            return Saveable.super.save();
+        }
+        return null;
     }
 
 
@@ -222,12 +238,79 @@ public class Entity implements Saveable, Identifiable {
         Saveable.super.delete();
     }
 
+    public StarSystem findCurrentSystem(){
+
+
+        ArrayList<StarSystem> systems = new ArrayList<>();
+        for(StarSystem system : GSVServer.starSystems){
+            if(system.getEntities().contains(this)){
+                systems.add(system);
+            }
+        }
+
+
+        //Todo: Implement prodding method, make it differentiate between an object migrating between systems/hosts and remove duplicates
+        if(systems.size() > 1){
+            for(StarSystem system : systems){
+                if(system.getId() != this.getSystemID()) {
+                    system.getEntities().remove(this);
+                }
+            }
+        }
+
+        return systems.get(0);
+
+    }
+
+
+
+
+
+
+
+
+    public void remove(){
+        for (StarSystem system : GSVServer.starSystems){
+            if(systemID == system.getId()){
+                system.getEntities().removeIf(i -> (system.getEntities().contains(this)));
+                return;
+            }
+        }
+    }
+
+
+    public boolean isMarkedForDeletion() {
+        return markedForDeletion;
+    }
+
+    public void setMarkedForDeletion(boolean markedForDeletion) {
+        this.markedForDeletion = markedForDeletion;
+    }
+
+
+    @Override
     public void delete(){
+        markedForDeletion = true;
+
+
+
+
+        Saveable.super.delete();
+
+
         //Destroys this object from the database
         //this = null;
 
 
 
+    }
+
+
+    public void hardDelete(){
+        for(StarSystem system : GSVServer.starSystems) {
+            system.getEntities().remove(this);
+        }
+        delete();
     }
 
 

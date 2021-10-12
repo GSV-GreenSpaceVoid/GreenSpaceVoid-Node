@@ -5,7 +5,6 @@ import com.greenspacevoidnode.common.core.item.industry.materials.Ore;
 
 public class ResourceNode extends WorldEntity {
 
-    private static final String name = "Asteroid";
     private static final boolean isInvincible = true;
     private static final boolean isTargetable = true;
     private static final boolean canMove = true;
@@ -16,14 +15,22 @@ public class ResourceNode extends WorldEntity {
 
 
     public ResourceNode(String name, long systemID,long x, long y) {
-        super(name + "" + ResourceNode.name, systemID, x, y, isInvincible, isTargetable, canMove);
-
+        super(name, systemID, x, y, isInvincible, isTargetable, canMove);
 
 
         //Create generator code
 
 
     }
+
+
+
+
+
+
+
+
+
 
 
     public enum Resources{
@@ -36,4 +43,19 @@ public class ResourceNode extends WorldEntity {
     public Ore getOre() {
         return ore;
     }
+
+    public Ore mine(int quantity){
+
+        if(this.ore.getQuantity() - quantity > 0){
+            ore.setQuantity(this.ore.getQuantity() - quantity);
+        }else {
+            this.delete();
+        }
+        return this.ore;
+
+    }
+
+
+
+
 }

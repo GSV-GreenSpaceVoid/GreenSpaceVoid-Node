@@ -23,30 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/Init.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/auth/LoginManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/PersistenceObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/StoredObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main/java/com/greenspacevoidshared/entities/world/Asteroids.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-Shared" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-Shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-Shared/src/main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/Networking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/login/NetworkedLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/login/NetworkedLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/GSVServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/GSVServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/system/StarSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/StarSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/ServerSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/ServerSide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/messages/SharedMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/messages/gameEntity/NetworkedEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/messages/gameEntity/targetingandrendering.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/messages/generalInfo/NetworkedPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/messages/login/NetworkedLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/Networking.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/network/Networking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/Saveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/Saveable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +117,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GreenSpaceVoid-Shared" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GreenSpaceVoid-Orchestrator" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />

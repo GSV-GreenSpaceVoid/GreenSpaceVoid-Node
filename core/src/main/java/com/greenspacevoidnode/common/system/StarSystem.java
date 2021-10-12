@@ -1,4 +1,4 @@
-package com.greenspacevoidnode;
+package com.greenspacevoidnode.common.system;
 
 import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.sql.SQL;
@@ -15,10 +15,6 @@ import java.util.List;
 @javax.persistence.Entity
 @Table(name = "systemInfo")
 public class StarSystem implements Saveable {//It's not actually a database B)
-    //public static ArrayList<StarSystem> StarSystems = new ArrayList<>();
-
-    public static StarSystem starSystem;
-
 
 
 
@@ -144,26 +140,10 @@ public class StarSystem implements Saveable {//It's not actually a database B)
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public void delete() {
+        //Systems cannot be deleted.
+    }
 
 
 

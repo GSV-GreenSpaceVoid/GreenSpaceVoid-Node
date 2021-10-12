@@ -1,6 +1,6 @@
 package com.greenspacevoidnode.engine;
 
-import com.greenspacevoidnode.StarSystem;
+import com.greenspacevoidnode.common.system.StarSystem;
 
 @Deprecated
 public class GameEngine {

@@ -1,6 +1,5 @@
 package com.greenspacevoidnode.sql;
 
-import com.greenspacevoidnode.common.core.entity.Entity;
 import com.greenspacevoidnode.common.core.item.Item;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -24,8 +23,6 @@ public interface Saveable {
             transaction.commit();
             return this.getId();
 
-
-
         }catch(Exception e){
             e.printStackTrace();
             if(transaction!= null){
@@ -38,16 +35,11 @@ public interface Saveable {
                 transaction = null;
                 i = null;
 
-
                 try{
                     transaction = session.beginTransaction();
                     i = (Long) session.save(this);
                     transaction.commit();
                     this.setId(i);
-
-
-
-
                 }catch(Exception e1){
                     if(transaction!= null){
                         transaction.rollback();
@@ -94,7 +86,7 @@ public interface Saveable {
          * @param string
          *This method pulls objects from the database of TABLE_NAME:PRIMARY_KEY followed by a comma.
          * Ex. crystal:id,module:id,cargo:id,
-         */
+         **/
 
 
 
@@ -116,9 +108,17 @@ public interface Saveable {
             Transaction tx = null;
             try{
                 tx = session.beginTransaction();
-                List results = session.createQuery("from " + name + " where id = "+ id).list(); //Todo: Replace with systemID
+                //List results = session.createQuery("from " + name + " where id = "+ id).list(); //Deprecated
+                Object obj = session.get(name, id);
+
+
                 //System.out.println(results);
-                items.addAll(results);
+
+                if(obj instanceof Item){
+                    items.add((Item) obj);
+                }
+
+
                 tx.commit();
             }catch(Exception e){
                 if(tx != null){
@@ -131,15 +131,35 @@ public interface Saveable {
         return items;
     }
 
+    default void updateFromDatabase(){
 
 
 
 
-    default void load(){
+
+    }
 
 
 
+    default void update(){//Something seem out of date?
+        Session session = SQL.HibernateManager.factory.openSession();
+        Transaction transaction = null;
+        Long i = null;
 
+        try {
+            transaction = session.beginTransaction();
+            session.refresh(this);
+            transaction.commit();
+        }
+        catch(Exception e){
+            if(transaction!= null){
+                transaction.rollback();
+            }
+            System.out.println("Something persisted that otherwise wasn't deleted...");
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
 
 
     }
@@ -150,7 +170,7 @@ public interface Saveable {
         Transaction transaction = null;
         Long i = null;
 
-        try {//If this fails to update, save it.
+        try {
             transaction = session.beginTransaction();
             session.remove(this);
             transaction.commit();
@@ -166,6 +186,7 @@ public interface Saveable {
             session.close();
         }
     }
+
 
 
 
