@@ -77,7 +77,14 @@ public interface Saveable {
         return s.toString();
     }
 
+    default void close(){//Remove the object from all references
 
+
+
+
+
+
+    }
 
 
 

@@ -523,6 +523,18 @@ public class Vessel extends Entity implements PlayerTells {
         this.volume = volume;
     }
 
+    @Override
+    public void close(){
+
+
+
+
+
+    }
+
+
+
+
 
     @Override
     public void destroy() {

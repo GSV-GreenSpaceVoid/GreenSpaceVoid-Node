@@ -70,7 +70,6 @@ public class Entity implements Saveable, Identifiable {
         this.isInvincible = isInvincible;
         this.isTargetable = isTargetable;
         this.canMove = canMove;
-
     }
 
     /*
@@ -209,14 +208,7 @@ public class Entity implements Saveable, Identifiable {
         this.systemID = systemID;
     }
 
-    public void updateS(){
 
-
-
-
-
-
-   }
 
 
     @Override
@@ -230,7 +222,7 @@ public class Entity implements Saveable, Identifiable {
     }
 
 
-    public void destroy(){
+    public void destroy(){//Todo: Implement animation/timer or whathaveyou before utter complete deletion, or produce an object of this entity's wreckage.
         //Animation of destruction!!!
 
 
@@ -263,10 +255,16 @@ public class Entity implements Saveable, Identifiable {
     }
 
 
+    @Override
+    public void close() {
+        this.save();
+        this.setMarkedForDeletion(true);
+        this.remove();
 
 
 
-
+        Saveable.super.close();
+    }
 
 
     public void remove(){
