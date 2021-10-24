@@ -105,7 +105,7 @@ public class StarSystem implements Saveable {//It's not actually a database B)
         }
 
         for(Entity entity : entities){
-            entity.updateS();
+            entity.update();
 
 
 

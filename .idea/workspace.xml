@@ -24,9 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/Saveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/sql/Saveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/world/resources/ResourceSpawner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/system/StarSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/system/StarSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/ServerSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/ServerSide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/auth/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/server/shared/auth/LoginManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +70,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GreenSpaceVoid-Node" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="run" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -111,7 +120,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../GreenSpaceVoid-Orchestrator" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -144,7 +153,7 @@
       <command value="update" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.PersistenceObject$Main">
+  <component name="RunManager" selected="Gradle.GreenSpaceVoid-Node [RUN]">
     <configuration name="PersistenceObject$Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.greenspacevoidnode.sql.PersistenceObject$Main" />
       <module name="GreenSpaceVoid-Node.core.main" />
@@ -181,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PersistenceObject$Main" />
         <item itemvalue="Gradle.GreenSpaceVoid-Node [RUN]" />
+        <item itemvalue="Application.PersistenceObject$Main" />
       </list>
     </recent_temporary>
   </component>

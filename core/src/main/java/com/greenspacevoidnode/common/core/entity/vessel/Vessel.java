@@ -443,28 +443,13 @@ public class Vessel extends Entity implements PlayerTells {
     }
 
 
+    public Player getPilot() {
+        return pilot;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void setPilot(Player pilot) {
+        this.pilot = pilot;
+    }
 
     public String getShieldModulesData() {
         return shieldModulesData;

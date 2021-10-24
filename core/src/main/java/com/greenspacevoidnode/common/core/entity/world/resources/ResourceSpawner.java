@@ -45,7 +45,7 @@ public class ResourceSpawner extends WorldEntity {
 
 
 
-
+        /*
         for(Entity entity : StarSystem.starSystem.getEntities()){
             if(entity instanceof ResourceNode){
                 if(Math.sqrt(Math.pow(entity.getX() - thisPosX, 2) + Math.pow(entity.getY() - thisPosY, 2)) < resourceFieldRadius) {//Distance formula B)
@@ -53,7 +53,7 @@ public class ResourceSpawner extends WorldEntity {
                 }
             }
         }
-
+           */
 
 
 
