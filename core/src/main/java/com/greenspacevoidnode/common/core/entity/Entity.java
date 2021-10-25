@@ -4,6 +4,7 @@ import com.greenspacevoidnode.GSVServer;
 import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.common.core.Identifiable;
 import com.greenspacevoidnode.sql.Saveable;
+import com.greenspacevoidsharedAPI.networking.renderer.EntityIndex;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class Entity implements Saveable, Identifiable {
 
     private boolean markedForDeletion = false;
 
-
+    private EntityIndex model;
 
 
 
@@ -172,6 +173,14 @@ public class Entity implements Saveable, Identifiable {
 
     public void setCanMove(boolean canMove) {
         this.canMove = canMove;
+    }
+
+    public EntityIndex getModel() {
+        return model;
+    }
+
+    public void setModel(EntityIndex model) {
+        this.model = model;
     }
 
     //Todo: Physics
