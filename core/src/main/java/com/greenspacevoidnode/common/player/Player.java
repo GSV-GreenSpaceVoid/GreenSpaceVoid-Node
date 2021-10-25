@@ -5,9 +5,11 @@ import com.greenspacevoidnode.GSVServer;
 import com.greenspacevoidnode.common.core.entity.vessel.Vessel;
 import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.sql.Saveable;
+import com.greenspacevoidsharedAPI.networking.network.messages.gameEntity.NetworkedEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 
 @Entity
@@ -37,6 +39,8 @@ public class Player implements PlayerTells, Saveable {
     @Column(name = "currentSystem")
     private long currentSystemID;
 
+    ArrayList<com.greenspacevoidnode.common.core.entity.Entity> renderedEntities = new ArrayList<>();
+    ArrayList<NetworkedEntity> networkedEntitiesPair = new ArrayList<>();
 
 
     private Connection connection; //Mapped on player login!
@@ -88,8 +92,13 @@ public class Player implements PlayerTells, Saveable {
     }
 
 
+    public ArrayList<NetworkedEntity> getNetworkedEntitiesPair() {
+        return networkedEntitiesPair;
+    }
 
-
+    public ArrayList<com.greenspacevoidnode.common.core.entity.Entity> getRenderedEntities() {
+        return renderedEntities;
+    }
 
 
     public long getId() {

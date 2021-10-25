@@ -412,6 +412,22 @@ public class Vessel extends Entity implements PlayerTells {
         isMoving = true;
     }
 
+    public void setMoving(boolean moving) {
+        isMoving = moving;
+    }
+
+    public boolean isMoving() {
+        return isMoving;
+    }
+
+    public long getDestinationX() {
+        return destinationX;
+    }
+
+    public long getDestinationY() {
+        return destinationY;
+    }
+
     public void setTargetSpeed(double targetSpeed){
         this.targetSpeed = targetSpeed;
     }
@@ -449,6 +465,42 @@ public class Vessel extends Entity implements PlayerTells {
 
     public void setPilot(Player pilot) {
         this.pilot = pilot;
+    }
+
+    public double getCurrentStructureHP() {
+        return currentStructureHP;
+    }
+
+    public void setCurrentStructureHP(double currentStructureHP) {
+        this.currentStructureHP = currentStructureHP;
+    }
+
+    public double getCurrentHullHP() {
+        return currentHullHP;
+    }
+
+    public double getMaxStructureHP() {
+        return maxStructureHP;
+    }
+
+    public double getMaxHullHP() {
+        return maxHullHP;
+    }
+
+    public double getMaxShieldHP() {
+        return maxShieldHP;
+    }
+
+    public void setCurrentHullHP(double currentHullHP) {
+        this.currentHullHP = currentHullHP;
+    }
+
+    public double getCurrentShieldHP() {
+        return currentShieldHP;
+    }
+
+    public void setCurrentShieldHP(double currentShieldHP) {
+        this.currentShieldHP = currentShieldHP;
     }
 
     public String getShieldModulesData() {
