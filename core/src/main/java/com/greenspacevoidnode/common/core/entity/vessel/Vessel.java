@@ -428,6 +428,31 @@ public class Vessel extends Entity implements PlayerTells {
         return destinationY;
     }
 
+    public double getBaseSpeed() {
+        return baseSpeed;
+    }
+
+    public void setBaseSpeed(double baseSpeed) {
+        this.baseSpeed = baseSpeed;
+    }
+
+    public void setCurrentSpeed(double currentSpeed) {
+        this.currentSpeed = currentSpeed;
+    }
+
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public double getCurrentThrustLevel(){
+        return this.getMaxSpeed() / this.getCurrentSpeed();
+
+    }
+
     public void setTargetSpeed(double targetSpeed){
         this.targetSpeed = targetSpeed;
     }
@@ -447,13 +472,41 @@ public class Vessel extends Entity implements PlayerTells {
     public void freeze(){
         setCanMove(false);
         currentSpeed = 0;
-        isMoving = false;
     }
 
-    @Deprecated
     public void move(){
         //Todo: Physics logic!..This may belong better in the physics engine class as it can read destination and THEN do the according physics. Better there than here?
+        if (this.isCanMove()) {
+            long destinationX = this.getDestinationX();
+            long destinationY = this.getDestinationY();
+            double speed = this.getCurrentSpeed();
+            double dy, dx, flightpath;
 
+            dy = Math.abs(destinationY - this.getY());
+            dx = Math.abs(destinationX - this.getX());
+            flightpath = Math.atan(dy / dx);
+
+
+            if (destinationX != Math.round(this.getX()) || destinationY != Math.round(this.getY())) {
+                double travelX = speed * Math.cos(flightpath);
+                double travelY = speed * Math.sin(flightpath);
+                if (destinationX < this.getX()) {
+                    this.setX(Math.round(this.getX() - travelX));
+                }
+                if (destinationX > this.getX()) {
+                    this.setX(Math.round(this.getX() + travelX));
+                }
+                if (destinationY < this.getY()) {
+                    this.setY(Math.round(this.getY() - travelY));
+                }
+                if (destinationY > this.getY()) {
+                    this.setY(Math.round(this.getY() + travelY));
+                }
+            } else {
+                ((Vessel) this).setMoving(false);
+                ((Vessel) this).sendPlayerAWarningMessage("You have reached your destination!");
+            }
+        }
 
 
     }

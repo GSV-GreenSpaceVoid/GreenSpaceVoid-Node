@@ -44,7 +44,7 @@ public class Player implements PlayerTells, Saveable {
 
 
     private Connection connection; //Mapped on player login!
-
+    boolean isInitialized;
 
     public Player(){
 
@@ -77,6 +77,13 @@ public class Player implements PlayerTells, Saveable {
         }
 
 
+        NetworkedEntity.CLIENT_RECEIVE.PlayerShipMessage playerShipMessage = new NetworkedEntity.CLIENT_RECEIVE.PlayerShipMessage();
+        playerShipMessage.entityID = this.getCurrentVessel().getIDString();
+        playerShipMessage.dir = this.getCurrentVessel().getDirection();
+        playerShipMessage.engineThrustLevel = this.getCurrentVessel().getCurrentThrustLevel();
+        this.getConnection().sendTCP(playerShipMessage);
+        this.setInitialized(true);
+
 
 
 
@@ -100,6 +107,14 @@ public class Player implements PlayerTells, Saveable {
         return renderedEntities;
     }
 
+
+    public boolean isInitialized() {
+        return isInitialized;
+    }
+
+    public void setInitialized(boolean initialized) {
+        isInitialized = initialized;
+    }
 
     public long getId() {
         return id;

@@ -23,12 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/Dummy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/Dummy.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/NetworkedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/NetworkedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/renderer/AllRenderableEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/renderer/EntityIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" afterDir="false" />
     </list>
