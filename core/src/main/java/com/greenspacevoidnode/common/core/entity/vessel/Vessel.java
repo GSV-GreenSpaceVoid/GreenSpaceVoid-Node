@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 @MappedSuperclass
-public class Vessel extends Entity implements PlayerTells {
+public class Vessel extends Entity implements PlayerTells{
 
     private Player pilot;
     @Column(name = "pilotID")
@@ -97,31 +97,68 @@ public class Vessel extends Entity implements PlayerTells {
 
 
     //Base(Constructor initialized)
-    double baseStructureHP, baseHullHP, baseShieldHP;
-    double baseShieldRegenerationRate;
-
-    double baseStructureEnergyResist, baseStructureThermalResist, baseStructureEMPResist, baseStructureExplosiveResist;
-    double baseHullEnergyResist, baseHullThermalResist, baseHullEMPResist, baseHullExplosiveResist;
-    double baseShieldEnergyResist, baseShieldThermalResist, baseShieldEMPResist, baseShieldExplosiveResist;
+    double baseStructureHP = 0;
+    double baseHullHP = 0;
+    double baseShieldHP = 0;
+    double baseShieldRegenerationRate = 0;
 
 
-    double baseSensorStrength, baseSensorRadius, baseSignatureStrength, baseSignatureRadius;
+    double baseStructureEnergyResist = 0;
+    double baseStructureThermalResist = 0;
+    double baseStructureEMPResist = 0;
+    double baseStructureExplosiveResist = 0;
+    double baseHullEnergyResist = 0;
+    double baseHullThermalResist = 0;
+    double baseHullEMPResist = 0;
+    double baseHullExplosiveResist = 0;
 
-    double basePowerGrid, baseCapacitorCapacity, baseCapacitorRegenerationRate;
-
-    double baseInertiaModifier, baseSpeed, baseAccelerationRate, baseTurnRate;
-
-    double baseCargoHoldCapacity;
-
-    int hullModuleSlots, armorModuleSlots, shieldModuleSlots, weaponModuleSlots, miningModuleSlots, weaponSlots, maxTargets;
-
-    double baseRailGunDamageModifier, baseMissileDamageModifier, baseLaserDamageModifier, baseArtilleryDamageModifier, baseMiningYieldModifier;
-    double baseRailGunROFModifier, baseMissileROFModifier, baseLaserROFModifier, baseArtilleryROFModifier, baseMiningROFModifier;
-
-    double baseDroneControlRange, maxNumberOfDrones;
-    double baseDroneDamageModifier, baseDroneDefenseModifier,baseDroneSpeedModifier, baseDroneRateOfFireModifier, baseDroneMiningYieldModifier;
+    double baseShieldEnergyResist = 0;
+    double baseShieldThermalResist = 0;
+    double baseShieldEMPResist = 0;
+    double baseShieldExplosiveResist = 0;
 
 
+    double baseSensorStrength;
+    double baseSensorRadius;
+    double baseSignatureStrength;
+    double baseSignatureRadius;
+
+    double basePowerGrid = 0;
+    double  baseCapacitorCapacity = 0;
+    double  baseCapacitorRegenerationRate = 0;
+
+    double baseInertiaModifier = 0;
+    double  baseSpeed = 0;
+    double  baseAccelerationRate = 0;
+    double  baseTurnRate = 0;
+
+    double baseCargoHoldCapacity = 0;
+
+    int hullModuleSlots = 0;
+    int armorModuleSlots = 0;
+    int shieldModuleSlots = 0;
+    int weaponModuleSlots = 0;
+    int miningModuleSlots = 0;
+    int weaponSlots = 0;
+    int maxTargets = 0;
+    double baseRailGunDamageModifier = 0;
+    double baseMissileDamageModifier = 0;
+    double baseLaserDamageModifier = 0;
+    double baseArtilleryDamageModifier = 0;
+    double baseMiningYieldModifier = 0;
+    double baseRailGunROFModifier = 0;
+    double baseMissileROFModifier = 0;
+    double baseLaserROFModifier = 0;
+    double baseArtilleryROFModifier = 0;
+    double baseMiningROFModifier = 0;
+
+    double baseDroneControlRange = 0;
+    double maxNumberOfDrones = 0;
+    double baseDroneDamageModifier = 0;
+    double baseDroneDefenseModifier = 0;
+    double baseDroneSpeedModifier = 0;
+    double baseDroneRateOfFireModifier = 0;
+    double baseDroneMiningYieldModifier = 0;
 
 
 
@@ -164,7 +201,6 @@ public class Vessel extends Entity implements PlayerTells {
     double maxPowerGrid, maxCapacitorCapacity, maxCapacitorRegenerationRate;
 
     double maxInertiaModifier, maxSpeed, maxAccelerationRate, maxTurnRate;
-
 
 
     private Hold.CargoHold cargoHold;
@@ -633,12 +669,6 @@ public class Vessel extends Entity implements PlayerTells {
 
         super.destroy();
     }
-
-
-
-
-
-
 
 
 }

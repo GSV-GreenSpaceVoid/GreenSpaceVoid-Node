@@ -47,7 +47,7 @@ public class Entity implements Saveable, Identifiable {
     private boolean canMove;//General integration to prevent spoof
 
     private boolean markedForDeletion = false;
-
+    private boolean isLoaded = false;
     private EntityIndex model;
 
 
@@ -131,6 +131,14 @@ public class Entity implements Saveable, Identifiable {
 
     public boolean isInvincible() {
         return isInvincible;
+    }
+
+    public boolean isLoaded() {
+        return isLoaded;
+    }
+
+    public void setLoaded(boolean loaded) {
+        isLoaded = loaded;
     }
 
     @Override

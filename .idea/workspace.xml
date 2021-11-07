@@ -22,16 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/Dummy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/NetworkedEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GreenSpaceVoid-SharedAPI/src/main/java/com/greenspacevoidsharedAPI/networking/network/messages/gameEntity/NetworkedEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/Vessel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/core/entity/vessel/ship/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/common/player/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/greenspacevoidnode/engine/GameEngine.java" afterDir="false" />
-    </list>
+    <list default="true" id="0030f5ed-8b83-4abd-9728-7d411e9da387" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,9 +80,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -119,8 +110,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GreenSpaceVoid-Orchestrator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />

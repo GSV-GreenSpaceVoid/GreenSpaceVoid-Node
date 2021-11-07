@@ -15,6 +15,10 @@ public class Ship extends Vessel {
 
     private Class blueprintClass;
 
+    public Ship(){
+        super("Pending", 0,0,0,0,true,false, false, 0);
+
+    }
 
     public Ship(String name, long systemID, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
         super(name, systemID, x, y, volume, isInvincible, isTargetable, canMove, baseCargoCapacity);
