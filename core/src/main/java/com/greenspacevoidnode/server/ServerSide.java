@@ -9,8 +9,13 @@ import com.greenspacevoidnode.sql.SQL;
 import com.greenspacevoidnode.sql.Saveable;
 import com.greenspacevoidsharedAPI.networking.network.Networking;
 import com.greenspacevoidsharedAPI.networking.network.messages.login.NetworkedLogin;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Example;
+import org.hibernate.loader.custom.sql.SQLCustomQuery;
+import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
 import java.io.IOException;
 import java.sql.PreparedStatement;
@@ -37,6 +42,7 @@ public class ServerSide {
                for(Player player : GSVServer.connectedPlayers){
                    if(player.getConnection() == connection){
                        player.save();
+                       System.out.println("Player " + player.getUsername() + " disconnected!");
                        GSVServer.connectedPlayers.remove(player);
                    }
                }
@@ -80,57 +86,44 @@ public class ServerSide {
 
 
     public static void login_user(NetworkedLogin.CLIENT.CLIENT_SEND_LoginMessage message, Connection connection){
-        List players = null;
+
         Player player;
         Session session = SQL.HibernateManager.factory.openSession();
         Transaction tx = session.beginTransaction();
+        NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage sendableMessage = new NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage();
         try{
 
+            System.out.println(message.username);
+            System.out.println(new String(message.password));
 
+            String hqlQueryString = "FROM Player p WHERE p.username = :username AND p.password = :password";
+            Query query = session.createQuery(hqlQueryString);
+            query.setParameter("username", message.username);
+            query.setParameter("password", new String (message.password));
+            Player p = (Player) query.uniqueResult();
+            if (p != null) {
+                if (!GSVServer.connectedPlayers.contains(p)) { //Make sure it doesnt contain a player thats already connected.
+                    player = session.get(Player.class, p.getId());
+                    GSVServer.connectedPlayers.add(player);
+                    System.out.println("Player " + player.getUsername() + " connected!");
 
-
-            players = session.createSQLQuery("SELECT * FROM player WHERE PASSWORD = \"" + new String(message.password) + "\" AND username = \"" + message.username  + "\"").list();
-            if(players.get(0) instanceof Player && players.size() == 1 && !GSVServer.connectedPlayers.contains((Player) players.get(0))) { //Make sure it doesnt contain a player thats already connected.
-                player = session.get(Player.class, ((Player) players.get(0)).getId());
-                GSVServer.connectedPlayers.add(player);
-                System.out.println(player.getUsername() + " Joined the server!");
-            }
-            tx.commit();
-
-            try {
-
-                if(players.size() == 1){
-                    NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage sendableMessage = new NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage();
-                    sendableMessage.loginAccepted = true;
-
-
-                    connection.sendTCP(sendableMessage);
-
-                }else{
-                    NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage sendableMessage = new NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage();
+                } else {
                     sendableMessage.loginAccepted = false;
                     connection.sendTCP(sendableMessage);
-                    connection.close();
                 }
-            }catch(Exception e){
-                e.printStackTrace();
-                System.out.println("Something bad has happened in the LoginManager class");
+                tx.commit();
+
+            }else{
+                sendableMessage.loginAccepted = false;
             }
+            connection.sendTCP(sendableMessage);
         }catch(Exception e){
+            e.printStackTrace();
             tx.rollback();
         }finally{
             session.close();
         }
 
-
-
-
     }
-
-
-
-
-
-
 
 }

@@ -14,7 +14,7 @@ public class GameEngine {
 
 
     public static final long PLAYER_RENDER_DISTANCE = 100000;
-
+    private static final float TICK_RATE = 2;
 
 
 
@@ -41,7 +41,7 @@ public class GameEngine {
         System.out.println("Game loop started....");
         long initialTime = System.nanoTime();
 
-        final double TimePerFrame = 1000000000f / 2f;
+        final double TimePerFrame = 1000000000f / TICK_RATE;
         double deltaF = 0;
         int frames = 0, ticks = 0;
         long timer = System.currentTimeMillis();
@@ -93,8 +93,6 @@ public class GameEngine {
                     ((Vessel) e).move();
                 }
             }
-
-
         }
     }
 
@@ -118,7 +116,7 @@ public class GameEngine {
 
 
                             NetworkedEntity networkedEntity = new NetworkedEntity();
-                            networkedEntity.model = entity.getModel();
+
                             networkedEntity.entityIDString = entity.getIDString();
                             networkedEntity.x = entity.getX() - player.getCurrentVessel().getX();
                             networkedEntity.y = entity.getY() - player.getCurrentVessel().getY();
@@ -126,13 +124,6 @@ public class GameEngine {
                             networkedEntity.distance = distance;
                             networkedEntity.name = entity.getName();
                             if (entity instanceof Vessel) {
-                                networkedEntity.hasHealthPool = true;
-                                networkedEntity.currentHull = ((Vessel) entity).getCurrentHullHP();
-                                networkedEntity.currentHealth = ((Vessel) entity).getCurrentStructureHP();
-                                networkedEntity.currentShield = ((Vessel) entity).getCurrentShieldHP();
-                                networkedEntity.maxHealth = ((Vessel) entity).getMaxHullHP();
-                                networkedEntity.maxHull = ((Vessel) entity).getMaxHullHP();
-                                networkedEntity.maxShield = ((Vessel) entity).getMaxShieldHP();
 
 
                             }
@@ -143,7 +134,6 @@ public class GameEngine {
                         } else {
 
                             NetworkedEntity networkedEntity = new NetworkedEntity();
-                            networkedEntity.model = entity.getModel();
                             networkedEntity.entityIDString = entity.getIDString();
                             networkedEntity.x = entity.getX() - player.getCurrentVessel().getX();
                             networkedEntity.y = entity.getY() - player.getCurrentVessel().getY();
@@ -151,13 +141,6 @@ public class GameEngine {
                             networkedEntity.distance = distance;
                             networkedEntity.name = entity.getName();
                             if (entity instanceof Vessel) {
-                                networkedEntity.hasHealthPool = true;
-                                networkedEntity.currentHull = ((Vessel) entity).getCurrentHullHP();
-                                networkedEntity.currentHealth = ((Vessel) entity).getCurrentStructureHP();
-                                networkedEntity.currentShield = ((Vessel) entity).getCurrentShieldHP();
-                                networkedEntity.maxHealth = ((Vessel) entity).getMaxHullHP();
-                                networkedEntity.maxHull = ((Vessel) entity).getMaxHullHP();
-                                networkedEntity.maxShield = ((Vessel) entity).getMaxShieldHP();
 
 
                             }
