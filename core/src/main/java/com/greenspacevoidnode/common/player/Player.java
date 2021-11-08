@@ -6,6 +6,7 @@ import com.greenspacevoidnode.common.core.entity.vessel.Vessel;
 import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.sql.Saveable;
 import com.greenspacevoidsharedAPI.networking.network.messages.gameEntity.NetworkedEntity;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -15,8 +16,8 @@ import java.util.ArrayList;
 @Entity
 @Table(name = "Player")
 public class Player implements PlayerTells, Saveable {
-    @Id @GeneratedValue
-    @Column(name = "id")
+
+    @Id @GeneratedValue @Column(name = "id")
     private long id;
 
     @Column(name = "username")
@@ -31,19 +32,28 @@ public class Player implements PlayerTells, Saveable {
     @Column(name = "currency")
     private BigDecimal currency;
 
-    private Vessel currentVessel;
-    @Column(name = "ship")
-    private String currentVesselString;
-
-    private StarSystem currentSystem;
     @Column(name = "currentSystem")
     private long currentSystemID;
 
+    @Column(name = "ship")
+    private String currentVesselString;
+
+    @Transient
+    private Vessel currentVessel;
+
+
+    @Transient
+    private StarSystem currentSystem;
+
+
+    @Transient
     ArrayList<com.greenspacevoidnode.common.core.entity.Entity> renderedEntities = new ArrayList<>();
+    @Transient
     ArrayList<NetworkedEntity> networkedEntitiesPair = new ArrayList<>();
 
-
+    @Transient
     private Connection connection; //Mapped on player login!
+    @Transient
     boolean isInitialized;
 
     public Player(){

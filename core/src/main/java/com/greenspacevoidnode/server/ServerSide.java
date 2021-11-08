@@ -7,11 +7,13 @@ import com.greenspacevoidnode.GSVServer;
 import com.greenspacevoidnode.common.player.Player;
 import com.greenspacevoidnode.sql.SQL;
 import com.greenspacevoidnode.sql.Saveable;
+import com.greenspacevoidsharedAPI.networking.network.Networking;
 import com.greenspacevoidsharedAPI.networking.network.messages.login.NetworkedLogin;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class ServerSide {
     public static void startServer() throws IOException {
 
         Server server = new Server();
-        //Networking.syncRegisters(server.getKryo());
+        Networking.syncRegisters(server.getKryo());
         server.bind(30000);
         server.start();
         //Add listeners here
@@ -85,10 +87,13 @@ public class ServerSide {
         try{
 
 
-            players = session.createSQLQuery("SELECT * FROM player WHERE PASSWORD = " + Arrays.toString(message.password) + " AND username = " + message.username).list();
+
+
+            players = session.createSQLQuery("SELECT * FROM player WHERE PASSWORD = \"" + new String(message.password) + "\" AND username = \"" + message.username  + "\"").list();
             if(players.get(0) instanceof Player && players.size() == 1 && !GSVServer.connectedPlayers.contains((Player) players.get(0))) { //Make sure it doesnt contain a player thats already connected.
                 player = session.get(Player.class, ((Player) players.get(0)).getId());
                 GSVServer.connectedPlayers.add(player);
+                System.out.println(player.getUsername() + " Joined the server!");
             }
             tx.commit();
 
@@ -97,6 +102,7 @@ public class ServerSide {
                 if(players.size() == 1){
                     NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage sendableMessage = new NetworkedLogin.CLIENT.CLIENT_RECEIVE_LoginStatusMessage();
                     sendableMessage.loginAccepted = true;
+
 
                     connection.sendTCP(sendableMessage);
 

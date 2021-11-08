@@ -20,7 +20,7 @@
 
 
         <property name = "hibernate.connection.url">
-            jdbc:mariadb://localhost/system
+            jdbc:mariadb://localhost/GSV
         </property>
 
         <property name = "hibernate.connection.username">
@@ -31,12 +31,10 @@
             test1234
         </property>
 
+        <property name="hbm2ddl.auto">update</property>
+
         <!-- List of XML mapping files -->
-        <mapping class="com.greenspacevoidnode.sql.TestClass"/>
-        <mapping class="com.greenspacevoidnode.sql.ChildTestClass"/>
-        <mapping class="com.greenspacevoidnode.sql.GrandChildTestClass"/>
-        <mapping class="com.greenspacevoidnode.sql.OtherGrandChildClass"/>
-        <mapping class="com.greenspacevoidnode.sql.PersistenceObject"/>
-        <mapping class="com.greenspacevoidnode.sql.StoredObject"/>
+        <mapping class="com.greenspacevoidnode.common.player.Player"/>
+
     </session-factory>
 </hibernate-configuration>

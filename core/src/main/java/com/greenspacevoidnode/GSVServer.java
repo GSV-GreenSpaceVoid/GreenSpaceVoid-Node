@@ -4,6 +4,7 @@ import com.greenspacevoidnode.common.core.item.industry.materials.Material;
 import com.greenspacevoidnode.common.player.Player;
 import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.server.ServerSide;
+import com.greenspacevoidnode.sql.SQL;
 import org.hibernate.SessionFactory;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class GSVServer {
 
 
 
-        //SQL.HibernateManager.main(null);
+        SQL.HibernateManager.main(null);
         /*
 
 
