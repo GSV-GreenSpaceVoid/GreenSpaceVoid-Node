@@ -80,77 +80,117 @@ public abstract class Vessel extends Entity implements PlayerTells{
 
 
 
-
-
-
-
-
-
-    //TODO: REPEAT AFTER ME! I WILL NOT AND SHALL NOT INCLUDE BASEVALUES EVER(!!!!) IN THE DATABASE!
-
-
-
-
-
-    double volume;
+    @Transient double volume;
 
 
 
     //Base(Constructor initialized)
-    private double baseStructureHP;
-    private double baseHullHP;
-    private double baseShieldHP;
-    private double baseShieldRegenerationRate;
-    private double baseStructureEnergyResist;
-    private double baseStructureThermalResist;
-    private double baseStructureEMPResist;
-    private double baseStructureExplosiveResist;
-    private double baseHullEnergyResist;
-    private double baseHullThermalResist;
-    private double baseHullEMPResist;
-    private double baseHullExplosiveResist;
-    private double baseShieldEnergyResist;
-    private double baseShieldThermalResist;
-    private double baseShieldEMPResist;
-    private double baseShieldExplosiveResist;
-    private double baseSensorStrength;
-    private double baseSensorRadius;
-    private double baseSignatureStrength;
-    private double baseSignatureRadius;
-    private double basePowerGrid;
-    private double baseCapacitorCapacity;
-    private double baseCapacitorRegenerationRate;
-    private double baseInertiaModifier;
-    private double baseSpeed;
-    private double baseAccelerationRate;
-    private double baseTurnRate;
-    private double baseCargoHoldCapacity;
+   @Transient
+   private double baseStructureHP;
+   @Transient
+   private double baseHullHP;
+   @Transient
+   private double baseShieldHP;
+   @Transient
+   private double baseShieldRegenerationRate;
+   @Transient
+   private double baseStructureEnergyResist;
+   @Transient
+   private double baseStructureThermalResist;
+   @Transient
+   private double baseStructureEMPResist;
+   @Transient
+   private double baseStructureExplosiveResist;
+   @Transient
+   private double baseHullEnergyResist;
+   @Transient
+   private double baseHullThermalResist;
+   @Transient
+   private double baseHullEMPResist;
+   @Transient
+   private double baseHullExplosiveResist;
+   @Transient
+   private double baseShieldEnergyResist;
+   @Transient
+   private double baseShieldThermalResist;
+   @Transient
+   private double baseShieldEMPResist;
+   @Transient
+   private double baseShieldExplosiveResist;
+   @Transient
+   private double baseSensorStrength;
+   @Transient
+   private double baseSensorRadius;
+   @Transient
+   private double baseSignatureStrength;
+   @Transient
+   private double baseSignatureRadius;
+   @Transient
+   private double basePowerGrid;
+   @Transient
+   private double baseCapacitorCapacity;
+   @Transient
+   private double baseCapacitorRegenerationRate;
+   @Transient
+   private double baseInertiaModifier;
+   @Transient
+   private double baseSpeed;
+   @Transient
+   private double baseAccelerationRate;
+   @Transient
+   private double baseTurnRate;
+   @Transient
+   private double baseCargoHoldCapacity;
 
-    private int hullModuleSlots;
-    private int armorModuleSlots;
-    private int shieldModuleSlots;
-    private int weaponModuleSlots;
-    private int miningModuleSlots;
-    private int weaponSlots;
-    private int maxTargets;
+   @Transient
+   private int hullModuleSlots;
+   @Transient
+   private int armorModuleSlots;
+   @Transient
+   private int shieldModuleSlots;
+   @Transient
+   private int weaponModuleSlots;
+   @Transient
+   private int miningModuleSlots;
+   @Transient
+   private int weaponSlots;
+   @Transient
+   private int maxTargets;
 
-    private double baseRailGunDamageModifier;
-    private double baseMissileDamageModifier;
-    private double baseLaserDamageModifier;
-    private double baseArtilleryDamageModifier;
-    private double baseMiningYieldModifier;
-    private double baseRailGunROFModifier;
-    private double baseMissileROFModifier;
-    private double baseLaserROFModifier;
-    private double baseArtilleryROFModifier;
-    private double baseMiningROFModifier;
-    private double baseDroneControlRange;
-    private int maxNumberOfDrones;
-    private double baseDroneDamageModifier;
-    private double baseDroneDefenseModifier;
-    private double baseDroneSpeedModifier;
-    private double baseDroneRateOfFireModifier;
-    private double baseDroneMiningYieldModifier;
+   @Transient
+   private double baseRailGunDamageModifier;
+   @Transient
+   private double baseMissileDamageModifier;
+   @Transient
+   private double baseLaserDamageModifier;
+   @Transient
+   private double baseArtilleryDamageModifier;
+   @Transient
+   private double baseMiningYieldModifier;
+   @Transient
+   private double baseRailGunROFModifier;
+   @Transient
+   private double baseMissileROFModifier;
+   @Transient
+   private double baseLaserROFModifier;
+   @Transient
+   private double baseArtilleryROFModifier;
+   @Transient
+   private double baseMiningROFModifier;
+   @Transient
+   private double baseDroneControlRange;
+   @Transient
+   private int maxNumberOfDrones;
+   @Transient
+   private double baseDroneDamageModifier;
+   @Transient
+   private double baseDroneDefenseModifier;
+   @Transient
+   private double baseDroneSpeedModifier;
+   @Transient
+   private double baseDroneRateOfFireModifier;
+   @Transient
+   private double baseDroneMiningYieldModifier;
 
 
 
@@ -158,47 +198,135 @@ public abstract class Vessel extends Entity implements PlayerTells{
 
 
     //Current
-    double currentStructureHP, currentHullHP, currentShieldHP;
-    double currentShieldRegenerationRate;
+   @Transient
+    double currentStructureHP;
+   @Transient
+   double currentHullHP;
+   @Transient
+   double currentShieldHP;
+   @Transient
+   double currentShieldRegenerationRate;
 
-    double currentStructureEnergyResist, currentStructureThermalResist, currentStructureEMPResist, currentStructureExplosiveResist;
-    double currentHullEnergyResist, currentHullThermalResist, currentHullEMPResist, currentHullExplosiveResist;
-    double currentShieldEnergyResist, currentShieldThermalResist, currentShieldEMPResist, currentShieldExplosiveResist;
-
-
-    double currentSensorStrength, currentSensorRadius, currentSignatureStrength, currentSignatureRadius;
-
-    double currentPowerGrid, currentCapacitorCapacity, currentCapacitorRegenerationRate;
-
-    double currentInertiaModifier, currentSpeed, currentAccelerationRate, currentTurnRate;
-
-    int currentHullModuleCount, currentShieldModuleCount, currentWeaponModuleCount, currentMiningModuleCount;
-
-    boolean isPacked;
-
-    //Calculated maxes
-
-    //Maxes can be recomputed upon load, saving database table utilization.
-
-    double maxStructureHP, maxHullHP, maxShieldHP;
-    double maxShieldRegenerationRate;
-
-    double maxStructureEnergyResist, maxStructureThermalResist, maxStructureEMPResist, maxStructureExplosiveResist;
-    double maxHullEnergyResist, maxHullThermalResist, maxHullEMPResist, maxHullExplosiveResist;
-    double maxShieldEnergyResist, maxShieldThermalResist, maxShieldEMPResist, maxShieldExplosiveResist;
-
-
-    double maxSensorStrength, maxSensorRadius, maxSignatureStrength, maxSignatureRadius;
-
-    double maxPowerGrid, maxCapacitorCapacity, maxCapacitorRegenerationRate;
-
-    double maxInertiaModifier, maxSpeed, maxAccelerationRate, maxTurnRate;
+   @Transient
+   double currentStructureEnergyResist;
+   @Transient
+   double currentStructureThermalResist;
+   @Transient
+   double currentStructureEMPResist;
+   @Transient
+   double currentStructureExplosiveResist;
+   @Transient
+   double currentHullEnergyResist;
+   @Transient
+   double currentHullThermalResist;
+   @Transient
+   double currentHullEMPResist;
+   @Transient
+   double currentHullExplosiveResist;
+   @Transient
+   double currentShieldEnergyResist;
+   @Transient
+   double currentShieldThermalResist;
+   @Transient
+   double currentShieldEMPResist;
+   @Transient
+   double currentShieldExplosiveResist;
 
 
-    private Hold.CargoHold cargoHold;
-    private Hold.OreHold oreHold;
-    private Hold.ShipHold shipHold;
-    private Hold.DroneBay droneBay;
+   @Transient
+   double currentSensorStrength;
+   @Transient
+   double currentSensorRadius;
+   @Transient
+   double currentSignatureStrength;
+   @Transient
+   double currentSignatureRadius;
+
+   @Transient
+   double currentPowerGrid;
+   @Transient
+   double currentCapacitorCapacity;
+   @Transient
+   double currentCapacitorRegenerationRate;
+
+   @Transient
+   double currentInertiaModifier;
+   @Transient
+   double currentSpeed;
+   @Transient
+   double currentAccelerationRate;
+   @Transient
+   double currentTurnRate;
+
+   @Transient
+   double maxStructureHP;
+   @Transient
+   double maxHullHP;
+   @Transient
+   double maxShieldHP;
+   @Transient
+   double maxShieldRegenerationRate;
+
+   @Transient
+   double maxStructureEnergyResist;
+   @Transient
+   double maxStructureThermalResist;
+   @Transient
+   double maxStructureEMPResist;
+   @Transient
+   double maxStructureExplosiveResist;
+   @Transient
+   double maxHullEnergyResist;
+   @Transient
+   double maxHullThermalResist;
+   @Transient
+   double maxHullEMPResist;
+   @Transient
+   double maxHullExplosiveResist;
+   @Transient
+   double maxShieldEnergyResist;
+   @Transient
+   double maxShieldThermalResist;
+   @Transient
+   double maxShieldEMPResist;
+   @Transient
+   double maxShieldExplosiveResist;
+
+
+   @Transient
+   double maxSensorStrength;
+   @Transient
+   double maxSensorRadius;
+   @Transient
+   double maxSignatureStrength;
+   @Transient
+   double maxSignatureRadius;
+
+   @Transient
+   double maxPowerGrid;
+   @Transient
+   double maxCapacitorCapacity;
+   @Transient
+   double maxCapacitorRegenerationRate;
+
+   @Transient
+   double maxInertiaModifier;
+   @Transient
+   double maxSpeed;
+   @Transient
+   double maxAccelerationRate;
+   @Transient
+   double maxTurnRate;
+
+
+   @Transient
+   private Hold.CargoHold cargoHold;
+   @Transient
+   private Hold.OreHold oreHold;
+   @Transient
+   private Hold.ShipHold shipHold;
+   @Transient
+   private Hold.DroneBay droneBay;
 
 //            88b           d88                        88               88
 //            888b         d888                        88               88
@@ -229,15 +357,30 @@ public abstract class Vessel extends Entity implements PlayerTells{
     @Column(name = "weaponsData")
     private String weaponsData;
 
-
+    @Transient
     private ArrayList<Module.ShieldModule> shieldModules = new ArrayList<>();
+    @Transient
     private ArrayList<Module.ArmorModule> armorModules = new ArrayList<>();
+    @Transient
     private ArrayList<Module.HullModule> hullModules = new ArrayList<>();
-
+    @Transient
     private ArrayList<Module.WeaponModule> weaponModules = new ArrayList<>();
+    @Transient
     private ArrayList<Module.MiningModule> miningModules = new ArrayList<>();
-
+    @Transient
     private ArrayList<Weapon> weapons = new ArrayList<>();
+
+    @Override
+    public void initialize() {
+        initializeBaseValues();
+        update();
+
+
+
+
+
+        super.initialize();
+    }
 
     @Override
     public Long save() {
@@ -376,7 +519,7 @@ public abstract class Vessel extends Entity implements PlayerTells{
                              | |                         __/ |
                              |_|                        |___/
 */
-
+    @Transient
     private ArrayList<Entity> targets = new ArrayList<>();
 
     public void addTarget(Entity entity){
@@ -423,8 +566,13 @@ public abstract class Vessel extends Entity implements PlayerTells{
      */
 
     //isMoving determines whether the engine will change ship position based on movement.
+    @Transient
     private boolean isMoving;
-    private long destinationX, destinationY;
+    @Transient
+    private long destinationX;
+    @Transient
+    private long destinationY;
+    @Transient
     private double targetSpeed;
 
 
@@ -663,7 +811,66 @@ public abstract class Vessel extends Entity implements PlayerTells{
         super.destroy();
     }
 
+    private void initializeBaseValues(){
+        initializeBaseStructureHP();
+        initializeBaseHullHP();
+        initializeBaseShieldHP();
+        initializeBaseShieldRegenerationRate();
+        initializeBaseStructureEnergyResist();
+        initializeBaseStructureThermalResist();
+        initializeBaseStructureEMPResist() ;
+        initializeBaseStructureExplosiveResist();
+        initializeBaseHullEnergyResist();
+        initializeBaseHullThermalResist();
+        initializeBaseHullEMPResist();
+        initializeBaseHullExplosiveResist();
+        initializeBaseShieldEnergyResist();
+        initializeBaseShieldThermalResist();
+        initializeBaseShieldEMPResist();
+        initializeBaseShieldExplosiveResist();
+        initializeBaseSensorStrength();
+        initializeBaseSensorRadius();
+        initializeBaseSignatureStrength();
+        initializeBaseSignatureRadius();
+        initializeBasePowerGrid();
+        initializeBaseCapacitorCapacity();
+        initializeBaseCapacitorRegenerationRate();
+        initializeBaseInertiaModifier();
+        initializeBaseSpeed();
+        initializeBaseAccelerationRate();
+        initializeBaseTurnRate();
+        initializeBaseCargoHoldCapacity();
+        initializeHullModuleSlots();
+        initializeArmorModuleSlots();
+        initializeShieldModuleSlots();
+        initializeWeaponModuleSlots();
+        initializeMiningModuleSlots();
+        initializeWeaponSlots();
+        initializeMaxTargets();
+        initializeBaseRailGunDamageModifier();
+        initializeBaseMissileDamageModifier();
+        initializeBaseLaserDamageModifier();
+        initializeBaseArtilleryDamageModifier();
+        initializeBaseMiningYieldModifier();
+        initializeBaseRailGunROFModifier();
+        initializeBaseMissileROFModifier();
+        initializeBaseLaserROFModifier();
+        initializeBaseArtilleryROFModifier();
+        initializeBaseMiningROFModifier();
+        initializeBaseDroneControlRange();
+        initializeMaxNumberOfDrones();
+        initializeBaseDroneDamageModifier();
+        initializeBaseDroneDefenseModifier();
+        initializeBaseDroneSpeedModifier();
+        initializeBaseDroneRateOfFireModifier();
+        initializeBaseDroneMiningYieldModifier();
 
+
+
+
+
+
+    }
 
     public abstract void initializeBaseStructureHP();
 
@@ -972,4 +1179,8 @@ public abstract class Vessel extends Entity implements PlayerTells{
     public void setBaseDroneMiningYieldModifier(double baseDroneMiningYieldModifier) {
         this.baseDroneMiningYieldModifier = baseDroneMiningYieldModifier;
     }
+
+
+
+
 }

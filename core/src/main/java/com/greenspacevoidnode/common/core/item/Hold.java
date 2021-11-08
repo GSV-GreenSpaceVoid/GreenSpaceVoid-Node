@@ -6,10 +6,7 @@ import com.greenspacevoidnode.common.core.item.industry.materials.Ore;
 import com.greenspacevoidnode.engine.exceptions.ErrorMessages;
 import com.greenspacevoidnode.sql.Saveable;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @MappedSuperclass
@@ -22,8 +19,9 @@ public class Hold implements Saveable { //Stores items
     @Column(name = "contents")
     private String contents;
 
+    @Transient
     private Vessel vesselReference;
-
+    
     private ArrayList<Item> items = new ArrayList<>();
     private double baseCargoHoldSpace;
     private double currentCargoHoldSpace; //Modified basevalue, not accumulated space taken by items.
@@ -167,6 +165,11 @@ public class Hold implements Saveable { //Stores items
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    @Override
+    public void initialize() {
+
     }
 
     public static class CargoHold extends Hold {

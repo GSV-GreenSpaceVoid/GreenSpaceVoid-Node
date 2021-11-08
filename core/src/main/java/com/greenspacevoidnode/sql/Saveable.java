@@ -204,7 +204,7 @@ public interface Saveable {
     void setId(long id);
 
 
-
+    void initialize(); //Called on object load from database
 
 
 

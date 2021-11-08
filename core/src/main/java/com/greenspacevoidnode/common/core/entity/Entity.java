@@ -226,7 +226,10 @@ public class Entity implements Saveable, Identifiable {
     }
 
 
-
+    @Override
+    public void initialize() {
+        this.setLoaded(true);
+    }
 
     @Override
     public Long save() {
