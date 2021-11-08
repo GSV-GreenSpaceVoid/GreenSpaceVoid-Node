@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 @MappedSuperclass
-public class Vessel extends Entity implements PlayerTells{
+public abstract class Vessel extends Entity implements PlayerTells{
 
     private Player pilot;
     @Column(name = "pilotID")
@@ -97,68 +97,60 @@ public class Vessel extends Entity implements PlayerTells{
 
 
     //Base(Constructor initialized)
-    double baseStructureHP = 0;
-    double baseHullHP = 0;
-    double baseShieldHP = 0;
-    double baseShieldRegenerationRate = 0;
+    private double baseStructureHP;
+    private double baseHullHP;
+    private double baseShieldHP;
+    private double baseShieldRegenerationRate;
+    private double baseStructureEnergyResist;
+    private double baseStructureThermalResist;
+    private double baseStructureEMPResist;
+    private double baseStructureExplosiveResist;
+    private double baseHullEnergyResist;
+    private double baseHullThermalResist;
+    private double baseHullEMPResist;
+    private double baseHullExplosiveResist;
+    private double baseShieldEnergyResist;
+    private double baseShieldThermalResist;
+    private double baseShieldEMPResist;
+    private double baseShieldExplosiveResist;
+    private double baseSensorStrength;
+    private double baseSensorRadius;
+    private double baseSignatureStrength;
+    private double baseSignatureRadius;
+    private double basePowerGrid;
+    private double baseCapacitorCapacity;
+    private double baseCapacitorRegenerationRate;
+    private double baseInertiaModifier;
+    private double baseSpeed;
+    private double baseAccelerationRate;
+    private double baseTurnRate;
+    private double baseCargoHoldCapacity;
 
+    private int hullModuleSlots;
+    private int armorModuleSlots;
+    private int shieldModuleSlots;
+    private int weaponModuleSlots;
+    private int miningModuleSlots;
+    private int weaponSlots;
+    private int maxTargets;
 
-    double baseStructureEnergyResist = 0;
-    double baseStructureThermalResist = 0;
-    double baseStructureEMPResist = 0;
-    double baseStructureExplosiveResist = 0;
-    double baseHullEnergyResist = 0;
-    double baseHullThermalResist = 0;
-    double baseHullEMPResist = 0;
-    double baseHullExplosiveResist = 0;
-
-    double baseShieldEnergyResist = 0;
-    double baseShieldThermalResist = 0;
-    double baseShieldEMPResist = 0;
-    double baseShieldExplosiveResist = 0;
-
-
-    double baseSensorStrength;
-    double baseSensorRadius;
-    double baseSignatureStrength;
-    double baseSignatureRadius;
-
-    double basePowerGrid = 0;
-    double  baseCapacitorCapacity = 0;
-    double  baseCapacitorRegenerationRate = 0;
-
-    double baseInertiaModifier = 0;
-    double  baseSpeed = 0;
-    double  baseAccelerationRate = 0;
-    double  baseTurnRate = 0;
-
-    double baseCargoHoldCapacity = 0;
-
-    int hullModuleSlots = 0;
-    int armorModuleSlots = 0;
-    int shieldModuleSlots = 0;
-    int weaponModuleSlots = 0;
-    int miningModuleSlots = 0;
-    int weaponSlots = 0;
-    int maxTargets = 0;
-    double baseRailGunDamageModifier = 0;
-    double baseMissileDamageModifier = 0;
-    double baseLaserDamageModifier = 0;
-    double baseArtilleryDamageModifier = 0;
-    double baseMiningYieldModifier = 0;
-    double baseRailGunROFModifier = 0;
-    double baseMissileROFModifier = 0;
-    double baseLaserROFModifier = 0;
-    double baseArtilleryROFModifier = 0;
-    double baseMiningROFModifier = 0;
-
-    double baseDroneControlRange = 0;
-    double maxNumberOfDrones = 0;
-    double baseDroneDamageModifier = 0;
-    double baseDroneDefenseModifier = 0;
-    double baseDroneSpeedModifier = 0;
-    double baseDroneRateOfFireModifier = 0;
-    double baseDroneMiningYieldModifier = 0;
+    private double baseRailGunDamageModifier;
+    private double baseMissileDamageModifier;
+    private double baseLaserDamageModifier;
+    private double baseArtilleryDamageModifier;
+    private double baseMiningYieldModifier;
+    private double baseRailGunROFModifier;
+    private double baseMissileROFModifier;
+    private double baseLaserROFModifier;
+    private double baseArtilleryROFModifier;
+    private double baseMiningROFModifier;
+    private double baseDroneControlRange;
+    private int maxNumberOfDrones;
+    private double baseDroneDamageModifier;
+    private double baseDroneDefenseModifier;
+    private double baseDroneSpeedModifier;
+    private double baseDroneRateOfFireModifier;
+    private double baseDroneMiningYieldModifier;
 
 
 
@@ -642,6 +634,7 @@ public class Vessel extends Entity implements PlayerTells{
 
     public Vessel(String name, long systemID, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove, double baseCargoCapacity) {
         super(name, systemID, x, y, isInvincible, isTargetable, canMove);
+
             Hold.CargoHold cargoHold = new Hold.CargoHold(baseCargoCapacity);
 
 
@@ -671,4 +664,312 @@ public class Vessel extends Entity implements PlayerTells{
     }
 
 
+
+    public abstract void initializeBaseStructureHP();
+
+    public abstract void initializeBaseHullHP();
+
+    public abstract void initializeBaseShieldHP();
+
+    public abstract void initializeBaseShieldRegenerationRate();
+
+    public abstract void initializeBaseStructureEnergyResist();
+
+    public abstract void initializeBaseStructureThermalResist();
+
+    public abstract void initializeBaseStructureEMPResist() ;
+
+    public abstract void initializeBaseStructureExplosiveResist();
+
+    public abstract void initializeBaseHullEnergyResist();
+
+    public abstract void initializeBaseHullThermalResist();
+
+    public abstract void initializeBaseHullEMPResist();
+
+    public abstract void initializeBaseHullExplosiveResist();
+
+    public abstract void initializeBaseShieldEnergyResist();
+
+    public abstract void initializeBaseShieldThermalResist();
+
+    public abstract void initializeBaseShieldEMPResist();
+
+    public abstract void initializeBaseShieldExplosiveResist();
+
+    public abstract void initializeBaseSensorStrength();
+
+    public abstract void initializeBaseSensorRadius();
+
+    public abstract void initializeBaseSignatureStrength();
+
+    public abstract void initializeBaseSignatureRadius();
+
+    public abstract void initializeBasePowerGrid();
+
+    public abstract void initializeBaseCapacitorCapacity();
+
+    public abstract void initializeBaseCapacitorRegenerationRate();
+
+    public abstract void initializeBaseInertiaModifier();
+
+    public abstract void initializeBaseSpeed();
+
+    public abstract void initializeBaseAccelerationRate();
+
+    public abstract void initializeBaseTurnRate();
+
+    public abstract void initializeBaseCargoHoldCapacity();
+
+    public abstract void initializeHullModuleSlots();
+
+    public abstract void initializeArmorModuleSlots();
+
+    public abstract void initializeShieldModuleSlots();
+
+    public abstract void initializeWeaponModuleSlots();
+
+    public abstract void initializeMiningModuleSlots();
+
+    public abstract void initializeWeaponSlots();
+
+    public abstract void initializeMaxTargets();
+
+    public abstract void initializeBaseRailGunDamageModifier();
+
+    public abstract void initializeBaseMissileDamageModifier();
+
+    public abstract void initializeBaseLaserDamageModifier();
+
+    public abstract void initializeBaseArtilleryDamageModifier();
+
+    public abstract void initializeBaseMiningYieldModifier();
+
+    public abstract void initializeBaseRailGunROFModifier();
+
+    public abstract void initializeBaseMissileROFModifier();
+
+    public abstract void initializeBaseLaserROFModifier();
+
+    public abstract void initializeBaseArtilleryROFModifier();
+
+    public abstract void initializeBaseMiningROFModifier();
+
+    public abstract void initializeBaseDroneControlRange();
+
+    public abstract void initializeMaxNumberOfDrones();
+
+    public abstract void initializeBaseDroneDamageModifier();
+
+    public abstract void initializeBaseDroneDefenseModifier();
+
+    public abstract void initializeBaseDroneSpeedModifier();
+
+    public abstract void initializeBaseDroneRateOfFireModifier();
+
+    public abstract void initializeBaseDroneMiningYieldModifier();
+
+    public void setBaseStructureHP(double baseStructureHP) {
+        this.baseStructureHP = baseStructureHP;
+    }
+
+    public void setBaseHullHP(double baseHullHP) {
+        this.baseHullHP = baseHullHP;
+    }
+
+    public void setBaseShieldHP(double baseShieldHP) {
+        this.baseShieldHP = baseShieldHP;
+    }
+
+    public void setBaseShieldRegenerationRate(double baseShieldRegenerationRate) {
+        this.baseShieldRegenerationRate = baseShieldRegenerationRate;
+    }
+
+    public void setBaseStructureEnergyResist(double baseStructureEnergyResist) {
+        this.baseStructureEnergyResist = baseStructureEnergyResist;
+    }
+
+    public void setBaseStructureThermalResist(double baseStructureThermalResist) {
+        this.baseStructureThermalResist = baseStructureThermalResist;
+    }
+
+    public void setBaseStructureEMPResist(double baseStructureEMPResist) {
+        this.baseStructureEMPResist = baseStructureEMPResist;
+    }
+
+    public void setBaseStructureExplosiveResist(double baseStructureExplosiveResist) {
+        this.baseStructureExplosiveResist = baseStructureExplosiveResist;
+    }
+
+    public void setBaseHullEnergyResist(double baseHullEnergyResist) {
+        this.baseHullEnergyResist = baseHullEnergyResist;
+    }
+
+    public void setBaseHullThermalResist(double baseHullThermalResist) {
+        this.baseHullThermalResist = baseHullThermalResist;
+    }
+
+    public void setBaseHullEMPResist(double baseHullEMPResist) {
+        this.baseHullEMPResist = baseHullEMPResist;
+    }
+
+    public void setBaseHullExplosiveResist(double baseHullExplosiveResist) {
+        this.baseHullExplosiveResist = baseHullExplosiveResist;
+    }
+
+    public void setBaseShieldEnergyResist(double baseShieldEnergyResist) {
+        this.baseShieldEnergyResist = baseShieldEnergyResist;
+    }
+
+    public void setBaseShieldThermalResist(double baseShieldThermalResist) {
+        this.baseShieldThermalResist = baseShieldThermalResist;
+    }
+
+    public void setBaseShieldEMPResist(double baseShieldEMPResist) {
+        this.baseShieldEMPResist = baseShieldEMPResist;
+    }
+
+    public void setBaseShieldExplosiveResist(double baseShieldExplosiveResist) {
+        this.baseShieldExplosiveResist = baseShieldExplosiveResist;
+    }
+
+    public void setBaseSensorStrength(double baseSensorStrength) {
+        this.baseSensorStrength = baseSensorStrength;
+    }
+
+    public void setBaseSensorRadius(double baseSensorRadius) {
+        this.baseSensorRadius = baseSensorRadius;
+    }
+
+    public void setBaseSignatureStrength(double baseSignatureStrength) {
+        this.baseSignatureStrength = baseSignatureStrength;
+    }
+
+    public void setBaseSignatureRadius(double baseSignatureRadius) {
+        this.baseSignatureRadius = baseSignatureRadius;
+    }
+
+    public void setBasePowerGrid(double basePowerGrid) {
+        this.basePowerGrid = basePowerGrid;
+    }
+
+    public void setBaseCapacitorCapacity(double baseCapacitorCapacity) {
+        this.baseCapacitorCapacity = baseCapacitorCapacity;
+    }
+
+    public void setBaseCapacitorRegenerationRate(double baseCapacitorRegenerationRate) {
+        this.baseCapacitorRegenerationRate = baseCapacitorRegenerationRate;
+    }
+
+    public void setBaseInertiaModifier(double baseInertiaModifier) {
+        this.baseInertiaModifier = baseInertiaModifier;
+    }
+
+    public void setBaseAccelerationRate(double baseAccelerationRate) {
+        this.baseAccelerationRate = baseAccelerationRate;
+    }
+
+    public void setBaseTurnRate(double baseTurnRate) {
+        this.baseTurnRate = baseTurnRate;
+    }
+
+    public void setBaseCargoHoldCapacity(double baseCargoHoldCapacity) {
+        this.baseCargoHoldCapacity = baseCargoHoldCapacity;
+    }
+
+    public void setHullModuleSlots(int hullModuleSlots) {
+        this.hullModuleSlots = hullModuleSlots;
+    }
+
+    public void setArmorModuleSlots(int armorModuleSlots) {
+        this.armorModuleSlots = armorModuleSlots;
+    }
+
+    public void setShieldModuleSlots(int shieldModuleSlots) {
+        this.shieldModuleSlots = shieldModuleSlots;
+    }
+
+    public void setWeaponModuleSlots(int weaponModuleSlots) {
+        this.weaponModuleSlots = weaponModuleSlots;
+    }
+
+    public void setMiningModuleSlots(int miningModuleSlots) {
+        this.miningModuleSlots = miningModuleSlots;
+    }
+
+    public void setWeaponSlots(int weaponSlots) {
+        this.weaponSlots = weaponSlots;
+    }
+
+    public void setMaxTargets(int maxTargets) {
+        this.maxTargets = maxTargets;
+    }
+
+    public void setBaseRailGunDamageModifier(double baseRailGunDamageModifier) {
+        this.baseRailGunDamageModifier = baseRailGunDamageModifier;
+    }
+
+    public void setBaseMissileDamageModifier(double baseMissileDamageModifier) {
+        this.baseMissileDamageModifier = baseMissileDamageModifier;
+    }
+
+    public void setBaseLaserDamageModifier(double baseLaserDamageModifier) {
+        this.baseLaserDamageModifier = baseLaserDamageModifier;
+    }
+
+    public void setBaseArtilleryDamageModifier(double baseArtilleryDamageModifier) {
+        this.baseArtilleryDamageModifier = baseArtilleryDamageModifier;
+    }
+
+    public void setBaseMiningYieldModifier(double baseMiningYieldModifier) {
+        this.baseMiningYieldModifier = baseMiningYieldModifier;
+    }
+
+    public void setBaseRailGunROFModifier(double baseRailGunROFModifier) {
+        this.baseRailGunROFModifier = baseRailGunROFModifier;
+    }
+
+    public void setBaseMissileROFModifier(double baseMissileROFModifier) {
+        this.baseMissileROFModifier = baseMissileROFModifier;
+    }
+
+    public void setBaseLaserROFModifier(double baseLaserROFModifier) {
+        this.baseLaserROFModifier = baseLaserROFModifier;
+    }
+
+    public void setBaseArtilleryROFModifier(double baseArtilleryROFModifier) {
+        this.baseArtilleryROFModifier = baseArtilleryROFModifier;
+    }
+
+    public void setBaseMiningROFModifier(double baseMiningROFModifier) {
+        this.baseMiningROFModifier = baseMiningROFModifier;
+    }
+
+    public void setBaseDroneControlRange(double baseDroneControlRange) {
+        this.baseDroneControlRange = baseDroneControlRange;
+    }
+
+    public void setMaxNumberOfDrones(int maxNumberOfDrones) {
+        this.maxNumberOfDrones = maxNumberOfDrones;
+    }
+
+    public void setBaseDroneDamageModifier(double baseDroneDamageModifier) {
+        this.baseDroneDamageModifier = baseDroneDamageModifier;
+    }
+
+    public void setBaseDroneDefenseModifier(double baseDroneDefenseModifier) {
+        this.baseDroneDefenseModifier = baseDroneDefenseModifier;
+    }
+
+    public void setBaseDroneSpeedModifier(double baseDroneSpeedModifier) {
+        this.baseDroneSpeedModifier = baseDroneSpeedModifier;
+    }
+
+    public void setBaseDroneRateOfFireModifier(double baseDroneRateOfFireModifier) {
+        this.baseDroneRateOfFireModifier = baseDroneRateOfFireModifier;
+    }
+
+    public void setBaseDroneMiningYieldModifier(double baseDroneMiningYieldModifier) {
+        this.baseDroneMiningYieldModifier = baseDroneMiningYieldModifier;
+    }
 }

@@ -8,7 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class Ship extends Vessel {
+public abstract class Ship extends Vessel {
 
 
 

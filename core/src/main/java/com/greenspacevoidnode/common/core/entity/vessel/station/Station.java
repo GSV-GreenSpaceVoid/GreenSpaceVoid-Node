@@ -9,14 +9,14 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Station extends Vessel {
+public abstract class Station extends Vessel {
     //Todo: Cargo capacities.
     private static int baseCargoCapacity = 10000;
     public Station(String name, long systemID, long x, long y, double volume, boolean isInvincible, boolean isTargetable, boolean canMove) {
         super(name, systemID, x, y, volume, isInvincible, isTargetable, canMove, baseCargoCapacity);
     }
 
-    public static class JumpGate extends Station{//World or player owned.
+    public abstract static class JumpGate extends Station{//World or player owned.
         private long jumpWarmupTime;
         private JumpGate linkedJumpGate;
         private boolean isLinked;
@@ -72,7 +72,7 @@ public class Station extends Vessel {
 
 
 
-        public static class PlayerGate extends JumpGate{
+        public abstract static class PlayerGate extends JumpGate{
             private static final boolean isInvincible = false;
             private static final boolean isTargetable = true;
             private static final boolean canMove = false; //Tractor a jumpgate into the nearest star anyone?
@@ -114,7 +114,7 @@ public class Station extends Vessel {
 
 
 
-        public static class NPCGate extends JumpGate{
+        public abstract static class NPCGate extends JumpGate{
             private static final boolean canMove = false;
             private static final boolean isTargetable = false;
             private static final boolean isInvincible = true;
