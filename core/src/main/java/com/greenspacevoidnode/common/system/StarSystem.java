@@ -158,6 +158,11 @@ public class StarSystem implements Saveable {//It's not actually a database B)
         this.id = id;
     }
 
+    @Override
+    public void initialize() {
+
+    }
+
     public String getName() {
         return name;
     }

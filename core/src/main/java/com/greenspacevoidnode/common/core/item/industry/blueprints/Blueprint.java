@@ -2,7 +2,7 @@ package com.greenspacevoidnode.common.core.item.industry.blueprints;
 
 import com.greenspacevoidnode.common.core.item.Item;
 
-public class Blueprint extends Item {
+public abstract class Blueprint extends Item {
     private static final double baseVolume = 1;
 
     private Recipe[] recipes;

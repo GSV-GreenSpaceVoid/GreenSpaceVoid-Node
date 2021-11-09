@@ -7,6 +7,11 @@ public class Material extends Item {
         super(name,basevolume, quantity);
     }
 
+    @Override
+    public void initialize() {
+
+    }
+
 
     //Refined Materials below:
 

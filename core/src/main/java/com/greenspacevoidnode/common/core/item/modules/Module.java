@@ -112,6 +112,11 @@ public class Module extends Item {
         this.vessel = vessel;
     }
 
+    @Override
+    public void initialize() {
+
+    }
+
     public static class WeaponModule extends Module{
 
 

@@ -15,6 +15,11 @@ public class Resource extends Item {
         this.data = data;
     }
 
+    @Override
+    public void initialize() {
+
+    }
+
 
     //All resources must be refinable...Unless they refine into nothing :)
 

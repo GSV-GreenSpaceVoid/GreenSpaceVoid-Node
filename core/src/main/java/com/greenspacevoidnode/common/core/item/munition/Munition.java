@@ -19,6 +19,10 @@ public class Munition extends Item {
         super(name, basevolume, quantity);
     }
 
+    @Override
+    public void initialize() {
+
+    }
 
 
     public static class ArtilleryShell{
