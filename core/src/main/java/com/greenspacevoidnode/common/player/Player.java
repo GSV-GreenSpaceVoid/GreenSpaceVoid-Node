@@ -6,10 +6,8 @@ import com.greenspacevoidnode.common.core.entity.vessel.Vessel;
 import com.greenspacevoidnode.common.system.StarSystem;
 import com.greenspacevoidnode.sql.Saveable;
 import com.greenspacevoidsharedAPI.networking.network.messages.gameEntity.NetworkedEntity;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 
 
@@ -30,7 +28,7 @@ public class Player implements PlayerTells, Saveable {
     private String emailAddress;
 
     @Column(name = "currency")
-    private BigDecimal currency;
+    private float currency;
 
     @Column(name = "currentSystem")
     private long currentSystemID;
@@ -134,6 +132,11 @@ public class Player implements PlayerTells, Saveable {
         this.id = id;
     }
 
+    @Override
+    public void initialize() {
+
+    }
+
     public String getUsername() {
         return username;
     }
@@ -158,11 +161,11 @@ public class Player implements PlayerTells, Saveable {
         this.emailAddress = emailAddress;
     }
 
-    public BigDecimal getCurrency() {
+    public float getCurrency() {
         return currency;
     }
 
-    public void setCurrency(BigDecimal currency) {
+    public void setCurrency(float currency) {
         this.currency = currency;
     }
 

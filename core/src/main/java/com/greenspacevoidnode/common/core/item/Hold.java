@@ -21,9 +21,13 @@ public class Hold implements Saveable { //Stores items
 
     @Transient
     private Vessel vesselReference;
-    
+
+    @Transient
     private ArrayList<Item> items = new ArrayList<>();
+
+    @Transient
     private double baseCargoHoldSpace;
+    @Transient
     private double currentCargoHoldSpace; //Modified basevalue, not accumulated space taken by items.
 
 

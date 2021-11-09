@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 @MappedSuperclass
-public class Item implements Saveable, Identifiable {
+public abstract class Item implements Saveable, Identifiable {
 
     @Column(name = "id")
     private long id;
@@ -85,6 +85,7 @@ public class Item implements Saveable, Identifiable {
     public void setId(long id) {
         this.id = id;
     }
+
 
 
 
